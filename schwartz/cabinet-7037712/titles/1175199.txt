@@ -1,0 +1,129 @@
+Your Library of Congress account password expires in days.
+
+Please visit the Library's Reading Room to log in to your account, and
+change your password.
+
+
+
+<https://pcwa.loc.gov/loc-film-lab-web/index.jsf>
+*Recorded Sound Reference Center User* | Log Out <#>	| Change Password
+<https://pcwa.loc.gov/loc-film-lab-web/changePassword.jsf> | Settings <#>
+
+  * My Cabinets <#>
+      o Create Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/createCabinet.jsf>
+      o Find Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/searchCabinet.jsf>
+  * Collection Search
+    <https://pcwa.loc.gov/loc-film-lab-web/user/searchCollectionItems.jsf>
+  *
+  *
+
+Processing
+Session Expired
+X
+X
+X
+X
+X
+
+
+Num
+	
+Index
+	
+Title
+	
+Type
+	
+Total time
+
+false null [0, 1, 2, 3, 4]
+
+// Back To Previous <#>
+
+
+    Playable Audio and Video
+
+Carrier
+	
+Play
+	
+Item Details
+1175199-3-1	
+// <https://pcwa.loc.gov/loc-film-lab-web/content/140367> 	Duration
+(H:M:S) : -- 	//
+
+	Source Rack Number : RXF 4053
+
+false null [0, 1, 2]
+Title: 1175199 <#>
+component
+carrier
+Title 1175199
+
+
+    Chewing gum songs
+
+I'm gonna dance wit' de guy wot brung me
+
+Summary
+
+"We hear a popular song from 1961, "Does Your Chewing Gum Lose Its Flavor?"  History repeats itself, Bill [Billy] Murray and Irene [Aileen] Stanley sing "I Am Gonna Dance With the Guy That Brung Me" [I'm Gonna Dance Wit' de Guy Wot Brung Me]  a gum chewer's song." (00:00) --Accompanying collection documentation.
+
+Credits/Roles
+Role
+	
+Name
+Producer	Tony Schwartz
+Vocalist/Singer	Aileen Stanley
+Vocalist/Singer	Billy Murray
+
+false null [0, 1]
+
+Production/Dates
+Type
+	
+Date
+BROADCAST	Jan 15, 1961
+
+false null [0, 1]
+
+Note
+Broadcast on WNYC, New York (N.Y.), on January 15, 1961.
+
+Cataloged from container and accompanying paperwork.
+
+Transfer Engineer Notes (bryan h.):
+
+rxf 4053
+full track, mono
+repro gain 0 (cal)
+250 nw/meter. +4dbu output=0VU at 7.5 ips
+Maselec MTC2 input gain 0db
+
+after leader, short segment of blank tape.
+
+Add Title To Cabinet
+Cabinet Name: 	
+Name: 	
+
+Description: 	
+
+Warning: This page calls for XML namespace declared with prefix h1 but
+no taglibrary exists for that namespace.
+
+Send Email
+Email Address: 	
+
+Title Tree
+
+  * 1175199: Chewing gum songs
+
+Actions
+Print
+<https://pcwa.loc.gov/loc-film-lab-web/rest/mavis/titles/1175199/reports/print-pdf>
+
+Version 4.7.3
+Copyright 2020 Library of Congress
+

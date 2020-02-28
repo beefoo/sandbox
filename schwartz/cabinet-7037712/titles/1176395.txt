@@ -1,0 +1,137 @@
+Your Library of Congress account password expires in days.
+
+Please visit the Library's Reading Room to log in to your account, and
+change your password.
+
+
+
+<https://pcwa.loc.gov/loc-film-lab-web/index.jsf>
+*Recorded Sound Reference Center User* | Log Out <#>	| Change Password
+<https://pcwa.loc.gov/loc-film-lab-web/changePassword.jsf> | Settings <#>
+
+  * My Cabinets <#>
+      o Create Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/createCabinet.jsf>
+      o Find Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/searchCabinet.jsf>
+  * Collection Search
+    <https://pcwa.loc.gov/loc-film-lab-web/user/searchCollectionItems.jsf>
+  *
+  *
+
+Processing
+Session Expired
+X
+X
+X
+X
+X
+
+
+Num
+	
+Index
+	
+Title
+	
+Type
+	
+Total time
+
+false null [0, 1, 2, 3, 4]
+
+// Back To Previous <#>
+
+
+    Playable Audio and Video
+
+Carrier
+	
+Play
+	
+Item Details
+1176395-4-1	
+// <https://pcwa.loc.gov/loc-film-lab-web/content/121025> 	Duration
+(H:M:S) : -- 	//
+
+	Source Rack Number : RXF 4261
+
+false null [0, 1, 2]
+Title: 1176395 <#>
+component
+carrier
+Title 1176395
+
+
+    Rough material #6
+
+Summary
+
+RXF 4261:
+Learning a language (Tony Schwartz, narrator ; various men and women, speakers) (0:00) -- comments (unidentified child, speaker) (5:01) -- comments (unidentified man, speaker) (5:11) -- comments on treatment received by a foreigner (unidentified man, speaker) (5:19) -- Senzenena (Tony Schwartz, narrator ; mixed chorus, vocals ; unidentified, violin ; Mrs. Frieda Matthews, speaker) (5:40) -- segment comparing Leadbelly and George Gershwin (Tony Schwartz, narrator ; Leadbelly, 12 string guitar and vocals ; George Gershwin, piano) (17:07) -- Relax your mind (Leadbelly, 12 string guitar and vocals) (20:28) -- unidentiifed (George Gershwin, piano) (21:35) -- Eagle rock rag (Leadbelly, piano and vocal) (22:08) -- narration for segment on pennywhistle player Herb Levy (Tony Schwartz, narrator) (24:08) -- unidentified (Herb Levy, pennywhistle, piano, cigar box) (25:21) --  unidentified (Herb Levy, pennywhistle, piano, cigar box) (26:18) -- Jackass will jump and bray (Harry Belafonte, vocals ; unidentified chorus ; Herb Levy, pennywhistle, piano, cigar box) (26:56) -- examples and description of Irish mouth music (Kathleen Walsh, vocals) (29:09) -- examples and description of Hasidic songs without words (unidentified woman, vocals ; unidentified man and woman, vocals) (30:48).
+
+Credits/Roles
+Role
+	
+Name
+Editor	Tony Schwartz
+Performer	Kathleen Walsh
+Performer	Harry Belafonte
+Performer	George Gershwin
+Performer	Leadbelly
+Performer	Herb Levy
+Speaker	Frieda Bokwe Matthews
+
+false null [0, 1]
+
+Production/Dates
+Type
+	
+Date
+COMPILED	Jan 1, 1960
+
+false null [0, 1]
+
+Note
+Cataloged from accompanying paperwork.
+
+Unpublished recording consisting of roughly edited segments relating to language, song, and musical and cultural song and performance styles.
+
+Duration estimated.
+
+The first segment is a version of the Tony Schwartz program "Learning a Language," 1172619 / RXF 3637.
+
+Technical note (Matt):
+This tape has paper leader at the head and paper and blank tape leader at the tail. The segments are all separated by paper leader.
+
+Engineer notes (Brad):
+Technical note:
+Ingest of a previously digitized recording.
+Hum on a portion of this recording.
+
+Content note:
+"1. Learning a Language.  Reenah's father tells of the difficulties encountered. 4:30  2. Reenah's Father (in Polish) 'Don't pepper Peter the hog with pepper because you over-pepper Peter the hog with pepper.' 0:26  3. People and language: a) a child stumbling over words, b) a man with a Southern accent, c) a foreigner who says that doors are closed to him when he talks. 0:28  4. African Song 'Senzenena.'  Mrs. Frieda Matthews discusses its history; the song (a one word song) means 'What have we done (to deserve this)?' With group and violin accompaniment. 5:56  5. Group and violin accompaniment of 'Senzenena.' 0:42  6. Mrs. Frieda Matthews on Africa: its languages, the religious fervor of the campaign, the singing of 'Senzenena.' 2:12  7. Brief introduction and an American group singing 'Senzenena' (w/ violin accompaniment). 2:15  8. Leadbelly and his 12 string guitar; George Gershwin at the piano; Leadbelly at the piano; the similarity between the two is noted. 3:14  9. Leadbelly; George Gershwin; (no narration). 3:30  10. Penny whistle with Herb Levy; multiple recording; Harry Belafonte and group. 1:01  11. Herb Levy and the penny whistle; introductory remarks. 1:01  12. Herb Levy, Harry Belafonte & Company. 3:30  13. Kathleen Walsh telling a little about (and singing a sample of) Irish mouth music. 3:56  14. Hasidic Tunes"--Accompanying collection documentation.
+
+Add Title To Cabinet
+Cabinet Name: 	
+Name: 	
+
+Description: 	
+
+Warning: This page calls for XML namespace declared with prefix h1 but
+no taglibrary exists for that namespace.
+
+Send Email
+Email Address: 	
+
+Title Tree
+
+  * 1176395: Rough material #6
+
+Actions
+Print
+<https://pcwa.loc.gov/loc-film-lab-web/rest/mavis/titles/1176395/reports/print-pdf>
+
+Version 4.7.3
+Copyright 2020 Library of Congress
+

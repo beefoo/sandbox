@@ -1,0 +1,118 @@
+Your Library of Congress account password expires in days.
+
+Please visit the Library's Reading Room to log in to your account, and
+change your password.
+
+
+
+<https://pcwa.loc.gov/loc-film-lab-web/index.jsf>
+*Recorded Sound Reference Center User* | Log Out <#>	| Change Password
+<https://pcwa.loc.gov/loc-film-lab-web/changePassword.jsf> | Settings <#>
+
+  * My Cabinets <#>
+      o Create Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/createCabinet.jsf>
+      o Find Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/searchCabinet.jsf>
+  * Collection Search
+    <https://pcwa.loc.gov/loc-film-lab-web/user/searchCollectionItems.jsf>
+  *
+  *
+
+Processing
+Session Expired
+X
+X
+X
+X
+X
+
+
+Num
+	
+Index
+	
+Title
+	
+Type
+	
+Total time
+
+false null [0, 1, 2, 3, 4]
+
+// Back To Previous <#>
+
+
+    Playable Audio and Video
+
+Carrier
+	
+Play
+	
+Item Details
+1588735-3-1	
+// <https://pcwa.loc.gov/loc-film-lab-web/content/137222> 	Duration
+(H:M:S) : -- 	//
+
+	Source Rack Number : RXG 0456
+
+false null [0, 1, 2]
+Title: 1588735 <#>
+component
+carrier
+Title 1588735
+
+
+    Music, unusual sounds
+
+Music, unusual
+
+Summary
+
+Snare drum (00:00) -- Bass (00:58) -- Plucked strings (2:31) -- Circus band (3:00) -- Democratic Convention, 1976 (3:47) -- Young people's concert (7:46) -- Bells (14:33) -- Circus band (14:53) -- Star spangled mandolins (17:09).
+
+Credits/Roles
+No credits or roles found.
+
+Production/Dates
+No dates found.
+
+Note
+Cataloged from container and accompanying collection documentation.
+
+Transfer Engineer Notes (Bryan H.):
+RXG 0456
+mono full track
+Studer A810
+repro gain 0 (cal)
+250 nw/meter. +4dbu output=0VU at 7.5 ips
+Maselec MTC2 input gain 0db
+
+multiple tape base, acetate and polyester. 
+multiple tape speeds: as follows:
+
+15 ipsSnare drum (00:00) --  15 ips Bass (00:58) --  15 ips  Plucked strings (2:31) -- 15 ips Circus band (3:00) -- 15 ips Democratic Convention, 1976 (3:47) -- 7.5 ips Young people's concert (7:46) -- 15 ips Bells (14:33) -- 15 ips Circus band (14:53) -- 15 ips Star spangled mandolins (17:09).
+
+Add Title To Cabinet
+Cabinet Name: 	
+Name: 	
+
+Description: 	
+
+Warning: This page calls for XML namespace declared with prefix h1 but
+no taglibrary exists for that namespace.
+
+Send Email
+Email Address: 	
+
+Title Tree
+
+  * 1588735: Music, unusual sounds
+
+Actions
+Print
+<https://pcwa.loc.gov/loc-film-lab-web/rest/mavis/titles/1588735/reports/print-pdf>
+
+Version 4.7.3
+Copyright 2020 Library of Congress
+

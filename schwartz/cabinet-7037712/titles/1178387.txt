@@ -1,0 +1,130 @@
+Your Library of Congress account password expires in days.
+
+Please visit the Library's Reading Room to log in to your account, and
+change your password.
+
+
+
+<https://pcwa.loc.gov/loc-film-lab-web/index.jsf>
+*Recorded Sound Reference Center User* | Log Out <#>	| Change Password
+<https://pcwa.loc.gov/loc-film-lab-web/changePassword.jsf> | Settings <#>
+
+  * My Cabinets <#>
+      o Create Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/createCabinet.jsf>
+      o Find Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/searchCabinet.jsf>
+  * Collection Search
+    <https://pcwa.loc.gov/loc-film-lab-web/user/searchCollectionItems.jsf>
+  *
+  *
+
+Processing
+Session Expired
+X
+X
+X
+X
+X
+
+
+Num
+	
+Index
+	
+Title
+	
+Type
+	
+Total time
+
+false null [0, 1, 2, 3, 4]
+
+// Back To Previous <#>
+
+
+    Playable Audio and Video
+
+Carrier
+	
+Play
+	
+Item Details
+1178387-4-1	
+// <https://pcwa.loc.gov/loc-film-lab-web/content/121032> 	Duration
+(H:M:S) : -- 	//
+
+	Source Rack Number : RXF 4708
+
+false null [0, 1, 2]
+Title: 1178387 <#>
+component
+carrier
+Title 1178387
+
+
+    Rough material
+
+Summary
+
+RXF 4708:
+Story about Jayne Mansfield (unidentified male taxi driver, speaker) (0:00) -- story about pet (unidentified woman, speaker) (1:09) -- discussion of white paint (unidentified man, speaker ; Tony Schwartz, interviewer) (2:06) -- boxer and trainer describe his right hand punch (Rudy Sawyer, speaker ; unidentified man, speaker) (2:47) -- Moondog's San Francisco sounds (Moondog [Louis Hardin], percussion and bells) (4:20) .
+
+Credits/Roles
+Role
+	
+Name
+Producer	Tony Schwartz
+Performer	Louis Hardin
+
+false null [0, 1]
+
+Production/Dates
+Type
+	
+Date
+COMPILED	Jan 1, 1960
+
+false null [0, 1]
+
+Note
+Cataloged from container and accompanying paperwork.
+
+Unpublished recordings consisting of roughly edited material.
+
+
+
+Technical notes (Matt):
+This tape has paper head and tail leader, and paper leader separates items.
+
+Engineer notes (Brad):
+Technical note:
+Ingest of a previously digitized recording.
+
+Content note:
+
+"1.  Taxi driver tells about his fare: Jayne Mansfield and her large dog.  2.  A woman speaks of her pet, 'Thistlecat'  3.  OFFWHITE  4.  Boxer who opens with a right to the chin.  5.  Moondog's San Francisco sounds"--Accompanying collection documentation.
+
+Add Title To Cabinet
+Cabinet Name: 	
+Name: 	
+
+Description: 	
+
+Warning: This page calls for XML namespace declared with prefix h1 but
+no taglibrary exists for that namespace.
+
+Send Email
+Email Address: 	
+
+Title Tree
+
+  * 1178387: Rough material
+
+Actions
+Print
+<https://pcwa.loc.gov/loc-film-lab-web/rest/mavis/titles/1178387/reports/print-pdf>
+
+Version 4.7.3
+Copyright 2020 Library of Congress
+
