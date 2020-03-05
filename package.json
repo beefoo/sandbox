@@ -1,0 +1,11 @@
+{
+  "name": "sandbox",
+  "description": "Sandbox",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "express": "^4.17.0",
+    "ws": "^7.0.0"
+  }
+}
