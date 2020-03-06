@@ -56,7 +56,8 @@ for row in rows:
     if not isItem:
         continue
 
-    if "public domain" in title.lower():
+    titleLower = title.lower()
+    if "public domain" in titleLower and "research" not in titleLower and "permission" not in titleLower:
         items.append({
             "id": id,
             "title": title,
