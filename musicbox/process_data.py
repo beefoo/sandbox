@@ -14,6 +14,21 @@ parser.add_argument('-in', dest="INPUT_FILE", default="data.csv", help="Input fi
 parser.add_argument('-out', dest="OUTPUT_FILE", default="data_cleaned.csv", help="Output file")
 a = parser.parse_args()
 
+includeStrings = ["public domain"]
+excludeStrings = [
+    "research",
+    "permission",
+    "approval",
+    "not a keeper",
+    "corresponding audio",
+    "public domain?",
+    "corresponds w/ audio",
+    "oral history",
+    "interview",
+    "corrrupt file",
+    "bad file"
+]
+
 def readCsv(filename):
     rows = []
     with open(filename, "r", encoding="utf8", newline='') as f:
@@ -43,7 +58,7 @@ def writeCsv(filename, arr, headings):
 rows = readCsv(a.INPUT_FILE)
 
 items = []
-collectionTitle = ""
+eventTitle = ""
 for row in rows:
     id, title = tuple(row[:2])
     id, title = (id.strip(), title.strip())
@@ -51,20 +66,41 @@ for row in rows:
     isItem = len(id) > 0 and id.startswith("20")
 
     if not isItem and len(title) > 0:
-        collectionTitle = title
+        eventTitle = title
 
     if not isItem:
         continue
 
     titleLower = title.lower()
-    if "public domain" in titleLower and "research" not in titleLower and "permission" not in titleLower:
-        items.append({
-            "id": id,
-            "title": title,
-            "performance": collectionTitle,
-            "contributors": "",
-            "date": "",
-            "subjects": ""
-        })
+    eventLower = eventTitle.lower()
+    valid = True
+    for string in includeStrings:
+        if string not in titleLower:
+            valid = False
+            break
+    if not valid:
+        continue
 
-writeCsv(a.OUTPUT_FILE, items, ["id", "title", "performance", "contributors", "date", "subjects"])
+    for string in excludeStrings:
+        for sstring in [eventLower, titleLower]:
+            if string in sstring:
+                valid = False
+                break
+        if not valid:
+            break
+    if not valid:
+        continue
+
+    items.append({
+        "id": id,
+        "originalRecordingTitle": title,
+        "originalEventTitle": eventTitle,
+        "contributors": "",
+        "date": "",
+        "subjects": ""
+    })
+
+writeCsv(a.OUTPUT_FILE, items, ["id", "originalRecordingTitle", "originalEventTitle", "contributors", "date", "subjects"])
+
+
+# python3 update_meta.py -in "C:/Users/brian/apps/sandbox/musicbox/data_cleaned.csv" -key "id" -rkey "date" -find "([12][0-9]{3})([0-9]{2})([0-9]{2}).*" -repl "\1-\2-\3" -probe
