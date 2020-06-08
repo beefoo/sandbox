@@ -17,6 +17,7 @@ var MaterialVertexShader = `
   attribute vec3 translate;
   attribute vec3 translateDest;
   attribute vec3 scale;
+  attribute vec3 scaleMap;
   attribute vec3 color;
   attribute vec3 colorDest;
   attribute vec3 uidColor;
@@ -35,7 +36,7 @@ var MaterialVertexShader = `
     vTween = tween;
 
     mvPosition.xyz += position * scale;
-    vUv = uvOffset.xy + uv * scale.xy;
+    vUv = uvOffset.xy + uv * scale.xy / scaleMap.xy;
 
     vColor = mix( color, colorDest, pct );//colorDest * pct + color * (1.0 - pct);
 
@@ -132,6 +133,7 @@ var texture = textureLoader.load('img/sprite.png', function() {
 			{name: 'translate', size: 3},
 			{name: 'translateDest', size: 3},
 			{name: 'scale', size: 3},
+      {name: 'scaleMap', size: 3},
 			{name: 'color', size: 3},
 			{name: 'colorDest', size: 3},
 			{name: 'uidColor', size: 3, isStatic: true}
@@ -168,18 +170,25 @@ var texture = textureLoader.load('img/sprite.png', function() {
 
 	// set translates and colors
 	var scaleArr = geom.getAttribute('scale').array;
+  var scaleMapArr = geom.getAttribute('scaleMap').array;
 	var translateArr = geom.getAttribute('translate').array;
 	var translateDestArr = geom.getAttribute('translateDest').array;
 	var colorArr = geom.getAttribute('color').array;
 	var colorDestArr = geom.getAttribute('colorDest').array;
 	var uidColorArr = geom.getAttribute('uidColor').array;
 
+  var scaleAmount = 0.5;
+
 	for (var i=0; i<maxInstancedCount; i++) {
 		var i0 = i*3;
 
-		scaleArr[i0] = imageW / cols;
-		scaleArr[i0+1] = imageH / cols;
+		scaleArr[i0] = imageW / cols * scaleAmount;
+		scaleArr[i0+1] = imageH / cols * scaleAmount;
 		scaleArr[i0+2] = 1;
+
+    scaleMapArr[i0] = scaleAmount;
+		scaleMapArr[i0+1] = scaleAmount;
+		scaleMapArr[i0+2] = 1;
 
 		translateArr[i0] = positions[i].x;
 		translateArr[i0+1] = positions[i].y;
