@@ -119,11 +119,13 @@
   }
 
     function audioBufferToWavfile(buffer, filename){
-      var wav = audioBufferToWav(buffer)
+      logMessage('Making wav...')
+      var wav = audioBufferToWav(buffer);
+      logMessage('Made wav. Making blob...')
       var blob = new window.Blob([ new DataView(wav) ], {
         type: 'audio/wav'
       });
-      logMessage('Made blob')
+      logMessage('Made blob. Downloading blob...');
       downloadBlob(blob, filename)
     }
 
@@ -171,12 +173,14 @@
         }
       });
       $.when(deferred).done(function(){
+        logMessage("Deferred resolved");
         var buf = player.buffer.get();
         saveToneBuf(buf);
       });
     }
 
     function saveToneBuf(buf){
+      logMessage("Duration: "+buf.duration);
       Tone.Offline(function(){
         var offlinePlayer = new Tone.Player({
           'url': buf
