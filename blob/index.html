@@ -15,6 +15,8 @@
 
   <p id="agent"></p>
 
+  <div id="log"></div>
+
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/tone-13.8.25.min.js"></script>
   <script>
@@ -121,6 +123,7 @@
       var blob = new window.Blob([ new DataView(wav) ], {
         type: 'audio/wav'
       });
+      logMessage('Made blob')
       downloadBlob(blob, filename)
     }
 
@@ -133,6 +136,8 @@
         return;
       }
       var url = window.URL.createObjectURL(blob);
+
+      logMessage('Made url '+url);
 
       if (testNum == 2) {
         window.open(url, '_blank');
@@ -150,6 +155,7 @@
       anchor.href = url;
       anchor.download = filename;
       anchor.click();
+      logMessage('Clicked');
       window.URL.revokeObjectURL(url);
     }
 
@@ -160,7 +166,7 @@
       var player = new Tone.Player({
         "url": 'audio/12th-Street-rag_00694040_001_00-00-30.mp3',
         "onload": function(){
-          console.log('Loaded');
+          logMessage('Loaded');
           deferred.resolve();
         }
       });
@@ -178,11 +184,15 @@
         offlinePlayer.start();
         //schedule their events
       }, buf.duration).then(function(buffer){
-        console.log("Done rendering clip.");
+        logMessage("Done rendering clip.");
         //do something with the output buffer
         var audioBuffer = buffer.get();
         audioBufferToWavfile(audioBuffer, 'test.wav');
       });
+    }
+
+    function logMessage(msg){
+      $('#log').append($('<p>'+msg+'</p>'))
     }
 
     $('#test1').on('click', function(){
