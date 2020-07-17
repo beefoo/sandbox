@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tone Offline test</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <button id="go">Go</button>
+
+  <script src="js/tone-13.8.25.min.js"></script>
+  <script src="js/audiobuffer-to-wav.js"></script>
+
+  <script>
+
+
+  function init(){
+
+    var filename = "audio/Conversation-with-12-year-old-white-female-Arkansas_afccal000229_002_00-08-56.mp3";
+    var dur = 3.0;
+
+    var player = new Tone.Player({
+      "url": filename,
+      "onload": function(){
+        console.log("loaded");
+        Tone.Offline(function(){
+        	//only nodes created in this callback will be recorded
+        	// var oscillator = new Tone.Oscillator().toMaster().start(0);
+          var newPlayer = new Tone.Player(player.buffer.get()).toMaster();
+          newPlayer.start(0, 2.0, dur);
+        	//schedule their events
+        }, dur).then(function(buffer){
+          console.log("Done rendering.");
+        	//do something with the output buffer
+          var audioBuffer = buffer.get();
+          AudioUtils.audioBufferToWavfile(audioBuffer, 'tone.wav')
+
+        });
+      }
+    });
+
+
+  };
+
+
+  document.getElementById('go').addEventListener("click", function(){
+    init();
+  });
+  </script>
+</body>
+
+</html>
