@@ -12,6 +12,8 @@
   <button>Null button</button>
   <button id="test1">Download 1</button>
   <button id="test2">Download 2</button>
+  <button id="test3">Download 3</button>
+  <button id="test4">Download 4</button>
 
   <p id="agent"></p>
 
@@ -161,6 +163,16 @@
       window.URL.revokeObjectURL(url);
     }
 
+    function runJsonTest(number) {
+      testNum = number;
+
+      var data = {"test": "content"};
+      var json = JSON.stringify(data);
+      var blob = new Blob([json], {type: "octet/stream"});
+
+      downloadBlob(blob, 'jsontest.json');
+    }
+
     function runTest(number) {
        Tone.context.resume();
       testNum = number;
@@ -212,6 +224,14 @@
 
     $('#test2').on('click', function(){
       runTest(2);
+    });
+
+    $('#test3').on('click', function(){
+      runJsonTest(1);
+    });
+
+    $('#test4').on('click', function(){
+      runJsonTest(2);
     });
 
     var ua = window.navigator.userAgent;
