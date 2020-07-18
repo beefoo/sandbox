@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+  <button>Null button</button>
   <button id="test1">Download 1</button>
   <button id="test2">Download 2</button>
 
@@ -162,6 +162,7 @@
     }
 
     function runTest(number) {
+       Tone.context.resume();
       testNum = number;
 
       var deferred = $.Deferred();
@@ -195,6 +196,9 @@
         //do something with the output buffer
         var audioBuffer = buffer.get();
         audioBufferToWavfile(audioBuffer, 'test.wav');
+      }).catch(function(reason){
+        logMessage("Offline fail");
+        logMessage(""+reason);
       });
     }
 
