@@ -9,7 +9,6 @@
 </head>
 
 <body>
-  <button>Null button</button>
   <button id="test1">Download 1</button>
   <button id="test2">Download 2</button>
   <button id="test3">Download 3</button>
@@ -21,6 +20,7 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/tone-13.8.25.min.js"></script>
+  <script type="text/javascript" src="js/FileSaver.min.js"></script>
   <script>
 
   var testNum = 1;
@@ -133,6 +133,9 @@
 
     function downloadBlob(blob, filename) {
       filename = filename || 'citizen_dj_audio_clip_' + Util.uniqueString() + '.wav';
+
+      saveAs(blob, filename);
+      return;
 
       // for internet explorer
       if (window.navigator && window.navigator.msSaveOrOpenBlob) {
