@@ -182,10 +182,13 @@
     function saveToneBuf(buf){
       logMessage("Duration: "+buf.duration);
       Tone.Offline(function(){
+        logMessage("Load offline player");
         var offlinePlayer = new Tone.Player({
           'url': buf
         }).toMaster();
+        logMessage("Start offline player");
         offlinePlayer.start();
+        logMessage("Started offline player");
         //schedule their events
       }, buf.duration).then(function(buffer){
         logMessage("Done rendering clip.");
