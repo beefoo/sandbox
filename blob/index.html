@@ -9,10 +9,10 @@
 </head>
 
 <body>
-  <button id="test1">Download 1</button>
-  <button id="test2">Download 2</button>
-  <button id="test3">Download 3</button>
-  <button id="test4">Download 4</button>
+  <button id="test1">Download wav</button>
+  <button id="test2">Stream wav</button>
+  <button id="test3">Download json</button>
+  <button id="test4">Stream json</button>
 
   <p id="agent"></p>
 
@@ -20,10 +20,13 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/tone-13.8.25.min.js"></script>
-  <script type="text/javascript" src="js/FileSaver.min.js"></script>
+  <!-- <script type="text/javascript" src="js/FileSaver.min.js"></script> -->
+  <script type="text/javascript" src="js/ponyfill.min.js"></script>
+  <script type="text/javascript" src="js/StreamSaver.min.js"></script>
   <script>
 
-  var testNum = 1;
+  var dataType = 'wav';
+  var method = 'download';
 
   // https://github.com/Jam3/audiobuffer-to-wav
   function audioBufferToWav(buffer, opt) {
@@ -128,14 +131,52 @@
         type: 'audio/wav'
       });
       logMessage('Made blob. Downloading blob...');
-      downloadBlob(blob, filename)
+      // downloadBlob(blob, filename)
+      if (method=='stream') streamBlob(blob, filename);
+      else downloadBlob(blob, filename);
+    }
+
+    function streamBlob(blob, filename) {
+      logMessage('Streaming blob...');
+      const fileStream = streamSaver.createWriteStream(filename, {
+          size: blob.size // Makes the procentage visiable in the download
+      })
+
+      var readableStream = blob.stream()
+
+      // more optimized pipe version
+      // (Safari may have pipeTo but it's useless without the WritableStream)
+      if (window.WritableStream && readableStream.pipeTo) {
+        return readableStream.pipeTo(fileStream)
+          .then(function(){
+            logMessage('Done writing early');
+          });
+      }
+
+      // Write (pipe) manually
+      window.writer = fileStream.getWriter()
+
+      var reader = readableStream.getReader()
+      var pump = function(){
+        reader.read()
+          .then(function(res){
+            if (res.done) {
+              writer.close();
+              logMessage('Done writing');
+            } else {
+              writer.write(res.value).then(pump);
+              logMessage('Wrote partial...');
+            }
+          })
+      }
+
+      logMessage('Pumping...');
+      pump();
     }
 
     function downloadBlob(blob, filename) {
       filename = filename || 'citizen_dj_audio_clip_' + Util.uniqueString() + '.wav';
-
-      saveAs(blob, filename);
-      return;
+      logMessage('Downloading blob to '+filename);
 
       // for internet explorer
       if (window.navigator && window.navigator.msSaveOrOpenBlob) {
@@ -145,11 +186,6 @@
       var url = window.URL.createObjectURL(blob);
 
       logMessage('Made url '+url);
-
-      if (testNum == 2) {
-        window.open(url, '_blank');
-        return;
-      }
 
       var anchorId = 'invisibleBufferAchnor';
       var anchor = document.getElementById(anchorId);
@@ -166,19 +202,19 @@
       window.URL.revokeObjectURL(url);
     }
 
-    function runJsonTest(number) {
-      testNum = number;
+    function runJsonTest() {
 
       var data = {"test": "content"};
       var json = JSON.stringify(data);
       var blob = new Blob([json], {type: "octet/stream"});
 
-      downloadBlob(blob, 'jsontest.json');
+      if (method=='stream') streamBlob(blob, 'jsontest.json');
+      else downloadBlob(blob, 'jsontest.json');
+
     }
 
-    function runTest(number) {
+    function runTest() {
        Tone.context.resume();
-      testNum = number;
 
       var deferred = $.Deferred();
       var player = new Tone.Player({
@@ -222,19 +258,27 @@
     }
 
     $('#test1').on('click', function(){
-      runTest(1);
+      dataType = 'wav';
+      method = 'download';
+      runTest();
     });
 
     $('#test2').on('click', function(){
-      runTest(2);
+      dataType = 'wav';
+      method = 'stream';
+      runTest();
     });
 
     $('#test3').on('click', function(){
-      runJsonTest(1);
+      dataType = 'json';
+      method = 'download';
+      runJsonTest();
     });
 
     $('#test4').on('click', function(){
-      runJsonTest(2);
+      dataType = 'json';
+      method = 'stream';
+      runJsonTest();
     });
 
     var ua = window.navigator.userAgent;
