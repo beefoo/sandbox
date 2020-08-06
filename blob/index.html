@@ -127,10 +127,9 @@
       logMessage('Making wav...')
       var wav = audioBufferToWav(buffer);
       logMessage('Made wav. Making blob...')
-      // var blob = new window.Blob([ new DataView(wav) ], {
-      //   type: 'audio/wav'
-      // });
-      var blob = new window.Blob([ new DataView(wav) ]);
+      var blob = new window.Blob([ new DataView(wav) ], {
+        type: 'audio/wav'
+      });
       logMessage('Made blob. Downloading blob...');
       // downloadBlob(blob, filename)
       if (method=='stream') streamBlob(blob, filename);
@@ -207,8 +206,7 @@
 
       var data = {"test": "content"};
       var json = JSON.stringify(data);
-      // var blob = new Blob([json], {type: "octet/stream"});
-      var blob = new Blob([json]);
+      var blob = new Blob([json], {type: "octet/stream"});
 
       if (method=='stream') streamBlob(blob, 'jsontest.json');
       else downloadBlob(blob, 'jsontest.json');
