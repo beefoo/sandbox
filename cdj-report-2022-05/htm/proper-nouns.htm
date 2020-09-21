@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distant Reader</title>
+
+	<!-- Bootstrap CSS files-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<!-- jQuery Javascript Library -->
+	<script src="../js/jquery.min.js"></script>
+	
+	<!-- Bootstrap Library -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Local Javascript add on -->
+	<script src="../js/main.js" type="text/javascript"></script>
+
+	<!-- Font Awesome Web Icons -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<!-- custom local css file -->
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- data tables -->
+	<link   rel="stylesheet"       type="text/css"       href="../css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() { $('#tsv').DataTable( {
+        "order": [[ 1, "desc" ]],
+        "pageLength": 10
+    } ); } );
+	</script>
+	
+</head>
+<body>
+
+	<nav class="navbar yamm navbar-inverse navbar-fixed-top">
+		 <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+								 class="icon-bar"></span><span class="icon-bar"></span></button>
+					 <h1><a class="navbar-brand" href="https://distantreader.org/">Distant Reader</a></h1>
+				</div> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav navbar-right">
+
+							<li class="dropdown" id="grams-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngrams <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="unigrams.htm">Unigrams</a></li>
+										<li><a href="bigrams.htm">Bigrams</a></li>
+										<li><a href="trigrams.htm">Trigrams</a></li>
+										<li><a href="quadgrams.htm">Quadgrams</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="pos-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POS <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="nouns.htm">Nouns</a></li>
+										<li><a href="verbs.htm">Verbs</a></li>
+										<li><a href="adjectives.htm">Adjectives</a></li>
+										<li><a href="adverbs.htm">Adverbs</a></li>
+										<li><a href="pronouns.htm">Pronouns</a></li>
+										<li><a href="proper-nouns.htm">Proper nouns</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="grammar-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grammars <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="noun-verb.htm">Noun – Verb</a></li>
+										<li><a href="adjective-noun.htm">Adjective – Noun</a></li>
+										<li><a href="questions.htm">Questions</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="miscellaneous-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="bibliographics.htm">Bibliographics</a></li>
+										<li><a href="keywords.htm">Keywords</a></li>
+										<li><a href="entities.htm">Named entities</a></li>
+										<li><a href="search.htm">Search (experimental)</a></li>
+										<li><a href="topic-model.htm">Topic model (experimental)</a></li>
+								 </ul>
+							</li>
+					 </ul>
+				</div><!-- /.navbar-collapse -->
+		 </div>
+	</nav>
+
+	<div class="container subpage">
+
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb ">
+			<li class="breadcrumb-item">
+				<a href="../index.htm">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">proper</li>
+		</ol>
+	</nav>
+
+<h1>proper</h1>
+<p>This is a table of type proper and their frequencies. Use it to search &amp; browse the list to learn more about your study carrel.</p>
+
+<table id="tsv" class="display">
+        <thead>
+            <tr>
+                <th>proper</th>
+                <th>frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td>dj</td><td>29</td></tr>
+<tr><td>explore</td><td>20</td></tr>
+<tr><td>citizen</td><td>20</td></tr>
+<tr><td>ui</td><td>19</td></tr>
+<tr><td>redacted</td><td>17</td></tr>
+<tr><td>king</td><td>16</td></tr>
+<tr><td>loc</td><td>12</td></tr>
+<tr><td>wav</td><td>12</td></tr>
+<tr><td>library</td><td>11</td></tr>
+<tr><td>congress</td><td>10</td></tr>
+<tr><td>pii</td><td>9</td></tr>
+<tr><td>remix</td><td>9</td></tr>
+<tr><td>hip</td><td>9</td></tr>
+<tr><td>bb</td><td>9</td></tr>
+<tr><td>safari</td><td>8</td></tr>
+<tr><td>daw</td><td>7</td></tr>
+<tr><td>hop</td><td>7</td></tr>
+<tr><td>ux</td><td>7</td></tr>
+<tr><td>b.b.</td><td>6</td></tr>
+<tr><td>brian</td><td>6</td></tr>
+<tr><td>fun</td><td>6</td></tr>
+<tr><td>ableton</td><td>5</td></tr>
+<tr><td>iphone</td><td>5</td></tr>
+<tr><td>browser</td><td>4</td></tr>
+<tr><td>u</td><td>4</td></tr>
+<tr><td>s</td><td>4</td></tr>
+<tr><td>youtube</td><td>4</td></tr>
+<tr><td>awesome</td><td>4</td></tr>
+<tr><td>a</td><td>4</td></tr>
+<tr><td>ai</td><td>4</td></tr>
+<tr><td>mp3s</td><td>3</td></tr>
+<tr><td>super</td><td>3</td></tr>
+<tr><td>soundcloud</td><td>3</td></tr>
+<tr><td>record</td><td>3</td></tr>
+<tr><td>producer</td><td>3</td></tr>
+<tr><td>new</td><td>3</td></tr>
+<tr><td>mpc</td><td>3</td></tr>
+<tr><td>studio</td><td>3</td></tr>
+<tr><td>ipad</td><td>3</td></tr>
+<tr><td>foo</td><td>3</td></tr>
+<tr><td>fma</td><td>3</td></tr>
+<tr><td>download</td><td>3</td></tr>
+<tr><td>dope</td><td>3</td></tr>
+<tr><td>cool</td><td>3</td></tr>
+<tr><td>intro</td><td>3</td></tr>
+<tr><td>music</td><td>2</td></tr>
+<tr><td>fantastic</td><td>2</td></tr>
+<tr><td>fl</td><td>2</td></tr>
+<tr><td>garageband</td><td>2</td></tr>
+<tr><td>media</td><td>2</td></tr>
+<tr><td>metadata</td><td>2</td></tr>
+<tr><td>united</td><td>2</td></tr>
+<tr><td>n</td><td>2</td></tr>
+<tr><td>states</td><td>2</td></tr>
+<tr><td>times</td><td>2</td></tr>
+<tr><td>us</td><td>2</td></tr>
+<tr><td>wor</td><td>2</td></tr>
+<tr><td>digital</td><td>2</td></tr>
+<tr><td>ex</td><td>2</td></tr>
+<tr><td>google</td><td>2</td></tr>
+<tr><td>dialect</td><td>2</td></tr>
+<tr><td>audio</td><td>2</td></tr>
+<tr><td>adobe</td><td>2</td></tr>
+<tr><td>creative</td><td>2</td></tr>
+<tr><td>akai</td><td>2</td></tr>
+<tr><td>america</td><td>2</td></tr>
+<tr><td>american</td><td>2</td></tr>
+<tr><td>android</td><td>2</td></tr>
+<tr><td>amazing</td><td>2</td></tr>
+<tr><td>australia</td><td>2</td></tr>
+<tr><td>b</td><td>2</td></tr>
+<tr><td>bpm</td><td>2</td></tr>
+<tr><td>browse</td><td>2</td></tr>
+<tr><td>context</td><td>2</td></tr>
+<tr><td>open</td><td>1</td></tr>
+<tr><td>musician</td><td>1</td></tr>
+<tr><td>na</td><td>1</td></tr>
+<tr><td>national</td><td>1</td></tr>
+<tr><td>nope</td><td>1</td></tr>
+<tr><td>note</td><td>1</td></tr>
+<tr><td>ny</td><td>1</td></tr>
+<tr><td>nyc</td><td>1</td></tr>
+<tr><td>oblique</td><td>1</td></tr>
+<tr><td>online</td><td>1</td></tr>
+<tr><td>oosstatus</td><td>1</td></tr>
+<tr><td>player</td><td>1</td></tr>
+<tr><td>os</td><td>1</td></tr>
+<tr><td>p</td><td>1</td></tr>
+<tr><td>pan</td><td>1</td></tr>
+<tr><td>pianos</td><td>1</td></tr>
+<tr><td>play</td><td>1</td></tr>
+<tr><td>mozaiek</td><td>1</td></tr>
+<tr><td>popping</td><td>1</td></tr>
+<tr><td>premiere</td><td>1</td></tr>
+<tr><td>presented</td><td>1</td></tr>
+<tr><td>pride</td><td>1</td></tr>
+<tr><td>pro</td><td>1</td></tr>
+<tr><td>produce</td><td>1</td></tr>
+<tr><td>program</td><td>1</td></tr>
+<tr><td>multimode</td><td>1</td></tr>
+<tr><td>mechanic</td><td>1</td></tr>
+<tr><td>mosiac</td><td>1</td></tr>
+<tr><td>lomax</td><td>1</td></tr>
+<tr><td>put</td><td>1</td></tr>
+<tr><td>l</td><td>1</td></tr>
+<tr><td>lab</td><td>1</td></tr>
+<tr><td>law</td><td>1</td></tr>
+<tr><td>librarian</td><td>1</td></tr>
+<tr><td>linn</td><td>1</td></tr>
+<tr><td>linndrum</td><td>1</td></tr>
+<tr><td>live</td><td>1</td></tr>
+<tr><td>locs</td><td>1</td></tr>
+<tr><td>logic</td><td>1</td></tr>
+<tr><td>lol</td><td>1</td></tr>
+<tr><td>loops</td><td>1</td></tr>
+<tr><td>moooooooooooooore</td><td>1</td></tr>
+<tr><td>love</td><td>1</td></tr>
+<tr><td>mac</td><td>1</td></tr>
+<tr><td>macbook</td><td>1</td></tr>
+<tr><td>machines</td><td>1</td></tr>
+<tr><td>madness</td><td>1</td></tr>
+<tr><td>malcom</td><td>1</td></tr>
+<tr><td>mark</td><td>1</td></tr>
+<tr><td>martin</td><td>1</td></tr>
+<tr><td>meta</td><td>1</td></tr>
+<tr><td>midi</td><td>1</td></tr>
+<tr><td>mobile</td><td>1</td></tr>
+<tr><td>project</td><td>1</td></tr>
+<tr><td>twitter</td><td>1</td></tr>
+<tr><td>queue</td><td>1</td></tr>
+<tr><td>r</td><td>1</td></tr>
+<tr><td>tempo</td><td>1</td></tr>
+<tr><td>thanx</td><td>1</td></tr>
+<tr><td>time</td><td>1</td></tr>
+<tr><td>today?</p</td><td>1</td></tr>
+<tr><td>tracklib</td><td>1</td></tr>
+<tr><td>twitch</td><td>1</td></tr>
+<tr><td>john</td><td>1</td></tr>
+<tr><td>uis</td><td>1</td></tr>
+<tr><td>usa</td><td>1</td></tr>
+<tr><td>user</td><td>1</td></tr>
+<tr><td>w</td><td>1</td></tr>
+<tr><td>w/</td><td>1</td></tr>
+<tr><td>well</td><td>1</td></tr>
+<tr><td>wheaty</td><td>1</td></tr>
+<tr><td>whole</td><td>1</td></tr>
+<tr><td>will.i.am</td><td>1</td></tr>
+<tr><td>windows</td><td>1</td></tr>
+<tr><td>wonderful</td><td>1</td></tr>
+<tr><td>x</td><td>1</td></tr>
+<tr><td>xln</td><td>1</td></tr>
+<tr><td>xo</td><td>1</td></tr>
+<tr><td>yellofier</td><td>1</td></tr>
+<tr><td>york</td><td>1</td></tr>
+<tr><td>y´all</td><td>1</td></tr>
+<tr><td>zealand</td><td>1</td></tr>
+<tr><td>techno</td><td>1</td></tr>
+<tr><td>task</td><td>1</td></tr>
+<tr><td>tab</td><td>1</td></tr>
+<tr><td>sarcastic</td><td>1</td></tr>
+<tr><td>rage</td><td>1</td></tr>
+<tr><td>reason</td><td>1</td></tr>
+<tr><td>recordings</td><td>1</td></tr>
+<tr><td>reggaeton</td><td>1</td></tr>
+<tr><td>remixer</td><td>1</td></tr>
+<tr><td>residence</td><td>1</td></tr>
+<tr><td>resource</td><td>1</td></tr>
+<tr><td>roman</td><td>1</td></tr>
+<tr><td>roosevelt</td><td>1</td></tr>
+<tr><td>salsa</td><td>1</td></tr>
+<tr><td>sample</td><td>1</td></tr>
+<tr><td>se</td><td>1</td></tr>
+<tr><td>t</td><td>1</td></tr>
+<tr><td>searching</td><td>1</td></tr>
+<tr><td>sequencer</td><td>1</td></tr>
+<tr><td>show</td><td>1</td></tr>
+<tr><td>slight</td><td>1</td></tr>
+<tr><td>smith</td><td>1</td></tr>
+<tr><td>some</td><td>1</td></tr>
+<tr><td>source</td><td>1</td></tr>
+<tr><td>splice</td><td>1</td></tr>
+<tr><td>step</td><td>1</td></tr>
+<tr><td>steve</td><td>1</td></tr>
+<tr><td>strategies</td><td>1</td></tr>
+<tr><td>k-12</td><td>1</td></tr>
+<tr><td>flac</td><td>1</td></tr>
+<tr><td>joe</td><td>1</td></tr>
+<tr><td>chen</td><td>1</td></tr>
+<tr><td>beats</td><td>1</td></tr>
+<tr><td>belle</td><td>1</td></tr>
+<tr><td>bit</td><td>1</td></tr>
+<tr><td>bookmark</td><td>1</td></tr>
+<tr><td>boom</td><td>1</td></tr>
+<tr><td>bpms</td><td>1</td></tr>
+<tr><td>bro</td><td>1</td></tr>
+<tr><td>brooklyn</td><td>1</td></tr>
+<tr><td>business</td><td>1</td></tr>
+<tr><td>c''mon</td><td>1</td></tr>
+<tr><td>california</td><td>1</td></tr>
+<tr><td>children</td><td>1</td></tr>
+<tr><td>beat$</td><td>1</td></tr>
+<tr><td>cititzen</td><td>1</td></tr>
+<tr><td>classic</td><td>1</td></tr>
+<tr><td>click</td><td>1</td></tr>
+<tr><td>clip</td><td>1</td></tr>
+<tr><td>college</td><td>1</td></tr>
+<tr><td>commons</td><td>1</td></tr>
+<tr><td>conceived</td><td>1</td></tr>
+<tr><td>content</td><td>1</td></tr>
+<tr><td>control</td><td>1</td></tr>
+<tr><td>cool--</td><td>1</td></tr>
+<tr><td>copyright</td><td>1</td></tr>
+<tr><td>beatmaker</td><td>1</td></tr>
+<tr><td>beat</td><td>1</td></tr>
+<tr><td>crate</td><td>1</td></tr>
+<tr><td>apple</td><td>1</td></tr>
+<tr><td>/remix/</td><td>1</td></tr>
+<tr><td>192kbps</td><td>1</td></tr>
+<tr><td>320kbps</td><td>1</td></tr>
+<tr><td>=)</td><td>1</td></tr>
+<tr><td>about</td><td>1</td></tr>
+<tr><td>adelaide</td><td>1</td></tr>
+<tr><td>age</td><td>1</td></tr>
+<tr><td>aif</td><td>1</td></tr>
+<tr><td>alex</td><td>1</td></tr>
+<tr><td>almighty</td><td>1</td></tr>
+<tr><td>ap</td><td>1</td></tr>
+<tr><td>archive</td><td>1</td></tr>
+<tr><td>bap</td><td>1</td></tr>
+<tr><td>archive.org</td><td>1</td></tr>
+<tr><td>archives</td><td>1</td></tr>
+<tr><td>archivist</td><td>1</td></tr>
+<tr><td>ariel</td><td>1</td></tr>
+<tr><td>audacity</td><td>1</td></tr>
+<tr><td>audition</td><td>1</td></tr>
+<tr><td>aussie</td><td>1</td></tr>
+<tr><td>avalanches</td><td>1</td></tr>
+<tr><td>bachata</td><td>1</td></tr>
+<tr><td>baker</td><td>1</td></tr>
+<tr><td>bancroft</td><td>1</td></tr>
+<tr><td>covid</td><td>1</td></tr>
+<tr><td>cumbia</td><td>1</td></tr>
+<tr><td>jaijaii</td><td>1</td></tr>
+<tr><td>huge</td><td>1</td></tr>
+<tr><td>goodnight</td><td>1</td></tr>
+<tr><td>got</td><td>1</td></tr>
+<tr><td>gotye</td><td>1</td></tr>
+<tr><td>greenwich</td><td>1</td></tr>
+<tr><td>gunga</td><td>1</td></tr>
+<tr><td>hayward</td><td>1</td></tr>
+<tr><td>hold"y</td><td>1</td></tr>
+<tr><td>hs</td><td>1</td></tr>
+<tr><td>http://citizendj.labs.loc.gov.s3-website-us-east-1.amazonaws.com/loc-variety-stage/remix/?itemid=2018620419&itemstart=23220&drumname=akai%20mpc&patternname=80s%20new%20wave%20pattern%20a%20%5b3%5d</td><td>1</td></tr>
+<tr><td>https://freesound.org/browse/</td><td>1</td></tr>
+<tr><td>https://open.spotify.com/artist/6hclqqhqlj6kpzmrqnl05v?si=gwozz8_eqeg6wzu0f2zuag</td><td>1</td></tr>
+<tr><td>idea</td><td>1</td></tr>
+<tr><td>girl</td><td>1</td></tr>
+<tr><td>ig</td><td>1</td></tr>
+<tr><td>ii</td><td>1</td></tr>
+<tr><td>impeach</td><td>1</td></tr>
+<tr><td>incredible</td><td>1</td></tr>
+<tr><td>innovator</td><td>1</td></tr>
+<tr><td>inspirational</td><td>1</td></tr>
+<tr><td>interesting</td><td>1</td></tr>
+<tr><td>interface</td><td>1</td></tr>
+<tr><td>iphonex</td><td>1</td></tr>
+<tr><td>itunes</td><td>1</td></tr>
+<tr><td>j</td><td>1</td></tr>
+<tr><td>golden</td><td>1</td></tr>
+<tr><td>genre</td><td>1</td></tr>
+<tr><td>cursor</td><td>1</td></tr>
+<tr><td>eric</td><td>1</td></tr>
+<tr><td>deadmau5</td><td>1</td></tr>
+<tr><td>disco</td><td>1</td></tr>
+<tr><td>discord</td><td>1</td></tr>
+<tr><td>drum</td><td>1</td></tr>
+<tr><td>dubowsky</td><td>1</td></tr>
+<tr><td>duda</td><td>1</td></tr>
+<tr><td>edm</td><td>1</td></tr>
+<tr><td>eg</td><td>1</td></tr>
+<tr><td>eleanor</td><td>1</td></tr>
+<tr><td>ellie</td><td>1</td></tr>
+<tr><td>eno</td><td>1</td></tr>
+<tr><td>f</td><td>1</td></tr>
+<tr><td>gargeband</td><td>1</td></tr>
+<tr><td>fb</td><td>1</td></tr>
+<tr><td>feedback</td><td>1</td></tr>
+<tr><td>fidelity</td><td>1</td></tr>
+<tr><td>filter</td><td>1</td></tr>
+<tr><td>firefox</td><td>1</td></tr>
+<tr><td>fmu</td><td>1</td></tr>
+<tr><td>free</td><td>1</td></tr>
+<tr><td>freesound</td><td>1</td></tr>
+<tr><td>fruity</td><td>1</td></tr>
+<tr><td>fuqqn</td><td>1</td></tr>
+<tr><td>game)maker</td><td>1</td></tr>
+<tr><td>🤪</td><td>1</td></tr>
+
+        </tbody>
+    </table>
+	</div>
+	<footer class="footer">
+ 		<div class="container">
+ 			 <hr>
+ 			 <div class="row">
+
+ 					<div class="col-sm-4">
+ 						 <p class="text-muted text-center">&copy; 2019 Eric Lease Morgan</p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center"><a href="mailto:emorgan@nd.edu">Contact Webmaster</a></p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center">
+ 								<a href="https://distantreader.org/">About Distant Reader</a>
+ 						 </p>
+ 					</div>
+
+ 			 </div>
+
+
+ 		</div>
+  </footer>
+</body>
+</html>

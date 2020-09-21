@@ -1,0 +1,474 @@
+id	sid	eid	entity	type
+input-file	1	1	second	ORDINAL
+input-file	13	1	the United States	GPE
+input-file	14	1	first	ORDINAL
+input-file	19	1	C'mon	PERSON
+input-file	19	2	SARCASTIC	ORG
+input-file	23	1	one	CARDINAL
+input-file	30	1	Pianos	WORK_OF_ART
+input-file	31	1	Beatmaker	ORG
+input-file	31	2	Better	PRODUCT
+input-file	37	1	button	GPE
+input-file	39	1	Curious	PERSON
+input-file	40	1	NY Times	ORG
+input-file	41	1	Digital	ORG
+input-file	41	2	100%	PERCENT
+input-file	41	3	today	DATE
+input-file	44	1	Elementary	DATE
+input-file	46	1	Brian Foo	PERSON
+input-file	46	2	Congress	ORG
+input-file	52	1	Firstly	ORDINAL
+input-file	54	1	WAV	ORG
+input-file	54	2	at least 24	CARDINAL
+input-file	55	1	24bit 96k	DATE
+input-file	64	1	Play in Context	WORK_OF_ART
+input-file	67	1	Remix	PERSON
+input-file	68	1	Fl Studio	PERSON
+input-file	69	1	15 year old	DATE
+input-file	69	2	a Logic Pro	PERSON
+input-file	69	3	Fl Studio	PERSON
+input-file	71	1	20 years	DATE
+input-file	75	1	FUN Great	ORG
+input-file	83	1	EDM	ORG
+input-file	83	2	HS	ORG
+input-file	83	3	Brooklyn	GPE
+input-file	86	1	the years	DATE
+input-file	88	1	first	ORDINAL
+input-file	93	1	Remix	PERSON
+input-file	97	1	one	CARDINAL
+input-file	99	1	One	CARDINAL
+input-file	99	2	the Record/Slice	ORG
+input-file	99	3	Yellofier	ORG
+input-file	101	1	this day	DATE
+input-file	101	2	one	CARDINAL
+input-file	104	1	first	ORDINAL
+input-file	105	1	2 cents	MONEY
+input-file	107	1	one day	DATE
+input-file	107	2	one	CARDINAL
+input-file	109	1	more than one	CARDINAL
+input-file	109	2	one	CARDINAL
+input-file	110	1	3	CARDINAL
+input-file	110	2	first	ORDINAL
+input-file	117	1	One	CARDINAL
+input-file	124	1	two	CARDINAL
+input-file	124	2	Remix	PERSON
+input-file	143	1	one	CARDINAL
+input-file	159	1	today	DATE
+input-file	161	1	American Copyright Law	WORK_OF_ART
+input-file	161	2	College	FAC
+input-file	161	3	Music Business	LOC
+input-file	167	1	One	CARDINAL
+input-file	172	1	Tempo	ORG
+input-file	183	1	years	DATE
+input-file	190	1	Gotye	GPE
+input-file	191	1	yesterday	DATE
+input-file	194	1	Eleanor Roosevelt	PERSON
+input-file	199	1	WAV	ORG
+input-file	199	2	FLAC	ORG
+input-file	200	1	bass drum	PERSON
+input-file	200	2	Akai MPC	ORG
+input-file	200	3	LinnDrum	ORG
+input-file	201	1	Gunga	WORK_OF_ART
+input-file	205	1	Aif	PERSON
+input-file	211	1	Congress	ORG
+input-file	216	1	Digital Archivist	ORG
+input-file	216	2	National Archives Australia	ORG
+input-file	217	1	New York Times	ORG
+input-file	219	1	FB	ORG
+input-file	230	1	one	CARDINAL
+input-file	236	1	years	DATE
+input-file	238	1	two	CARDINAL
+input-file	246	1	this summer	DATE
+input-file	249	1	Adobe Audition	ORG
+input-file	249	2	iTunes	ORG
+input-file	249	3	Mac	PERSON
+input-file	256	1	more than one	CARDINAL
+input-file	261	1	polish	NORP
+input-file	261	2	90	QUANTITY
+input-file	267	1	all day	DATE
+input-file	270	1	Congress	ORG
+input-file	271	1	Congress	ORG
+input-file	275	1	Love	WORK_OF_ART
+input-file	285	1	Media professional Moooooooooooooore	FAC
+input-file	286	1	100%	PERCENT
+input-file	289	1	musician n/	ORG
+input-file	294	1	today	DATE
+input-file	298	1	One	CARDINAL
+input-file	301	1	FANTASTIC	ORG
+input-file	311	1	one	CARDINAL
+input-file	312	1	K-12	PRODUCT
+input-file	312	2	Teaching Arts	ORG
+input-file	312	3	Soundcloud	PERSON
+input-file	314	1	56 year old	DATE
+input-file	316	1	Congress	ORG
+input-file	318	1	3rd	ORDINAL
+input-file	320	1	Bancroft	PERSON
+input-file	320	2	California	GPE
+input-file	325	1	1	CARDINAL
+input-file	340	1	longer than half a second	CARDINAL
+input-file	341	1	DAW	ORG
+input-file	344	1	million little DAW	QUANTITY
+input-file	344	2	first	ORDINAL
+input-file	351	1	first	ORDINAL
+input-file	353	1	LINN	ORG
+input-file	353	2	808	CARDINAL
+input-file	354	1	1919	DATE
+input-file	359	1	second	ORDINAL
+input-file	370	1	early "sampling days	DATE
+input-file	379	1	one	CARDINAL
+input-file	384	1	B.B.	GPE
+input-file	393	1	the 1980s	DATE
+input-file	393	2	early 1990s	DATE
+input-file	400	1	first	ORDINAL
+input-file	403	1	one	CARDINAL
+input-file	420	1	jibberish	NORP
+input-file	421	1	Audacity	ORG
+input-file	421	2	GarageBand	ORG
+input-file	423	1	this 50	CARDINAL
+input-file	429	1	LoC	ORG
+input-file	433	1	Fing	PERSON
+input-file	442	1	first	ORDINAL
+input-file	466	1	first	ORDINAL
+input-file	467	1	the "Explore Tab"	WORK_OF_ART
+input-file	479	1	1kb	QUANTITY
+input-file	483	1	3	CARDINAL
+input-file	483	2	Remix	WORK_OF_ART
+input-file	486	1	one	CARDINAL
+input-file	495	1	the "Browse & Download"	ORG
+input-file	498	1	bpm	ORG
+input-file	503	1	John Lomax	PERSON
+input-file	509	1	AWESOME	ORG
+input-file	515	1	YouTube	ORG
+input-file	520	1	WHOLE	ORG
+input-file	520	2	4	CARDINAL
+input-file	520	3	one	CARDINAL
+input-file	522	1	hours	TIME
+input-file	524	1	Discord	ORG
+input-file	528	1	UI	ORG
+input-file	529	1	USA	GPE
+input-file	530	1	Vet yr employer &	ORG
+input-file	530	2	america	GPE
+input-file	532	1	boom bap	PERSON
+input-file	533	1	america	GPE
+input-file	539	1	2	CARDINAL
+input-file	541	1	Windows Media Player	PERSON
+input-file	542	1	three	CARDINAL
+input-file	546	1	DJ/Produce	ORG
+input-file	547	1	kinda slippery	PERSON
+input-file	551	1	first	ORDINAL
+input-file	553	1	DAW	ORG
+input-file	562	1	3	CARDINAL
+input-file	562	2	2	CARDINAL
+input-file	562	3	FMA	ORG
+input-file	564	1	Wav	PERSON
+input-file	565	1	FMA	ORG
+input-file	565	2	0.3 seconds	TIME
+input-file	579	1	second	ORDINAL
+input-file	581	1	First	ORDINAL
+input-file	581	2	first	ORDINAL
+input-file	581	3	second	ORDINAL
+input-file	589	1	4	CARDINAL
+input-file	602	1	less than a second	CARDINAL
+input-file	609	1	Ableton	GPE
+input-file	609	2	Fruity Loops	GPE
+input-file	612	1	second	ORDINAL
+input-file	612	2	two	CARDINAL
+input-file	613	1	Adobe Premiere	ORG
+input-file	645	1	EXCELLENT	ORG
+input-file	645	2	IG	ORG
+input-file	645	3	REDACTED	ORG
+input-file	648	1	UI	ORG
+input-file	649	1	AWESOME	ORG
+input-file	669	1	UI	ORG
+input-file	677	1	UI	ORG
+input-file	692	1	second	ORDINAL
+input-file	692	2	one	CARDINAL
+input-file	694	1	16th	ORDINAL
+input-file	698	1	One	CARDINAL
+input-file	698	2	44bytes	CARDINAL
+input-file	698	3	a few seconds	TIME
+input-file	700	1	WAV	ORG
+input-file	700	2	Ableton Live	PERSON
+input-file	703	1	UI	ORG
+input-file	706	1	UI	ORG
+input-file	707	1	one	CARDINAL
+input-file	709	1	second	ORDINAL
+input-file	714	1	a ton	QUANTITY
+input-file	714	2	UI	ORG
+input-file	717	1	UI	ORG
+input-file	721	1	one	CARDINAL
+input-file	724	1	Chromebook	ORG
+input-file	732	1	DAW	ORG
+input-file	744	1	44 byte WAV	MONEY
+input-file	746	1	WAV	ORG
+input-file	756	1	UI	ORG
+input-file	757	1	kinda	GPE
+input-file	761	1	XO	ORG
+input-file	761	2	XLN	ORG
+input-file	769	1	second	ORDINAL
+input-file	779	1	Congress	ORG
+input-file	782	1	INSANE	ORG
+input-file	783	1	Congress	ORG
+input-file	785	1	Brian Foo	PERSON
+input-file	797	1	10 month old	DATE
+input-file	798	1	multi-century old	DATE
+input-file	807	1	the coming years	DATE
+input-file	808	1	One	CARDINAL
+input-file	820	1	first	ORDINAL
+input-file	828	1	Safari	GPE
+input-file	828	2	iOS	GPE
+input-file	832	1	.gov	CARDINAL
+input-file	833	1	Ariel	PRODUCT
+input-file	841	1	half	CARDINAL
+input-file	848	1	1.I	CARDINAL
+input-file	848	2	wav	PERSON
+input-file	849	1	2	CARDINAL
+input-file	851	1	Steve Duda	PERSON
+input-file	851	2	Deadmau5	PERSON
+input-file	868	1	a dozen	CARDINAL
+input-file	881	1	more than one	CARDINAL
+input-file	882	1	10	CARDINAL
+input-file	883	1	Chromebooks	ORG
+input-file	891	1	2	CARDINAL
+input-file	897	1	nice!-old	ORG
+input-file	910	1	one	CARDINAL
+input-file	916	1	a ton	QUANTITY
+input-file	919	1	tags and years	DATE
+input-file	930	1	this today	TIME
+input-file	949	1	UI	ORG
+input-file	951	1	Hip-Hop	PERSON
+input-file	973	1	US	GPE
+input-file	975	1	today	DATE
+input-file	978	1	iphoneX	ORG
+input-file	989	1	Reason Studio	PERSON
+input-file	992	1	more than four	CARDINAL
+input-file	1007	1	latin	NORP
+input-file	1007	2	bolero, cumbia	ORG
+input-file	1007	3	reggaeton	GPE
+input-file	1013	1	UI	ORG
+input-file	1015	1	Library	PERSON
+input-file	1027	1	LOVE	ORG
+input-file	1034	1	UI	ORG
+input-file	1043	1	Crate	ORG
+input-file	1043	2	one	CARDINAL
+input-file	1052	1	PII-REDACTED	ORG
+input-file	1058	1	BB King	FAC
+input-file	1058	2	Dialect	PERSON
+input-file	1058	3	Joe Smith	PERSON
+input-file	1061	1	Garageband	ORG
+input-file	1061	2	about 6 months ago	DATE
+input-file	1070	1	80s and 90s	DATE
+input-file	1070	2	up to 4	CARDINAL
+input-file	1072	1	half-beats	DATE
+input-file	1073	1	8th	ORDINAL
+input-file	1080	1	7	CARDINAL
+input-file	1080	2	2	CARDINAL
+input-file	1080	3	4	CARDINAL
+input-file	1081	1	1	CARDINAL
+input-file	1086	1	one	CARDINAL
+input-file	1086	2	one	CARDINAL
+input-file	1096	1	2	CARDINAL
+input-file	1096	2	safari	GPE
+input-file	1100	1	hold"y	ORG
+input-file	1102	1	one	CARDINAL
+input-file	1103	1	BB King	ORG
+input-file	1134	1	Ty	PERSON
+input-file	1146	1	UI	ORG
+input-file	1148	1	UI	ORG
+input-file	1148	2	Freesound	PERSON
+input-file	1155	1	one	CARDINAL
+input-file	1156	1	one	CARDINAL
+input-file	1159	1	FMA	ORG
+input-file	1176	1	kinda	GPE
+input-file	1207	1	iPhone	ORG
+input-file	1211	1	Remix	PERSON
+input-file	1217	1	Brian	PERSON
+input-file	1218	1	more than one	CARDINAL
+input-file	1220	1	the year	DATE
+input-file	1223	1	Draconian	NORP
+input-file	1231	1	Safari	GPE
+input-file	1243	1	Congress	ORG
+input-file	1257	1	BB King	FAC
+input-file	1259	1	One	CARDINAL
+input-file	1271	1	1	CARDINAL
+input-file	1272	1	hour+	PRODUCT
+input-file	1273	1	Ellie Greenwich	PERSON
+input-file	1273	2	1986-04-02	DATE
+input-file	1273	3	1986	DATE
+input-file	1273	4	36:30	TIME
+input-file	1275	1	36:30	TIME
+input-file	1276	1	40 seconds	TIME
+input-file	1278	1	2	CARDINAL
+input-file	1278	2	HUGE	ORG
+input-file	1282	1	3	CARDINAL
+input-file	1282	2	WAY	ORG
+input-file	1288	1	keyboard navigation	ORG
+input-file	1290	1	bin	PERSON
+input-file	1300	1	Cititzen	ORG
+input-file	1301	1	25 years	DATE
+input-file	1307	1	first	ORDINAL
+input-file	1311	1	47 year old	DATE
+input-file	1311	2	Adelaide	GPE
+input-file	1311	3	Australia	GPE
+input-file	1314	1	Ableton	GPE
+input-file	1323	1	BPM	ORG
+input-file	1324	1	first	ORDINAL
+input-file	1326	1	Ableton Live	PERSON
+input-file	1326	2	DAW	ORG
+input-file	1341	1	WOR	ORG
+input-file	1341	2	Belle Baker's	PERSON
+input-file	1341	3	All Of Me	PERSON
+input-file	1341	4	WOR	ORG
+input-file	1346	1	A half-second	CARDINAL
+input-file	1350	1	REDACTED	ORG
+input-file	1362	1	united states	GPE
+input-file	1364	1	congress	ORG
+input-file	1364	2	the other day	DATE
+input-file	1366	1	hours	TIME
+input-file	1368	1	Eric J Dubowsky	PERSON
+input-file	1368	2	one	CARDINAL
+input-file	1379	1	UI	ORG
+input-file	1381	1	only one	CARDINAL
+input-file	1382	1	nav	ORG
+input-file	1383	1	UI	ORG
+input-file	1383	2	first	ORDINAL
+input-file	1390	1	Today	DATE
+input-file	1392	1	Congress	ORG
+input-file	1422	1	SEARCHABLE	ORG
+input-file	1423	1	the Free Music Archive	LAW
+input-file	1430	1	SoundCloud	ORG
+input-file	1430	2	SoundCloud	ORG
+input-file	1432	1	only 3	CARDINAL
+input-file	1435	1	first	ORDINAL
+input-file	1435	2	MPC	ORG
+input-file	1436	1	year	DATE
+input-file	1437	1	today	DATE
+input-file	1444	1	triangle	ORG
+input-file	1456	1	Remix	PERSON
+input-file	1472	1	2	CARDINAL
+input-file	1472	2	Android	GPE
+input-file	1473	1	Brian Eno	PERSON
+input-file	1473	2	Oblique Strategies	WORK_OF_ART
+input-file	1474	1	Safari	GPE
+input-file	1475	1	1/16h	PERSON
+input-file	1475	2	one	CARDINAL
+input-file	1487	1	Today	DATE
+input-file	1493	1	Explore	ORG
+input-file	1495	1	up to 57%	PERCENT
+input-file	1497	1	https://open.spotify.com/artist/6HclqqHQlJ6kPzMRQnl05V?si=GwOzZ8_EQEG6wZu0f2zUag Thanx	PERSON
+input-file	1518	1	YouTube	ORG
+input-file	1524	1	one	CARDINAL
+input-file	1527	1	more than one	CARDINAL
+input-file	1532	1	the summer	DATE
+input-file	1535	1	DAW	ORG
+input-file	1538	1	five seconds	TIME
+input-file	1545	1	one	CARDINAL
+input-file	1545	2	one	CARDINAL
+input-file	1549	1	years	DATE
+input-file	1549	2	the late 80s early 90s	DATE
+input-file	1549	3	BB King interview	ORG
+input-file	1549	4	first	ORDINAL
+input-file	1550	1	first	ORDINAL
+input-file	1556	1	One	CARDINAL
+input-file	1568	1	Splice	ORG
+input-file	1570	1	AI	ORG
+input-file	1571	1	One	CARDINAL
+input-file	1574	1	AI	ORG
+input-file	1576	1	Alex Chen	PERSON
+input-file	1576	2	the Creative Lab	ORG
+input-file	1576	3	Google	ORG
+input-file	1578	1	2000	DATE
+input-file	1578	2	Mobile	GPE
+input-file	1581	1	one	CARDINAL
+input-file	1584	1	second	ORDINAL
+input-file	1586	1	808	CARDINAL
+input-file	1597	1	Mix	GPE
+input-file	1598	1	Loved	ORG
+input-file	1606	1	UI	ORG
+input-file	1613	1	house	ORG
+input-file	1613	2	disco	ORG
+input-file	1619	1	DAW	ORG
+input-file	1619	2	ableton	GPE
+input-file	1619	3	gargeband	GPE
+input-file	1623	1	polish	NORP
+input-file	1624	1	Itbwas	ORG
+input-file	1628	1	AMAZING	ORG
+input-file	1637	1	at least one	CARDINAL
+input-file	1637	2	one tenth	PERCENT
+input-file	1643	1	one	CARDINAL
+input-file	1643	2	only one	CARDINAL
+input-file	1650	1	1	CARDINAL
+input-file	1657	1	Inspirational	ORG
+input-file	1663	1	timey	ORG
+input-file	1665	1	II	ORG
+input-file	1667	1	one	CARDINAL
+input-file	1674	1	Safari	GPE
+input-file	1674	2	iPhone	ORG
+input-file	1674	3	iOS 13.3.1	PRODUCT
+input-file	1679	1	UX	ORG
+input-file	1679	2	UI	ORG
+input-file	1680	1	UI	ORG
+input-file	1682	1	the Open Source and Creative Commons	ORG
+input-file	1689	1	13 inch	QUANTITY
+input-file	1690	1	one	CARDINAL
+input-file	1690	2	4	CARDINAL
+input-file	1701	1	1	CARDINAL
+input-file	1701	2	one	CARDINAL
+input-file	1703	1	Remix	ORG
+input-file	1703	2	one	CARDINAL
+input-file	1703	3	three	CARDINAL
+input-file	1706	1	dozens	CARDINAL
+input-file	1708	1	American Dialect	ORG
+input-file	1711	1	Slight	ORG
+input-file	1712	1	1	CARDINAL
+input-file	1713	1	lol	ORG
+input-file	1718	1	2	CARDINAL
+input-file	1726	1	a million	CARDINAL
+input-file	1744	1	first	ORDINAL
+input-file	1744	2	3	CARDINAL
+input-file	1751	1	three	CARDINAL
+input-file	1752	1	first	ORDINAL
+input-file	1758	1	UX	ORG
+input-file	1765	1	BB King	FAC
+input-file	1775	1	first	ORDINAL
+input-file	1781	1	first	ORDINAL
+input-file	1781	2	two	CARDINAL
+input-file	1781	3	2	MONEY
+input-file	1782	1	third	ORDINAL
+input-file	1782	2	BB King	FAC
+input-file	1785	1	an entire 3	CARDINAL
+input-file	1794	1	COVID	ORG
+input-file	1796	1	first	ORDINAL
+input-file	1798	1	first	ORDINAL
+input-file	1799	1	Iphone	ORG
+input-file	1800	1	three	CARDINAL
+input-file	1800	2	one	CARDINAL
+input-file	1805	1	BB King	FAC
+input-file	1806	1	two	CARDINAL
+input-file	1808	1	four	CARDINAL
+input-file	1808	2	16	CARDINAL
+input-file	1809	1	Awesome	ORG
+input-file	1813	1	100 percent	PERCENT
+input-file	1817	1	1	CARDINAL
+input-file	1821	1	Rage Beat$	PERSON
+input-file	1821	2	french	NORP
+input-file	1822	1	this morning	TIME
+input-file	1822	2	thousands	CARDINAL
+input-file	1829	1	one	CARDINAL
+input-file	1829	2	one	CARDINAL
+input-file	1844	1	one	CARDINAL
+input-file	1850	1	iPhone	ORG
+input-file	1852	1	Safari	GPE
+input-file	1856	1	Fantastic Resource	PERSON
+input-file	1858	1	Remix	PERSON
+input-file	1862	1	One	CARDINAL
+input-file	1867	1	Explore	WORK_OF_ART
+input-file	1879	1	today	DATE
+input-file	1880	1	Remix This	WORK_OF_ART
+input-file	1882	1	last night	TIME
+input-file	1884	1	New Zealand Amazing	ORG
+input-file	1890	1	seconds	TIME
+input-file	1890	2	Brian	PERSON
+input-file	1891	1	American	NORP
+input-file	1895	1	Brian Foo	PERSON
+input-file	1904	1	🤪	PERSON

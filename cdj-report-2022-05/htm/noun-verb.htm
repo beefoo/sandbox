@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distant Reader</title>
+
+	<!-- Bootstrap CSS files-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<!-- jQuery Javascript Library -->
+	<script src="../js/jquery.min.js"></script>
+	
+	<!-- Bootstrap Library -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Local Javascript add on -->
+	<script src="../js/main.js" type="text/javascript"></script>
+
+	<!-- Font Awesome Web Icons -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<!-- custom local css file -->
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- data tables -->
+	<link   rel="stylesheet"       type="text/css"       href="../css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() { $('#tsv').DataTable( {
+        "order": [[ 2, "desc" ]],
+        "pageLength": 10
+    } ); } );
+	</script>
+</head>
+<body>
+
+	<nav class="navbar yamm navbar-inverse navbar-fixed-top">
+		 <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+								 class="icon-bar"></span><span class="icon-bar"></span></button>
+					 <h1><a class="navbar-brand" href="https://distantreader.org/">Distant Reader</a></h1>
+				</div> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav navbar-right">
+
+							<li class="dropdown" id="grams-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngrams <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="unigrams.htm">Unigrams</a></li>
+										<li><a href="bigrams.htm">Bigrams</a></li>
+										<li><a href="trigrams.htm">Trigrams</a></li>
+										<li><a href="quadgrams.htm">Quadgrams</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="pos-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POS <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="nouns.htm">Nouns</a></li>
+										<li><a href="verbs.htm">Verbs</a></li>
+										<li><a href="adjectives.htm">Adjectives</a></li>
+										<li><a href="adverbs.htm">Adverbs</a></li>
+										<li><a href="pronouns.htm">Pronouns</a></li>
+										<li><a href="proper-nouns.htm">Proper nouns</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="grammar-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grammars <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="noun-verb.htm">Noun – Verb</a></li>
+										<li><a href="adjective-noun.htm">Adjective – Noun</a></li>
+										<li><a href="questions.htm">Questions</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="miscellaneous-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="bibliographics.htm">Bibliographics</a></li>
+										<li><a href="keywords.htm">Keywords</a></li>
+										<li><a href="entities.htm">Named entities</a></li>
+										<li><a href="search.htm">Search (experimental)</a></li>
+										<li><a href="topic-model.htm">Topic model (experimental)</a></li>
+								 </ul>
+							</li>
+					 </ul>
+				</div><!-- /.navbar-collapse -->
+		 </div>
+	</nav>
+
+	<div class="container subpage">
+
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb ">
+			<li class="breadcrumb-item">
+				<a href="../index.htm">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">noun/verb</li>
+		</ol>
+	</nav>
+
+
+<h1>noun/verb</h1>
+<p>This is a table of noun/verb combinations and their frequencies from sentences in your study carrel. Use it to search &amp; browse the list to learn more about your study carrel.</p>
+
+<table id="tsv" class="display">
+        <thead>
+            <tr>
+                <th>noun</th>
+                <th>verb</th>
+                <th>frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td>i</td><td>''m</td><td>79</td></tr>
+<tr><td>it</td><td>''s</td><td>72</td></tr>
+<tr><td>i</td><td>think</td><td>65</td></tr>
+<tr><td>i</td><td>was</td><td>55</td></tr>
+<tr><td>it</td><td>was</td><td>51</td></tr>
+<tr><td>it</td><td>is</td><td>48</td></tr>
+<tr><td>i</td><td>am</td><td>45</td></tr>
+<tr><td>i</td><td>love</td><td>35</td></tr>
+<tr><td>i</td><td>did</td><td>32</td></tr>
+<tr><td>you</td><td>have</td><td>25</td></tr>
+<tr><td>i</td><td>do</td><td>21</td></tr>
+<tr><td>i</td><td>have</td><td>21</td></tr>
+<tr><td>i</td><td>found</td><td>20</td></tr>
+<tr><td>i</td><td>''ve</td><td>20</td></tr>
+<tr><td>i</td><td>like</td><td>19</td></tr>
+<tr><td>i</td><td>had</td><td>18</td></tr>
+<tr><td>site</td><td>is</td><td>16</td></tr>
+<tr><td>i</td><td>know</td><td>14</td></tr>
+<tr><td>i</td><td>feel</td><td>12</td></tr>
+<tr><td>you</td><td>are</td><td>12</td></tr>
+<tr><td>i</td><td>want</td><td>10</td></tr>
+<tr><td>i</td><td>look</td><td>9</td></tr>
+<tr><td>you</td><td>''re</td><td>9</td></tr>
+<tr><td>interface</td><td>is</td><td>8</td></tr>
+<tr><td>they</td><td>were</td><td>8</td></tr>
+<tr><td>it</td><td>feels</td><td>7</td></tr>
+<tr><td>website</td><td>is</td><td>7</td></tr>
+<tr><td>it</td><td>does</td><td>7</td></tr>
+<tr><td>i</td><td>need</td><td>7</td></tr>
+<tr><td>i</td><td>wanted</td><td>7</td></tr>
+<tr><td>i</td><td>downloaded</td><td>6</td></tr>
+<tr><td>i</td><td>thought</td><td>6</td></tr>
+<tr><td>it</td><td>seemed</td><td>6</td></tr>
+<tr><td>site</td><td>was</td><td>6</td></tr>
+<tr><td>tool</td><td>is</td><td>6</td></tr>
+<tr><td>you</td><td>click</td><td>6</td></tr>
+<tr><td>you</td><td>want</td><td>6</td></tr>
+<tr><td>i</td><td>’m</td><td>5</td></tr>
+<tr><td>samples</td><td>is</td><td>5</td></tr>
+<tr><td>you</td><td>need</td><td>5</td></tr>
+<tr><td>you</td><td>''ve</td><td>5</td></tr>
+<tr><td>they</td><td>''re</td><td>5</td></tr>
+<tr><td>i</td><td>m</td><td>5</td></tr>
+<tr><td>music</td><td>is</td><td>5</td></tr>
+<tr><td>i</td><td>make</td><td>5</td></tr>
+<tr><td>files</td><td>are</td><td>5</td></tr>
+<tr><td>clips</td><td>are</td><td>5</td></tr>
+<tr><td>sounds</td><td>is</td><td>4</td></tr>
+<tr><td>sound</td><td>like</td><td>4</td></tr>
+<tr><td>sounds</td><td>are</td><td>4</td></tr>
+<tr><td>sample</td><td>is</td><td>4</td></tr>
+<tr><td>you</td><td>do</td><td>4</td></tr>
+<tr><td>your</td><td>work</td><td>4</td></tr>
+<tr><td>samples</td><td>are</td><td>4</td></tr>
+<tr><td>it</td><td>did</td><td>4</td></tr>
+<tr><td>music</td><td>making</td><td>4</td></tr>
+<tr><td>i</td><td>get</td><td>4</td></tr>
+<tr><td>i</td><td>went</td><td>4</td></tr>
+<tr><td>i</td><td>made</td><td>4</td></tr>
+<tr><td>i</td><td>loved</td><td>4</td></tr>
+<tr><td>i</td><td>got</td><td>4</td></tr>
+<tr><td>it</td><td>got</td><td>4</td></tr>
+<tr><td>tool</td><td>was</td><td>3</td></tr>
+<tr><td>samples</td><td>were</td><td>3</td></tr>
+<tr><td>sounds</td><td>like</td><td>3</td></tr>
+<tr><td>they</td><td>do</td><td>3</td></tr>
+<tr><td>you</td><td>find</td><td>3</td></tr>
+<tr><td>tools</td><td>were</td><td>3</td></tr>
+<tr><td>you</td><td>created</td><td>3</td></tr>
+<tr><td>my</td><td>work</td><td>3</td></tr>
+<tr><td>you</td><td>were</td><td>3</td></tr>
+<tr><td>page</td><td>was</td><td>3</td></tr>
+<tr><td>we</td><td>are</td><td>3</td></tr>
+<tr><td>it</td><td>seems</td><td>3</td></tr>
+<tr><td>idea</td><td>is</td><td>3</td></tr>
+<tr><td>i</td><td>work</td><td>3</td></tr>
+<tr><td>i</td><td>liked</td><td>3</td></tr>
+<tr><td>i</td><td>figured</td><td>3</td></tr>
+<tr><td>i</td><td>created</td><td>3</td></tr>
+<tr><td>i</td><td>clicked</td><td>3</td></tr>
+<tr><td>collection</td><td>was</td><td>3</td></tr>
+<tr><td>beat</td><td>making</td><td>3</td></tr>
+<tr><td>it</td><td>makes</td><td>3</td></tr>
+<tr><td>resource</td><td>is</td><td>2</td></tr>
+<tr><td>sound</td><td>was</td><td>2</td></tr>
+<tr><td>sound</td><td>is</td><td>2</td></tr>
+<tr><td>samples</td><td>was</td><td>2</td></tr>
+<tr><td>myself</td><td>wanting</td><td>2</td></tr>
+<tr><td>project</td><td>is</td><td>2</td></tr>
+<tr><td>people</td><td>looking</td><td>2</td></tr>
+<tr><td>page</td><td>is</td><td>2</td></tr>
+<tr><td>sounds</td><td>were</td><td>2</td></tr>
+<tr><td>sounds</td><td>using</td><td>2</td></tr>
+<tr><td>you</td><td>get</td><td>2</td></tr>
+<tr><td>sounds</td><td>work</td><td>2</td></tr>
+<tr><td>they</td><td>''ve</td><td>2</td></tr>
+<tr><td>they</td><td>are</td><td>2</td></tr>
+<tr><td>tools</td><td>like</td><td>2</td></tr>
+<tr><td>you</td><td>go</td><td>2</td></tr>
+<tr><td>you</td><td>hear</td><td>2</td></tr>
+<tr><td>you</td><td>select</td><td>2</td></tr>
+<tr><td>you</td><td>’re</td><td>2</td></tr>
+<tr><td>me</td><td>is</td><td>2</td></tr>
+<tr><td>myself</td><td>using</td><td>2</td></tr>
+<tr><td>it</td><td>plays</td><td>2</td></tr>
+<tr><td>it</td><td>worked</td><td>2</td></tr>
+<tr><td>i</td><td>heard</td><td>2</td></tr>
+<tr><td>button</td><td>did</td><td>2</td></tr>
+<tr><td>it</td><td>work</td><td>2</td></tr>
+<tr><td>button</td><td>do</td><td>2</td></tr>
+<tr><td>files</td><td>had</td><td>2</td></tr>
+<tr><td>he</td><td>knew</td><td>2</td></tr>
+<tr><td>he</td><td>wanted</td><td>2</td></tr>
+<tr><td>i</td><td>browse</td><td>2</td></tr>
+<tr><td>i</td><td>download</td><td>2</td></tr>
+<tr><td>i</td><td>hear</td><td>2</td></tr>
+<tr><td>collections</td><td>is</td><td>2</td></tr>
+<tr><td>i</td><td>saw</td><td>2</td></tr>
+<tr><td>i</td><td>’ve</td><td>2</td></tr>
+<tr><td>it</td><td>goes</td><td>2</td></tr>
+<tr><td>it</td><td>had</td><td>2</td></tr>
+<tr><td>it</td><td>has</td><td>2</td></tr>
+<tr><td>it</td><td>looks</td><td>2</td></tr>
+<tr><td>it</td><td>needs</td><td>2</td></tr>
+<tr><td>it</td><td>were</td><td>2</td></tr>
+<tr><td>i</td><td>see</td><td>2</td></tr>
+<tr><td>sounds</td><td>was</td><td>1</td></tr>
+<tr><td>sound</td><td>play</td><td>1</td></tr>
+<tr><td>sounds</td><td>did</td><td>1</td></tr>
+<tr><td>sounds</td><td>felt</td><td>1</td></tr>
+<tr><td>sounds</td><td>make</td><td>1</td></tr>
+<tr><td>sounds</td><td>seem</td><td>1</td></tr>
+<tr><td>sounds</td><td>selected</td><td>1</td></tr>
+<tr><td>thanks</td><td>thank</td><td>1</td></tr>
+<tr><td>they</td><td>like</td><td>1</td></tr>
+<tr><td>source</td><td>did</td><td>1</td></tr>
+<tr><td>sources</td><td>is</td><td>1</td></tr>
+<tr><td>them</td><td>have</td><td>1</td></tr>
+<tr><td>them</td><td>make</td><td>1</td></tr>
+<tr><td>themselves</td><td>were</td><td>1</td></tr>
+<tr><td>they</td><td>hear</td><td>1</td></tr>
+<tr><td>site</td><td>seems</td><td>1</td></tr>
+<tr><td>sound</td><td>does</td><td>1</td></tr>
+<tr><td>samples</td><td>looks</td><td>1</td></tr>
+<tr><td>site</td><td>looks</td><td>1</td></tr>
+<tr><td>samples</td><td>create</td><td>1</td></tr>
+<tr><td>resource</td><td>thank</td><td>1</td></tr>
+<tr><td>resources</td><td>be</td><td>1</td></tr>
+<tr><td>resources</td><td>work</td><td>1</td></tr>
+<tr><td>sample</td><td>explore</td><td>1</td></tr>
+<tr><td>sample</td><td>has</td><td>1</td></tr>
+<tr><td>sample</td><td>played</td><td>1</td></tr>
+<tr><td>samples</td><td>being</td><td>1</td></tr>
+<tr><td>samples</td><td>did</td><td>1</td></tr>
+<tr><td>site</td><td>has</td><td>1</td></tr>
+<tr><td>they</td><td>make</td><td>1</td></tr>
+<tr><td>samples</td><td>selected</td><td>1</td></tr>
+<tr><td>search</td><td>is</td><td>1</td></tr>
+<tr><td>she</td><td>does</td><td>1</td></tr>
+<tr><td>site</td><td>are</td><td>1</td></tr>
+<tr><td>site</td><td>did</td><td>1</td></tr>
+<tr><td>site</td><td>does</td><td>1</td></tr>
+<tr><td>they</td><td>loved</td><td>1</td></tr>
+<tr><td>tool</td><td>makes</td><td>1</td></tr>
+<tr><td>they</td><td>need</td><td>1</td></tr>
+<tr><td>you</td><td>explore</td><td>1</td></tr>
+<tr><td>we</td><td>need</td><td>1</td></tr>
+<tr><td>we</td><td>use</td><td>1</td></tr>
+<tr><td>we</td><td>want</td><td>1</td></tr>
+<tr><td>we</td><td>’re</td><td>1</td></tr>
+<tr><td>work</td><td>downloading</td><td>1</td></tr>
+<tr><td>you</td><td>''d</td><td>1</td></tr>
+<tr><td>you</td><td>be</td><td>1</td></tr>
+<tr><td>you</td><td>found</td><td>1</td></tr>
+<tr><td>they</td><td>seemed</td><td>1</td></tr>
+<tr><td>you</td><td>like</td><td>1</td></tr>
+<tr><td>you</td><td>liked</td><td>1</td></tr>
+<tr><td>you</td><td>made</td><td>1</td></tr>
+<tr><td>you</td><td>navigate</td><td>1</td></tr>
+<tr><td>you</td><td>played</td><td>1</td></tr>
+<tr><td>you</td><td>thank</td><td>1</td></tr>
+<tr><td>resource</td><td>like</td><td>1</td></tr>
+<tr><td>we</td><td>have</td><td>1</td></tr>
+<tr><td>we</td><td>''re</td><td>1</td></tr>
+<tr><td>users</td><td>thinking</td><td>1</td></tr>
+<tr><td>users</td><td>are</td><td>1</td></tr>
+<tr><td>they</td><td>use</td><td>1</td></tr>
+<tr><td>they</td><td>want</td><td>1</td></tr>
+<tr><td>thing</td><td>thank</td><td>1</td></tr>
+<tr><td>thing</td><td>was</td><td>1</td></tr>
+<tr><td>time</td><td>exploring</td><td>1</td></tr>
+<tr><td>time</td><td>looking</td><td>1</td></tr>
+<tr><td>time</td><td>using</td><td>1</td></tr>
+<tr><td>tool</td><td>did</td><td>1</td></tr>
+<tr><td>tool</td><td>worked</td><td>1</td></tr>
+<tr><td>tools</td><td>was</td><td>1</td></tr>
+<tr><td>us</td><td>select</td><td>1</td></tr>
+<tr><td>user</td><td>clicks</td><td>1</td></tr>
+<tr><td>user</td><td>download</td><td>1</td></tr>
+<tr><td>user</td><td>having</td><td>1</td></tr>
+<tr><td>user</td><td>make</td><td>1</td></tr>
+<tr><td>resource</td><td>needs</td><td>1</td></tr>
+<tr><td>clips</td><td>play</td><td>1</td></tr>
+<tr><td>remix</td><td>was</td><td>1</td></tr>
+<tr><td>i</td><td>click</td><td>1</td></tr>
+<tr><td>files</td><td>created</td><td>1</td></tr>
+<tr><td>files</td><td>downloaded</td><td>1</td></tr>
+<tr><td>files</td><td>seem</td><td>1</td></tr>
+<tr><td>files</td><td>were</td><td>1</td></tr>
+<tr><td>he</td><td>''d</td><td>1</td></tr>
+<tr><td>he</td><td>''s</td><td>1</td></tr>
+<tr><td>i</td><td>''d</td><td>1</td></tr>
+<tr><td>i</td><td>felt</td><td>1</td></tr>
+<tr><td>interface</td><td>gets</td><td>1</td></tr>
+<tr><td>i</td><td>find</td><td>1</td></tr>
+<tr><td>i</td><td>go</td><td>1</td></tr>
+<tr><td>i</td><td>knew</td><td>1</td></tr>
+<tr><td>i</td><td>needed</td><td>1</td></tr>
+<tr><td>i</td><td>seemed</td><td>1</td></tr>
+<tr><td>i</td><td>selected</td><td>1</td></tr>
+<tr><td>i</td><td>use</td><td>1</td></tr>
+<tr><td>file</td><td>seems</td><td>1</td></tr>
+<tr><td>drums</td><td>work</td><td>1</td></tr>
+<tr><td>collections</td><td>was</td><td>1</td></tr>
+<tr><td>collections</td><td>looks</td><td>1</td></tr>
+<tr><td>beat</td><td>had</td><td>1</td></tr>
+<tr><td>beats</td><td>is</td><td>1</td></tr>
+<tr><td>beats</td><td>using</td><td>1</td></tr>
+<tr><td>bit</td><td>was</td><td>1</td></tr>
+<tr><td>button</td><td>are</td><td>1</td></tr>
+<tr><td>button</td><td>does</td><td>1</td></tr>
+<tr><td>button</td><td>made</td><td>1</td></tr>
+<tr><td>button</td><td>seems</td><td>1</td></tr>
+<tr><td>button</td><td>was</td><td>1</td></tr>
+<tr><td>buttons</td><td>make</td><td>1</td></tr>
+<tr><td>buttons</td><td>were</td><td>1</td></tr>
+<tr><td>clips</td><td>do</td><td>1</td></tr>
+<tr><td>clips</td><td>is</td><td>1</td></tr>
+<tr><td>clips</td><td>love</td><td>1</td></tr>
+<tr><td>clips</td><td>were</td><td>1</td></tr>
+<tr><td>idea</td><td>was</td><td>1</td></tr>
+<tr><td>interface</td><td>makes</td><td>1</td></tr>
+<tr><td>remix</td><td>play</td><td>1</td></tr>
+<tr><td>people</td><td>know</td><td>1</td></tr>
+<tr><td>page</td><td>are</td><td>1</td></tr>
+<tr><td>page</td><td>does</td><td>1</td></tr>
+<tr><td>page</td><td>makes</td><td>1</td></tr>
+<tr><td>page</td><td>seems</td><td>1</td></tr>
+<tr><td>pages</td><td>feel</td><td>1</td></tr>
+<tr><td>people</td><td>browse</td><td>1</td></tr>
+<tr><td>people</td><td>do</td><td>1</td></tr>
+<tr><td>people</td><td>like</td><td>1</td></tr>
+<tr><td>interface</td><td>was</td><td>1</td></tr>
+<tr><td>people</td><td>look</td><td>1</td></tr>
+<tr><td>project</td><td>has</td><td>1</td></tr>
+<tr><td>project</td><td>having</td><td>1</td></tr>
+<tr><td>project</td><td>loved</td><td>1</td></tr>
+<tr><td>project</td><td>thank</td><td>1</td></tr>
+<tr><td>project</td><td>was</td><td>1</td></tr>
+<tr><td>remix</td><td>is</td><td>1</td></tr>
+<tr><td>my</td><td>uses</td><td>1</td></tr>
+<tr><td>music</td><td>needs</td><td>1</td></tr>
+<tr><td>music</td><td>felt</td><td>1</td></tr>
+<tr><td>me</td><td>was</td><td>1</td></tr>
+<tr><td>it</td><td>be</td><td>1</td></tr>
+<tr><td>it</td><td>feel</td><td>1</td></tr>
+<tr><td>it</td><td>felt</td><td>1</td></tr>
+<tr><td>it</td><td>gets</td><td>1</td></tr>
+<tr><td>it</td><td>play</td><td>1</td></tr>
+<tr><td>it</td><td>played</td><td>1</td></tr>
+<tr><td>it</td><td>working</td><td>1</td></tr>
+<tr><td>its</td><td>like</td><td>1</td></tr>
+<tr><td>itself</td><td>is</td><td>1</td></tr>
+<tr><td>me</td><td>being</td><td>1</td></tr>
+<tr><td>me</td><td>do</td><td>1</td></tr>
+<tr><td>me</td><td>feel</td><td>1</td></tr>
+<tr><td>me</td><td>having</td><td>1</td></tr>
+<tr><td>me</td><td>know</td><td>1</td></tr>
+<tr><td>me</td><td>thinking</td><td>1</td></tr>
+<tr><td>you</td><td>was</td><td>1</td></tr>
+
+        </tbody>
+    </table>
+	</div>
+	<footer class="footer">
+ 		<div class="container">
+ 			 <hr>
+ 			 <div class="row">
+
+ 					<div class="col-sm-4">
+ 						 <p class="text-muted text-center">&copy; 2019 Eric Lease Morgan</p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center"><a href="mailto:emorgan@nd.edu">Contact Webmaster</a></p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center">
+ 								<a href="https://distantreader.org/">About Distant Reader</a>
+ 						 </p>
+ 					</div>
+
+ 			 </div>
+
+
+ 		</div>
+  </footer>
+</body>
+</html>

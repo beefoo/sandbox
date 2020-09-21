@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distant Reader</title>
+
+	<!-- Bootstrap CSS files-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<!-- jQuery Javascript Library -->
+	<script src="../js/jquery.min.js"></script>
+	
+	<!-- Bootstrap Library -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Local Javascript add on -->
+	<script src="../js/main.js" type="text/javascript"></script>
+
+	<!-- Font Awesome Web Icons -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<!-- custom local css file -->
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- data tables -->
+	<link   rel="stylesheet"       type="text/css"       href="../css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() { $('#tsv').DataTable( {
+        "order": [[ 1, "desc" ]],
+        "pageLength": 10
+    } ); } );
+	</script>
+	
+</head>
+<body>
+
+	<nav class="navbar yamm navbar-inverse navbar-fixed-top">
+		 <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+								 class="icon-bar"></span><span class="icon-bar"></span></button>
+					 <h1><a class="navbar-brand" href="https://distantreader.org/">Distant Reader</a></h1>
+				</div> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav navbar-right">
+
+							<li class="dropdown" id="grams-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngrams <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="unigrams.htm">Unigrams</a></li>
+										<li><a href="bigrams.htm">Bigrams</a></li>
+										<li><a href="trigrams.htm">Trigrams</a></li>
+										<li><a href="quadgrams.htm">Quadgrams</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="pos-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POS <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="nouns.htm">Nouns</a></li>
+										<li><a href="verbs.htm">Verbs</a></li>
+										<li><a href="adjectives.htm">Adjectives</a></li>
+										<li><a href="adverbs.htm">Adverbs</a></li>
+										<li><a href="pronouns.htm">Pronouns</a></li>
+										<li><a href="proper-nouns.htm">Proper nouns</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="grammar-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grammars <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="noun-verb.htm">Noun – Verb</a></li>
+										<li><a href="adjective-noun.htm">Adjective – Noun</a></li>
+										<li><a href="questions.htm">Questions</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="miscellaneous-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="bibliographics.htm">Bibliographics</a></li>
+										<li><a href="keywords.htm">Keywords</a></li>
+										<li><a href="entities.htm">Named entities</a></li>
+										<li><a href="search.htm">Search (experimental)</a></li>
+										<li><a href="topic-model.htm">Topic model (experimental)</a></li>
+								 </ul>
+							</li>
+					 </ul>
+				</div><!-- /.navbar-collapse -->
+		 </div>
+	</nav>
+
+	<div class="container subpage">
+
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb ">
+			<li class="breadcrumb-item">
+				<a href="../index.htm">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">bigram</li>
+		</ol>
+	</nav>
+
+<h1>bigram</h1>
+<p>This is a table of type bigram and their frequencies. Use it to search &amp; browse the list to learn more about your study carrel.</p>
+
+<table id="tsv" class="display">
+        <thead>
+            <tr>
+                <th>bigram</th>
+                <th>frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td>citizen dj</td><td>26</td></tr>
+<tr><td>really cool</td><td>18</td></tr>
+<tr><td>looking forward</td><td>16</td></tr>
+<tr><td>great idea</td><td>16</td></tr>
+<tr><td>hip hop</td><td>14</td></tr>
+<tr><td>good work</td><td>14</td></tr>
+<tr><td>great work</td><td>13</td></tr>
+<tr><td>drum machine</td><td>11</td></tr>
+<tr><td>look forward</td><td>11</td></tr>
+<tr><td>great project</td><td>10</td></tr>
+<tr><td>explore page</td><td>9</td></tr>
+<tr><td>bb king</td><td>9</td></tr>
+<tr><td>multiple sources</td><td>9</td></tr>
+<tr><td>super cool</td><td>9</td></tr>
+<tr><td>well done</td><td>9</td></tr>
+<tr><td>great resource</td><td>9</td></tr>
+<tr><td>cool idea</td><td>9</td></tr>
+<tr><td>remix tool</td><td>9</td></tr>
+<tr><td>will definitely</td><td>9</td></tr>
+<tr><td>king interview</td><td>8</td></tr>
+<tr><td>really like</td><td>8</td></tr>
+<tr><td>drum machines</td><td>8</td></tr>
+<tr><td>user friendly</td><td>8</td></tr>
+<tr><td>pii redacted</td><td>8</td></tr>
+<tr><td>sample packs</td><td>8</td></tr>
+<tr><td>search function</td><td>8</td></tr>
+<tr><td>great tool</td><td>8</td></tr>
+<tr><td>make music</td><td>7</td></tr>
+<tr><td>long time</td><td>7</td></tr>
+<tr><td>easy way</td><td>7</td></tr>
+<tr><td>user interface</td><td>7</td></tr>
+<tr><td>multiple samples</td><td>7</td></tr>
+<tr><td>explore section</td><td>7</td></tr>
+<tr><td>cool project</td><td>7</td></tr>
+<tr><td>wav files</td><td>7</td></tr>
+<tr><td>beat maker</td><td>7</td></tr>
+<tr><td>different sounds</td><td>7</td></tr>
+<tr><td>step sequencer</td><td>7</td></tr>
+<tr><td>longer samples</td><td>6</td></tr>
+<tr><td>one sample</td><td>6</td></tr>
+<tr><td>one thing</td><td>6</td></tr>
+<tr><td>incredible resource</td><td>6</td></tr>
+<tr><td>really enjoyed</td><td>6</td></tr>
+<tr><td>amazing resource</td><td>6</td></tr>
+<tr><td>feel like</td><td>6</td></tr>
+<tr><td>looks like</td><td>6</td></tr>
+<tr><td>search bar</td><td>6</td></tr>
+<tr><td>amazing tool</td><td>6</td></tr>
+<tr><td>little bit</td><td>6</td></tr>
+<tr><td>go back</td><td>6</td></tr>
+<tr><td>hard work</td><td>6</td></tr>
+<tr><td>seems like</td><td>6</td></tr>
+<tr><td>remix page</td><td>6</td></tr>
+<tr><td>music production</td><td>5</td></tr>
+<tr><td>definitely use</td><td>5</td></tr>
+<tr><td>great way</td><td>5</td></tr>
+<tr><td>play button</td><td>5</td></tr>
+<tr><td>sliced samples</td><td>5</td></tr>
+<tr><td>beat making</td><td>5</td></tr>
+<tr><td>really fun</td><td>5</td></tr>
+<tr><td>will continue</td><td>5</td></tr>
+<tr><td>record button</td><td>5</td></tr>
+<tr><td>love love</td><td>5</td></tr>
+<tr><td>music making</td><td>5</td></tr>
+<tr><td>explore tab</td><td>5</td></tr>
+<tr><td>amazing project</td><td>5</td></tr>
+<tr><td>use samples</td><td>5</td></tr>
+<tr><td>beat pattern</td><td>5</td></tr>
+<tr><td>sample library</td><td>5</td></tr>
+<tr><td>music producer</td><td>5</td></tr>
+<tr><td>drum sounds</td><td>4</td></tr>
+<tr><td>good job</td><td>4</td></tr>
+<tr><td>good luck</td><td>4</td></tr>
+<tr><td>please keep</td><td>4</td></tr>
+<tr><td>just one</td><td>4</td></tr>
+<tr><td>audio file</td><td>4</td></tr>
+<tr><td>every time</td><td>4</td></tr>
+<tr><td>sound browser</td><td>4</td></tr>
+<tr><td>incredible idea</td><td>4</td></tr>
+<tr><td>multiple sounds</td><td>4</td></tr>
+<tr><td>useful tool</td><td>4</td></tr>
+<tr><td>short clips</td><td>4</td></tr>
+<tr><td>different samples</td><td>4</td></tr>
+<tr><td>finding samples</td><td>4</td></tr>
+<tr><td>sound like</td><td>4</td></tr>
+<tr><td>great site</td><td>4</td></tr>
+<tr><td>enjoyed using</td><td>4</td></tr>
+<tr><td>different sources</td><td>4</td></tr>
+<tr><td>even know</td><td>4</td></tr>
+<tr><td>new sounds</td><td>4</td></tr>
+<tr><td>source material</td><td>4</td></tr>
+<tr><td>without clicking</td><td>4</td></tr>
+<tr><td>browsing page</td><td>4</td></tr>
+<tr><td>combine different</td><td>4</td></tr>
+<tr><td>different tracks</td><td>4</td></tr>
+<tr><td>feels like</td><td>4</td></tr>
+<tr><td>play around</td><td>4</td></tr>
+<tr><td>ui ux</td><td>4</td></tr>
+<tr><td>sounds available</td><td>4</td></tr>
+<tr><td>browse view</td><td>4</td></tr>
+<tr><td>truly amazing</td><td>4</td></tr>
+<tr><td>beat patterns</td><td>3</td></tr>
+<tr><td>search tool</td><td>3</td></tr>
+<tr><td>free sounds</td><td>3</td></tr>
+<tr><td>year old</td><td>3</td></tr>
+<tr><td>full sample</td><td>3</td></tr>
+<tr><td>explore screen</td><td>3</td></tr>
+<tr><td>sound samples</td><td>3</td></tr>
+<tr><td>definitely using</td><td>3</td></tr>
+<tr><td>cursor around</td><td>3</td></tr>
+<tr><td>really love</td><td>3</td></tr>
+<tr><td>one sound</td><td>3</td></tr>
+<tr><td>easier way</td><td>3</td></tr>
+<tr><td>bit clunky</td><td>3</td></tr>
+<tr><td>sounds together</td><td>3</td></tr>
+<tr><td>search option</td><td>3</td></tr>
+<tr><td>old recordings</td><td>3</td></tr>
+<tr><td>cool tool</td><td>3</td></tr>
+<tr><td>treasure trove</td><td>3</td></tr>
+<tr><td>just starting</td><td>3</td></tr>
+<tr><td>pretty easy</td><td>3</td></tr>
+<tr><td>will use</td><td>3</td></tr>
+<tr><td>just need</td><td>3</td></tr>
+<tr><td>public domain</td><td>3</td></tr>
+<tr><td>many thanks</td><td>3</td></tr>
+<tr><td>bit confusing</td><td>3</td></tr>
+<tr><td>brian foo</td><td>3</td></tr>
+<tr><td>remix section</td><td>3</td></tr>
+<tr><td>amazing idea</td><td>3</td></tr>
+<tr><td>coolest things</td><td>3</td></tr>
+<tr><td>incredible tool</td><td>3</td></tr>
+<tr><td>context button</td><td>3</td></tr>
+<tr><td>everyone involved</td><td>3</td></tr>
+<tr><td>coming back</td><td>3</td></tr>
+<tr><td>royalty free</td><td>3</td></tr>
+<tr><td>cool concept</td><td>3</td></tr>
+<tr><td>wider audience</td><td>3</td></tr>
+<tr><td>just click</td><td>3</td></tr>
+<tr><td>wonderful idea</td><td>3</td></tr>
+<tr><td>mobile experience</td><td>3</td></tr>
+<tr><td>spoken word</td><td>3</td></tr>
+<tr><td>bit overwhelming</td><td>3</td></tr>
+<tr><td>little confusing</td><td>3</td></tr>
+<tr><td>search feature</td><td>3</td></tr>
+<tr><td>original recording</td><td>3</td></tr>
+<tr><td>well executed</td><td>3</td></tr>
+<tr><td>loc website</td><td>3</td></tr>
+<tr><td>really enjoy</td><td>3</td></tr>
+<tr><td>full recordings</td><td>3</td></tr>
+<tr><td>educational tool</td><td>3</td></tr>
+<tr><td>individual samples</td><td>3</td></tr>
+<tr><td>sounds like</td><td>3</td></tr>
+<tr><td>easily find</td><td>3</td></tr>
+<tr><td>certain sounds</td><td>3</td></tr>
+<tr><td>individual sounds</td><td>3</td></tr>
+<tr><td>wonderful resource</td><td>3</td></tr>
+<tr><td>different colors</td><td>3</td></tr>
+<tr><td>fantastic resource</td><td>3</td></tr>
+<tr><td>great fun</td><td>3</td></tr>
+<tr><td>creative tool</td><td>3</td></tr>
+<tr><td>wav file</td><td>3</td></tr>
+<tr><td>free music</td><td>3</td></tr>
+<tr><td>remix tab</td><td>3</td></tr>
+<tr><td>producers like</td><td>3</td></tr>
+<tr><td>great job</td><td>3</td></tr>
+<tr><td>great source</td><td>3</td></tr>
+<tr><td>full recording</td><td>3</td></tr>
+<tr><td>user experience</td><td>3</td></tr>
+<tr><td>maybe even</td><td>3</td></tr>
+<tr><td>cool site</td><td>3</td></tr>
+<tr><td>valuable resource</td><td>3</td></tr>
+<tr><td>something like</td><td>3</td></tr>
+<tr><td>combine multiple</td><td>3</td></tr>
+<tr><td>download samples</td><td>3</td></tr>
+<tr><td>makes sense</td><td>3</td></tr>
+<tr><td>mouse button</td><td>3</td></tr>
+<tr><td>high school</td><td>3</td></tr>
+<tr><td>mobile safari</td><td>3</td></tr>
+<tr><td>will try</td><td>3</td></tr>
+<tr><td>went back</td><td>3</td></tr>
+<tr><td>open source</td><td>3</td></tr>
+<tr><td>finished product</td><td>2</td></tr>
+<tr><td>one issue</td><td>2</td></tr>
+<tr><td>drag around</td><td>2</td></tr>
+<tr><td>one point</td><td>2</td></tr>
+<tr><td>hop producer</td><td>2</td></tr>
+<tr><td>like audacity</td><td>2</td></tr>
+<tr><td>entire source</td><td>2</td></tr>
+<tr><td>keep working</td><td>2</td></tr>
+<tr><td>list view</td><td>2</td></tr>
+<tr><td>sound design</td><td>2</td></tr>
+<tr><td>music clips</td><td>2</td></tr>
+<tr><td>arrow keys</td><td>2</td></tr>
+<tr><td>just like</td><td>2</td></tr>
+<tr><td>use sounds</td><td>2</td></tr>
+<tr><td>integrate multiple</td><td>2</td></tr>
+<tr><td>social media</td><td>2</td></tr>
+<tr><td>sound libraries</td><td>2</td></tr>
+<tr><td>excellent work</td><td>2</td></tr>
+<tr><td>give input</td><td>2</td></tr>
+<tr><td>copyright free</td><td>2</td></tr>
+<tr><td>free content</td><td>2</td></tr>
+<tr><td>much better</td><td>2</td></tr>
+<tr><td>just use</td><td>2</td></tr>
+<tr><td>looks cool</td><td>2</td></tr>
+<tr><td>use longer</td><td>2</td></tr>
+<tr><td>find samples</td><td>2</td></tr>
+<tr><td>sequencer page</td><td>2</td></tr>
+<tr><td>music archive</td><td>2</td></tr>
+<tr><td>golden age</td><td>2</td></tr>
+<tr><td>many sounds</td><td>2</td></tr>
+<tr><td>full site</td><td>2</td></tr>
+<tr><td>mobile device</td><td>2</td></tr>
+<tr><td>shared history</td><td>2</td></tr>
+<tr><td>move around</td><td>2</td></tr>
+<tr><td>school teacher</td><td>2</td></tr>
+<tr><td>people will</td><td>2</td></tr>
+<tr><td>specific samples</td><td>2</td></tr>
+<tr><td>making music</td><td>2</td></tr>
+<tr><td>mind blowing</td><td>2</td></tr>
+<tr><td>amazing site</td><td>2</td></tr>
+<tr><td>awesome project</td><td>2</td></tr>
+<tr><td>mouse around</td><td>2</td></tr>
+<tr><td>pretty amazing</td><td>2</td></tr>
+<tr><td>even better</td><td>2</td></tr>
+<tr><td>fantastic work</td><td>2</td></tr>
+<tr><td>will bring</td><td>2</td></tr>
+<tr><td>audio snippet</td><td>2</td></tr>
+<tr><td>sound search</td><td>2</td></tr>
+<tr><td>tiny snippets</td><td>2</td></tr>
+<tr><td>site tool</td><td>2</td></tr>
+<tr><td>definitely need</td><td>2</td></tr>
+<tr><td>amazing work</td><td>2</td></tr>
+<tr><td>sound selection</td><td>2</td></tr>
+<tr><td>sounds using</td><td>2</td></tr>
+<tr><td>amazing thank</td><td>2</td></tr>
+<tr><td>visual cues</td><td>2</td></tr>
+<tr><td>redacted thanks</td><td>2</td></tr>
+<tr><td>go live</td><td>2</td></tr>
+<tr><td>also like</td><td>2</td></tr>
+<tr><td>just curious</td><td>2</td></tr>
+<tr><td>incredibly excited</td><td>2</td></tr>
+<tr><td>different collections</td><td>2</td></tr>
+<tr><td>slightly longer</td><td>2</td></tr>
+<tr><td>side column</td><td>2</td></tr>
+<tr><td>output error</td><td>2</td></tr>
+<tr><td>stumbled across</td><td>2</td></tr>
+<tr><td>just play</td><td>2</td></tr>
+<tr><td>buttons next</td><td>2</td></tr>
+<tr><td>mobile friendly</td><td>2</td></tr>
+<tr><td>awesome tool</td><td>2</td></tr>
+<tr><td>create something</td><td>2</td></tr>
+<tr><td>record function</td><td>2</td></tr>
+<tr><td>using just</td><td>2</td></tr>
+<tr><td>search box</td><td>2</td></tr>
+<tr><td>tools like</td><td>2</td></tr>
+<tr><td>like music</td><td>2</td></tr>
+<tr><td>strange samples</td><td>2</td></tr>
+<tr><td>dj tool</td><td>2</td></tr>
+<tr><td>artists musicians</td><td>2</td></tr>
+<tr><td>work together</td><td>2</td></tr>
+<tr><td>absolutely love</td><td>2</td></tr>
+<tr><td>selected sample</td><td>2</td></tr>
+<tr><td>hear longer</td><td>2</td></tr>
+<tr><td>bit slow</td><td>2</td></tr>
+<tr><td>select different</td><td>2</td></tr>
+<tr><td>browse sounds</td><td>2</td></tr>
+<tr><td>software like</td><td>2</td></tr>
+<tr><td>really just</td><td>2</td></tr>
+<tr><td>interesting way</td><td>2</td></tr>
+<tr><td>akai mpc</td><td>2</td></tr>
+<tr><td>early stages</td><td>2</td></tr>
+<tr><td>colors meant</td><td>2</td></tr>
+<tr><td>never used</td><td>2</td></tr>
+<tr><td>sample clips</td><td>2</td></tr>
+<tr><td>pretty cool</td><td>2</td></tr>
+<tr><td>super easy</td><td>2</td></tr>
+<tr><td>music sampling</td><td>2</td></tr>
+<tr><td>multiple clips</td><td>2</td></tr>
+<tr><td>playing around</td><td>2</td></tr>
+<tr><td>nice job</td><td>2</td></tr>
+<tr><td>select sounds</td><td>2</td></tr>
+<tr><td>definitely return</td><td>2</td></tr>
+<tr><td>machine sequencer</td><td>2</td></tr>
+<tr><td>response really</td><td>2</td></tr>
+<tr><td>find certain</td><td>2</td></tr>
+<tr><td>let us</td><td>2</td></tr>
+<tr><td>copyright law</td><td>2</td></tr>
+<tr><td>browsing sounds</td><td>2</td></tr>
+<tr><td>came across</td><td>2</td></tr>
+<tr><td>much information</td><td>2</td></tr>
+<tr><td>music creation</td><td>2</td></tr>
+<tr><td>also allow</td><td>2</td></tr>
+<tr><td>wav format</td><td>2</td></tr>
+<tr><td>remix tools</td><td>2</td></tr>
+<tr><td>find specific</td><td>2</td></tr>
+<tr><td>little cumbersome</td><td>2</td></tr>
+<tr><td>right now</td><td>2</td></tr>
+<tr><td>will also</td><td>2</td></tr>
+<tr><td>fantastic idea</td><td>2</td></tr>
+<tr><td>amazing way</td><td>2</td></tr>
+<tr><td>learning curve</td><td>2</td></tr>
+<tr><td>hobbyist musician</td><td>2</td></tr>
+<tr><td>data visualization</td><td>2</td></tr>
+<tr><td>fl studio</td><td>2</td></tr>
+<tr><td>brilliant way</td><td>2</td></tr>
+<tr><td>really really</td><td>2</td></tr>
+<tr><td>produce music</td><td>2</td></tr>
+<tr><td>dj producer</td><td>2</td></tr>
+<tr><td>new wave</td><td>2</td></tr>
+<tr><td>browse download</td><td>2</td></tr>
+<tr><td>cool though</td><td>2</td></tr>
+<tr><td>really looking</td><td>2</td></tr>
+<tr><td>people looking</td><td>2</td></tr>
+<tr><td>whole new</td><td>2</td></tr>
+<tr><td>audio clips</td><td>2</td></tr>
+<tr><td>tremendously exciting</td><td>2</td></tr>
+<tr><td>remix function</td><td>2</td></tr>
+<tr><td>absolutely amazing</td><td>2</td></tr>
+<tr><td>make sure</td><td>2</td></tr>
+<tr><td>got stuck</td><td>2</td></tr>
+<tr><td>vocal samples</td><td>2</td></tr>
+<tr><td>start playing</td><td>2</td></tr>
+<tr><td>really great</td><td>2</td></tr>
+<tr><td>recording output</td><td>2</td></tr>
+<tr><td>several sounds</td><td>2</td></tr>
+<tr><td>full launch</td><td>2</td></tr>
+<tr><td>beat mixer</td><td>2</td></tr>
+<tr><td>cant wait</td><td>2</td></tr>
+<tr><td>great use</td><td>2</td></tr>
+<tr><td>really excited</td><td>2</td></tr>
+<tr><td>online remix</td><td>2</td></tr>
+<tr><td>just get</td><td>2</td></tr>
+<tr><td>main page</td><td>2</td></tr>
+<tr><td>awesome idea</td><td>2</td></tr>
+<tr><td>please continue</td><td>2</td></tr>
+<tr><td>exciting project</td><td>2</td></tr>
+<tr><td>remix app</td><td>2</td></tr>
+<tr><td>explore mode</td><td>2</td></tr>
+<tr><td>dj today</td><td>2</td></tr>
+<tr><td>different points</td><td>2</td></tr>
+<tr><td>help people</td><td>2</td></tr>
+<tr><td>combine samples</td><td>2</td></tr>
+<tr><td>internet connection</td><td>2</td></tr>
+<tr><td>always looking</td><td>2</td></tr>
+<tr><td>bring back</td><td>2</td></tr>
+<tr><td>create music</td><td>2</td></tr>
+<tr><td>samples available</td><td>2</td></tr>
+<tr><td>big fan</td><td>2</td></tr>
+<tr><td>united states</td><td>2</td></tr>
+<tr><td>without affecting</td><td>2</td></tr>
+<tr><td>first task</td><td>2</td></tr>
+<tr><td>making tool</td><td>2</td></tr>
+<tr><td>just getting</td><td>2</td></tr>
+<tr><td>great feature</td><td>2</td></tr>
+<tr><td>interesting sounds</td><td>2</td></tr>
+<tr><td>different set</td><td>2</td></tr>
+<tr><td>specific sound</td><td>2</td></tr>
+<tr><td>word search</td><td>2</td></tr>
+<tr><td>multiple tracks</td><td>2</td></tr>
+<tr><td>copyright laws</td><td>2</td></tr>
+<tr><td>find multiple</td><td>2</td></tr>
+<tr><td>search functionality</td><td>2</td></tr>
+<tr><td>idea though</td><td>2</td></tr>
+<tr><td>sound sample</td><td>2</td></tr>
+<tr><td>super helpful</td><td>2</td></tr>
+<tr><td>additional samples</td><td>2</td></tr>
+<tr><td>find things</td><td>2</td></tr>
+<tr><td>top right</td><td>2</td></tr>
+<tr><td>safari browser</td><td>2</td></tr>
+<tr><td>raw files</td><td>2</td></tr>
+<tr><td>ableton live</td><td>2</td></tr>
+<tr><td>fantastic project</td><td>2</td></tr>
+<tr><td>king exercise</td><td>2</td></tr>
+<tr><td>individual tracks</td><td>2</td></tr>
+<tr><td>make hip</td><td>2</td></tr>
+<tr><td>amazing thing</td><td>2</td></tr>
+<tr><td>make sense</td><td>2</td></tr>
+<tr><td>found sounds</td><td>2</td></tr>
+<tr><td>really amazing</td><td>2</td></tr>
+<tr><td>using samples</td><td>2</td></tr>
+<tr><td>remix feature</td><td>2</td></tr>
+<tr><td>minor bug</td><td>2</td></tr>
+<tr><td>beat machine</td><td>2</td></tr>
+<tr><td>making beats</td><td>2</td></tr>
+<tr><td>mobile phone</td><td>2</td></tr>
+<tr><td>sample based</td><td>2</td></tr>
+<tr><td>will make</td><td>2</td></tr>
+<tr><td>browse function</td><td>2</td></tr>
+<tr><td>something cool</td><td>2</td></tr>
+<tr><td>work well</td><td>2</td></tr>
+<tr><td>college professor</td><td>2</td></tr>
+<tr><td>production tool</td><td>2</td></tr>
+<tr><td>little difficult</td><td>2</td></tr>
+<tr><td>available tracks</td><td>2</td></tr>
+<tr><td>wonderful initiative</td><td>2</td></tr>
+<tr><td>many different</td><td>2</td></tr>
+<tr><td>pretty simple</td><td>2</td></tr>
+<tr><td>explore view</td><td>2</td></tr>
+<tr><td>audition sounds</td><td>2</td></tr>
+<tr><td>exploring citizen</td><td>2</td></tr>
+<tr><td>audio files</td><td>2</td></tr>
+<tr><td>even though</td><td>2</td></tr>
+<tr><td>get back</td><td>2</td></tr>
+<tr><td>pitch control</td><td>2</td></tr>
+<tr><td>great content</td><td>2</td></tr>
+<tr><td>chop samples</td><td>2</td></tr>
+<tr><td>nearly impossible</td><td>2</td></tr>
+<tr><td>works well</td><td>2</td></tr>
+<tr><td>machines available</td><td>2</td></tr>
+<tr><td>information tab</td><td>2</td></tr>
+<tr><td>looks really</td><td>2</td></tr>
+<tr><td>sample browsing</td><td>2</td></tr>
+<tr><td>th notes</td><td>2</td></tr>
+<tr><td>make beats</td><td>2</td></tr>
+<tr><td>find something</td><td>2</td></tr>
+<tr><td>intensity content</td><td>2</td></tr>
+<tr><td>sounds work</td><td>2</td></tr>
+<tr><td>sounds based</td><td>2</td></tr>
+<tr><td>stopped working</td><td>2</td></tr>
+<tr><td>different sound</td><td>2</td></tr>
+<tr><td>sound packs</td><td>2</td></tr>
+<tr><td>crate digging</td><td>2</td></tr>
+<tr><td>almost impossible</td><td>2</td></tr>
+<tr><td>just amazing</td><td>2</td></tr>
+<tr><td>likely use</td><td>2</td></tr>
+<tr><td>eye pleasing</td><td>2</td></tr>
+<tr><td>full source</td><td>2</td></tr>
+<tr><td>single remix</td><td>2</td></tr>
+<tr><td>right away</td><td>2</td></tr>
+<tr><td>really good</td><td>2</td></tr>
+<tr><td>nice work</td><td>2</td></tr>
+
+        </tbody>
+    </table>
+	</div>
+	<footer class="footer">
+ 		<div class="container">
+ 			 <hr>
+ 			 <div class="row">
+
+ 					<div class="col-sm-4">
+ 						 <p class="text-muted text-center">&copy; 2019 Eric Lease Morgan</p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center"><a href="mailto:emorgan@nd.edu">Contact Webmaster</a></p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center">
+ 								<a href="https://distantreader.org/">About Distant Reader</a>
+ 						 </p>
+ 					</div>
+
+ 			 </div>
+
+
+ 		</div>
+  </footer>
+</body>
+</html>

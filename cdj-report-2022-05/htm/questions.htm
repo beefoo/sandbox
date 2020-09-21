@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distant Reader</title>
+
+	<!-- Bootstrap CSS files-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<!-- jQuery Javascript Library -->
+	<script src="../js/jquery.min.js"></script>
+	
+	<!-- Bootstrap Library -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Local Javascript add on -->
+	<script src="../js/main.js" type="text/javascript"></script>
+
+	<!-- Font Awesome Web Icons -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<!-- custom local css file -->
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- data tables -->
+	<link   rel="stylesheet"       type="text/css"       href="../css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() { $('#tsv').DataTable( {
+        "order": [[ 0, "desc" ]],
+        "pageLength": 10
+    } ); } );
+	</script>
+</head>
+<body>
+
+	<nav class="navbar yamm navbar-inverse navbar-fixed-top">
+		 <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+								 class="icon-bar"></span><span class="icon-bar"></span></button>
+					 <h1><a class="navbar-brand" href="https://distantreader.org/">Distant Reader</a></h1>
+				</div> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav navbar-right">
+
+							<li class="dropdown" id="grams-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngrams <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="unigrams.htm">Unigrams</a></li>
+										<li><a href="bigrams.htm">Bigrams</a></li>
+										<li><a href="trigrams.htm">Trigrams</a></li>
+										<li><a href="quadgrams.htm">Quadgrams</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="pos-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POS <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="nouns.htm">Nouns</a></li>
+										<li><a href="verbs.htm">Verbs</a></li>
+										<li><a href="adjectives.htm">Adjectives</a></li>
+										<li><a href="adverbs.htm">Adverbs</a></li>
+										<li><a href="pronouns.htm">Pronouns</a></li>
+										<li><a href="proper-nouns.htm">Proper nouns</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="grammar-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grammars <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="noun-verb.htm">Noun – Verb</a></li>
+										<li><a href="adjective-noun.htm">Adjective – Noun</a></li>
+										<li><a href="questions.htm">Questions</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="miscellaneous-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="bibliographics.htm">Bibliographics</a></li>
+										<li><a href="keywords.htm">Keywords</a></li>
+										<li><a href="entities.htm">Named entities</a></li>
+										<li><a href="search.htm">Search (experimental)</a></li>
+										<li><a href="topic-model.htm">Topic model (experimental)</a></li>
+								 </ul>
+							</li>
+					 </ul>
+				</div><!-- /.navbar-collapse -->
+		 </div>
+	</nav>
+
+	<div class="container subpage">
+
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb ">
+			<li class="breadcrumb-item">
+				<a href="../index.htm">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">Questions</li>
+		</ol>
+	</nav>
+
+<h1>Questions</h1>
+<p>This is a list of all the questions and their associated study carrel identifiers. One can learn a lot of the "aboutness" of a text simply by reading the questions.</p>
+
+<table id="tsv" class="display">
+        <thead>
+            <tr>
+                <th>identifier</th>
+                <th>question</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td>input-file</td><td>Also the ability to search by type of sound and NOTE?</td></tr>
+<tr><td>input-file</td><td>Also, the"Explore"page makes it difficult to understand how the tracks are organized- by date?</td></tr>
+<tr><td>input-file</td><td>Are there any license- free samples available in the archive of a physician injecting disinfectant into a patient?</td></tr>
+<tr><td>input-file</td><td>Arrow keys to scroll through and space too trigger?</td></tr>
+<tr><td>input-file</td><td>Can I get from a sound in"Explore"to the full sound?</td></tr>
+<tr><td>input-file</td><td>Can you add a search bar somewhere?</td></tr>
+<tr><td>input-file</td><td>Can you show how you created the beats for a given source?</td></tr>
+<tr><td>input-file</td><td>Cheers Where is the search option?</td></tr>
+<tr><td>input-file</td><td>Could you have the remix play as a pop out, maybe?</td></tr>
+<tr><td>input-file</td><td>Do these pages and resources work on a variety of technology, such as Ipads or Chromebooks?</td></tr>
+<tr><td>input-file</td><td>Finally, I kept wondering about the significance of the colors in the sound cloud( or whatever it''s called)- are they different categories?</td></tr>
+<tr><td>input-file</td><td>How much material is here overall?</td></tr>
+<tr><td>input-file</td><td>I am a producer, so I understood what I was seeing, just now sure why slices where dropped in the rhythms they were dropped in( was it random?).</td></tr>
+<tr><td>input-file</td><td>I was n''t familiar with the beat/ drum machine choices; maybe some descriptors?</td></tr>
+<tr><td>input-file</td><td>Is it also possible to just select clips in''explore''window and download these?</td></tr>
+<tr><td>input-file</td><td>Is it possible to combine clips from multiple sources in the remix player?</td></tr>
+<tr><td>input-file</td><td>Is it possible to combine from different''collections''to create a''remix''?</td></tr>
+<tr><td>input-file</td><td>Is it possible to combine many different''sound bites''?</td></tr>
+<tr><td>input-file</td><td>Is there a way I can scrub through the idea to find excerpts that I want to use, and if not, why am I stuck with the pre- determined snippets?</td></tr>
+<tr><td>input-file</td><td>Is this intended for people looking for sounds to sample?</td></tr>
+<tr><td>input-file</td><td>It might be easier to collect sequential clips if they were grouped together in sequence?</td></tr>
+<tr><td>input-file</td><td>Maybe I can and just did n''t realize?</td></tr>
+<tr><td>input-file</td><td>Maybe a simple guide to follow?</td></tr>
+<tr><td>input-file</td><td>Maybe even be able to explore the full recording and define your own"zones"to use as trigger- able samples?</td></tr>
+<tr><td>input-file</td><td>Not intuitive at all maybe a search bar?</td></tr>
+<tr><td>input-file</td><td>Not sure if I could use more than one sample at once, if so, could nt figure out how, if not, hey, why not let me do that?</td></tr>
+<tr><td>input-file</td><td>One thing I could n''t find- how can I download full sample I made?</td></tr>
+<tr><td>input-file</td><td>Perhaps slightly larger icons?</td></tr>
+<tr><td>input-file</td><td>Perhaps the goal is to make the user learn by trial and error?</td></tr>
+<tr><td>input-file</td><td>Plus, when you click and hold over a sound, the"camera"( so to speak, the screen?)</td></tr>
+<tr><td>input-file</td><td>There is an emphasis on microsamples- is that the word for very short samples?</td></tr>
+<tr><td>input-file</td><td>There is no sign- in required?</td></tr>
+<tr><td>input-file</td><td>Want more?</td></tr>
+<tr><td>input-file</td><td>Why am I remixing tiny snippets of a BB King interview into a beat?</td></tr>
+<tr><td>input-file</td><td>Why no search bar to make this straightforward?</td></tr>
+<tr><td>input-file</td><td>Why take the extra step?</td></tr>
+<tr><td>input-file</td><td>Will be a cool project once everything is flushed out Why is it call Cititzen dj when the site is about production and beats?</td></tr>
+<tr><td>input-file</td><td>Would there be an exclusive John Lomax collection of sound at some point?</td></tr>
+<tr><td>input-file</td><td>an android app maybe?</td></tr>
+<tr><td>input-file</td><td>by bpm?</td></tr>
+<tr><td>input-file</td><td>by genre?</td></tr>
+<tr><td>input-file</td><td>did n''t immediately see a way to search for sounds based on simple text key tags... is this left out deliberately?</td></tr>
+<tr><td>input-file</td><td>horns, etc)?</td></tr>
+<tr><td>input-file</td><td>how can you record on iphone?</td></tr>
+<tr><td>input-file</td><td>maybe a search interface?</td></tr>
+<tr><td>input-file</td><td>perhaps a better tutorial system?</td></tr>
+<tr><td>input-file</td><td>will you be expanding the offerings further?</td></tr>
+
+        </tbody>
+    </table>
+	</div>
+	<footer class="footer">
+ 		<div class="container">
+ 			 <hr>
+ 			 <div class="row">
+
+ 					<div class="col-sm-4">
+ 						 <p class="text-muted text-center">&copy; 2019 Eric Lease Morgan</p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center"><a href="mailto:emorgan@nd.edu">Contact Webmaster</a></p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center">
+ 								<a href="https://distantreader.org/">About Distant Reader</a>
+ 						 </p>
+ 					</div>
+
+ 			 </div>
+
+
+ 		</div>
+  </footer>
+</body>
+</html>

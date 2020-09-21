@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distant Reader</title>
+
+	<!-- Bootstrap CSS files-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<!-- jQuery Javascript Library -->
+	<script src="../js/jquery.min.js"></script>
+	
+	<!-- Bootstrap Library -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Local Javascript add on -->
+	<script src="../js/main.js" type="text/javascript"></script>
+
+	<!-- Font Awesome Web Icons -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<!-- custom local css file -->
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- data tables -->
+	<link   rel="stylesheet"       type="text/css"       href="../css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() { $('#tsv').DataTable( {
+        "order": [[ 2, "desc" ]],
+        "pageLength": 10
+    } ); } );
+	</script>
+</head>
+<body>
+
+	<nav class="navbar yamm navbar-inverse navbar-fixed-top">
+		 <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+								 class="icon-bar"></span><span class="icon-bar"></span></button>
+					 <h1><a class="navbar-brand" href="https://distantreader.org/">Distant Reader</a></h1>
+				</div> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav navbar-right">
+
+							<li class="dropdown" id="grams-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngrams <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="unigrams.htm">Unigrams</a></li>
+										<li><a href="bigrams.htm">Bigrams</a></li>
+										<li><a href="trigrams.htm">Trigrams</a></li>
+										<li><a href="quadgrams.htm">Quadgrams</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="pos-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POS <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="nouns.htm">Nouns</a></li>
+										<li><a href="verbs.htm">Verbs</a></li>
+										<li><a href="adjectives.htm">Adjectives</a></li>
+										<li><a href="adverbs.htm">Adverbs</a></li>
+										<li><a href="pronouns.htm">Pronouns</a></li>
+										<li><a href="proper-nouns.htm">Proper nouns</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="grammar-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grammars <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="noun-verb.htm">Noun – Verb</a></li>
+										<li><a href="adjective-noun.htm">Adjective – Noun</a></li>
+										<li><a href="questions.htm">Questions</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="miscellaneous-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="bibliographics.htm">Bibliographics</a></li>
+										<li><a href="keywords.htm">Keywords</a></li>
+										<li><a href="entities.htm">Named entities</a></li>
+										<li><a href="search.htm">Search (experimental)</a></li>
+										<li><a href="topic-model.htm">Topic model (experimental)</a></li>
+								 </ul>
+							</li>
+					 </ul>
+				</div><!-- /.navbar-collapse -->
+		 </div>
+	</nav>
+
+	<div class="container subpage">
+
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb ">
+			<li class="breadcrumb-item">
+				<a href="../index.htm">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">adjective/noun</li>
+		</ol>
+	</nav>
+
+
+<h1>adjective/noun</h1>
+<p>This is a table of adjective/noun combinations and their frequencies from sentences in your study carrel. Use it to search &amp; browse the list to learn more about your study carrel.</p>
+
+<table id="tsv" class="display">
+        <thead>
+            <tr>
+                <th>adjective</th>
+                <th>noun</th>
+                <th>frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td>great</td><td>idea</td><td>16</td></tr>
+<tr><td>good</td><td>work</td><td>14</td></tr>
+<tr><td>great</td><td>work</td><td>13</td></tr>
+<tr><td>great</td><td>project</td><td>10</td></tr>
+<tr><td>cool</td><td>idea</td><td>9</td></tr>
+<tr><td>great</td><td>resource</td><td>9</td></tr>
+<tr><td>multiple</td><td>sources</td><td>9</td></tr>
+<tr><td>great</td><td>tool</td><td>8</td></tr>
+<tr><td>cool</td><td>project</td><td>7</td></tr>
+<tr><td>different</td><td>sounds</td><td>7</td></tr>
+<tr><td>easy</td><td>way</td><td>7</td></tr>
+<tr><td>long</td><td>time</td><td>7</td></tr>
+<tr><td>multiple</td><td>samples</td><td>7</td></tr>
+<tr><td>little</td><td>bit</td><td>6</td></tr>
+<tr><td>more</td><td>time</td><td>6</td></tr>
+<tr><td>longer</td><td>samples</td><td>6</td></tr>
+<tr><td>amazing</td><td>resource</td><td>6</td></tr>
+<tr><td>incredible</td><td>resource</td><td>6</td></tr>
+<tr><td>hard</td><td>work</td><td>6</td></tr>
+<tr><td>amazing</td><td>tool</td><td>6</td></tr>
+<tr><td>amazing</td><td>project</td><td>5</td></tr>
+<tr><td>great</td><td>way</td><td>5</td></tr>
+<tr><td>more</td><td>user</td><td>5</td></tr>
+<tr><td>more</td><td>sounds</td><td>4</td></tr>
+<tr><td>useful</td><td>tool</td><td>4</td></tr>
+<tr><td>short</td><td>clips</td><td>4</td></tr>
+<tr><td>new</td><td>sounds</td><td>4</td></tr>
+<tr><td>multiple</td><td>sounds</td><td>4</td></tr>
+<tr><td>different</td><td>samples</td><td>4</td></tr>
+<tr><td>great</td><td>site</td><td>4</td></tr>
+<tr><td>different</td><td>sources</td><td>4</td></tr>
+<tr><td>incredible</td><td>idea</td><td>4</td></tr>
+<tr><td>full</td><td>sample</td><td>3</td></tr>
+<tr><td>sound</td><td>samples</td><td>3</td></tr>
+<tr><td>more</td><td>drum</td><td>3</td></tr>
+<tr><td>incredible</td><td>tool</td><td>3</td></tr>
+<tr><td>great</td><td>source</td><td>3</td></tr>
+<tr><td>full</td><td>recordings</td><td>3</td></tr>
+<tr><td>full</td><td>recording</td><td>3</td></tr>
+<tr><td>easier</td><td>way</td><td>3</td></tr>
+<tr><td>coolest</td><td>things</td><td>3</td></tr>
+<tr><td>amazing</td><td>idea</td><td>3</td></tr>
+<tr><td>other</td><td>samples</td><td>2</td></tr>
+<tr><td>interesting</td><td>way</td><td>2</td></tr>
+<tr><td>more</td><td>people</td><td>2</td></tr>
+<tr><td>multiple</td><td>clips</td><td>2</td></tr>
+<tr><td>nice</td><td>work</td><td>2</td></tr>
+<tr><td>other</td><td>people</td><td>2</td></tr>
+<tr><td>full</td><td>site</td><td>2</td></tr>
+<tr><td>other</td><td>sounds</td><td>2</td></tr>
+<tr><td>other</td><td>way</td><td>2</td></tr>
+<tr><td>own</td><td>music</td><td>2</td></tr>
+<tr><td>own</td><td>work</td><td>2</td></tr>
+<tr><td>sound</td><td>search</td><td>2</td></tr>
+<tr><td>sounds</td><td>work</td><td>2</td></tr>
+<tr><td>full</td><td>source</td><td>2</td></tr>
+<tr><td>interesting</td><td>sounds</td><td>2</td></tr>
+<tr><td>fantastic</td><td>work</td><td>2</td></tr>
+<tr><td>cool</td><td>site</td><td>2</td></tr>
+<tr><td>amazing</td><td>thank</td><td>2</td></tr>
+<tr><td>amazing</td><td>site</td><td>2</td></tr>
+<tr><td>amazing</td><td>way</td><td>2</td></tr>
+<tr><td>amazing</td><td>work</td><td>2</td></tr>
+<tr><td>awesome</td><td>tool</td><td>2</td></tr>
+<tr><td>amazing</td><td>thing</td><td>2</td></tr>
+<tr><td>cool</td><td>tool</td><td>2</td></tr>
+<tr><td>different</td><td>collections</td><td>2</td></tr>
+<tr><td>different</td><td>sound</td><td>2</td></tr>
+<tr><td>fantastic</td><td>idea</td><td>2</td></tr>
+<tr><td>fantastic</td><td>project</td><td>2</td></tr>
+<tr><td>fantastic</td><td>resource</td><td>2</td></tr>
+<tr><td>nice</td><td>beat</td><td>1</td></tr>
+<tr><td>new</td><td>way</td><td>1</td></tr>
+<tr><td>new</td><td>users</td><td>1</td></tr>
+<tr><td>new</td><td>tools</td><td>1</td></tr>
+<tr><td>new</td><td>tool</td><td>1</td></tr>
+<tr><td>new</td><td>samples</td><td>1</td></tr>
+<tr><td>new</td><td>music</td><td>1</td></tr>
+<tr><td>new</td><td>ideas</td><td>1</td></tr>
+<tr><td>new</td><td>beat</td><td>1</td></tr>
+<tr><td>multiple</td><td>times</td><td>1</td></tr>
+<tr><td>longer</td><td>clips</td><td>1</td></tr>
+<tr><td>more</td><td>samples</td><td>1</td></tr>
+<tr><td>more</td><td>music</td><td>1</td></tr>
+<tr><td>more</td><td>files</td><td>1</td></tr>
+<tr><td>more</td><td>collections</td><td>1</td></tr>
+<tr><td>longer</td><td>music</td><td>1</td></tr>
+<tr><td>nice</td><td>source</td><td>1</td></tr>
+<tr><td>longer</td><td>clip</td><td>1</td></tr>
+<tr><td>little</td><td>work</td><td>1</td></tr>
+<tr><td>intuitive</td><td>tools</td><td>1</td></tr>
+<tr><td>interesting</td><td>site</td><td>1</td></tr>
+<tr><td>nice</td><td>project</td><td>1</td></tr>
+<tr><td>own</td><td>beats</td><td>1</td></tr>
+<tr><td>nice</td><td>thanks</td><td>1</td></tr>
+<tr><td>other</td><td>clips</td><td>1</td></tr>
+<tr><td>sure</td><td>lots</td><td>1</td></tr>
+<tr><td>sounds</td><td>tool</td><td>1</td></tr>
+<tr><td>sounds</td><td>clips</td><td>1</td></tr>
+<tr><td>sound</td><td>sources</td><td>1</td></tr>
+<tr><td>sound</td><td>sample</td><td>1</td></tr>
+<tr><td>sound</td><td>recordings</td><td>1</td></tr>
+<tr><td>sound</td><td>files</td><td>1</td></tr>
+<tr><td>sound</td><td>clip</td><td>1</td></tr>
+<tr><td>short</td><td>samples</td><td>1</td></tr>
+<tr><td>short</td><td>bits</td><td>1</td></tr>
+<tr><td>own</td><td>works</td><td>1</td></tr>
+<tr><td>own</td><td>sounds</td><td>1</td></tr>
+<tr><td>own</td><td>sample</td><td>1</td></tr>
+<tr><td>own</td><td>clip</td><td>1</td></tr>
+<tr><td>interesting</td><td>resource</td><td>1</td></tr>
+<tr><td>own</td><td>beat</td><td>1</td></tr>
+<tr><td>other</td><td>tools</td><td>1</td></tr>
+<tr><td>other</td><td>things</td><td>1</td></tr>
+<tr><td>other</td><td>music</td><td>1</td></tr>
+<tr><td>interesting</td><td>resources</td><td>1</td></tr>
+<tr><td>best</td><td>thing</td><td>1</td></tr>
+<tr><td>interesting</td><td>project</td><td>1</td></tr>
+<tr><td>cool</td><td>bits</td><td>1</td></tr>
+<tr><td>fantastic</td><td>tool</td><td>1</td></tr>
+<tr><td>fantastic</td><td>collection</td><td>1</td></tr>
+<tr><td>different</td><td>source</td><td>1</td></tr>
+<tr><td>different</td><td>collection</td><td>1</td></tr>
+<tr><td>coolest</td><td>thing</td><td>1</td></tr>
+<tr><td>cool</td><td>tools</td><td>1</td></tr>
+<tr><td>cool</td><td>sounds</td><td>1</td></tr>
+<tr><td>cool</td><td>interface</td><td>1</td></tr>
+<tr><td>cool</td><td>clips</td><td>1</td></tr>
+<tr><td>awesome</td><td>work</td><td>1</td></tr>
+<tr><td>interesting</td><td>idea</td><td>1</td></tr>
+<tr><td>awesome</td><td>way</td><td>1</td></tr>
+<tr><td>awesome</td><td>thanks</td><td>1</td></tr>
+<tr><td>awesome</td><td>resource</td><td>1</td></tr>
+<tr><td>awesome</td><td>project</td><td>1</td></tr>
+<tr><td>awesome</td><td>idea</td><td>1</td></tr>
+<tr><td>available</td><td>button</td><td>1</td></tr>
+<tr><td>amazing</td><td>tools</td><td>1</td></tr>
+<tr><td>amazing</td><td>resources</td><td>1</td></tr>
+<tr><td>able</td><td>samples</td><td>1</td></tr>
+<tr><td>fantastic</td><td>way</td><td>1</td></tr>
+<tr><td>full</td><td>music</td><td>1</td></tr>
+<tr><td>full</td><td>sound</td><td>1</td></tr>
+<tr><td>full</td><td>thing</td><td>1</td></tr>
+<tr><td>incredible</td><td>work</td><td>1</td></tr>
+<tr><td>incredible</td><td>source</td><td>1</td></tr>
+<tr><td>incredible</td><td>project</td><td>1</td></tr>
+<tr><td>hard</td><td>time</td><td>1</td></tr>
+<tr><td>greater</td><td>collection</td><td>1</td></tr>
+<tr><td>great</td><td>website</td><td>1</td></tr>
+<tr><td>great</td><td>thing</td><td>1</td></tr>
+<tr><td>great</td><td>thank</td><td>1</td></tr>
+<tr><td>great</td><td>sounds</td><td>1</td></tr>
+<tr><td>great</td><td>sound</td><td>1</td></tr>
+<tr><td>great</td><td>music</td><td>1</td></tr>
+<tr><td>good</td><td>website</td><td>1</td></tr>
+<tr><td>good</td><td>way</td><td>1</td></tr>
+<tr><td>good</td><td>tool</td><td>1</td></tr>
+<tr><td>good</td><td>site</td><td>1</td></tr>
+<tr><td>good</td><td>idea</td><td>1</td></tr>
+<tr><td>fun</td><td>way</td><td>1</td></tr>
+<tr><td>fun</td><td>interface</td><td>1</td></tr>
+<tr><td>fun</td><td>beat</td><td>1</td></tr>
+<tr><td>useful</td><td>project</td><td>1</td></tr>
+
+        </tbody>
+    </table>
+	</div>
+	<footer class="footer">
+ 		<div class="container">
+ 			 <hr>
+ 			 <div class="row">
+
+ 					<div class="col-sm-4">
+ 						 <p class="text-muted text-center">&copy; 2019 Eric Lease Morgan</p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center"><a href="mailto:emorgan@nd.edu">Contact Webmaster</a></p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center">
+ 								<a href="https://distantreader.org/">About Distant Reader</a>
+ 						 </p>
+ 					</div>
+
+ 			 </div>
+
+
+ 		</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="../js/elasticlunr.js"></script>
+</head>
+<body>
+
+<form>
+<input id='query' type='text' />
+<input onclick="search()" type='submit' value='search' />
+</form>
+
+<script>
+	function search() {
+		
+		var query = document.getElementById("query").value;
+		var data  = [{"title":"input-file","summary":"A few things I especially liked: the high-level find-a-sample-in-the-pile screen (great way to handle having a lot of material without any particular idea of what you''re seeking or what''s in there) the drum sample + beat-pattern selector (this goes kinda above & beyond what I was expecting) the per-sample tool to tweak the duration & volume (I would love a way to tweak the start-offset too) A few things I was hoping to see that I didn''t find: a way to \"remix\" using samples from multiple sources a way to build collections/folders of samples from various sources (ideally so I can just batch-download (& get the source credits), but really just any way to easily find a sample I liked again would be great) a few illustrative samples/previews of maybe what to expect per \"library\"(?) on the first screen a quick overview of what''s what, and what the flow looks like And as an aside, I got a bit annoyed by the samples I''d found / remixed getting lost between tasks.","id":"input-file"}];
+		
+		// initialize the index
+		var index = elasticlunr(function () {
+			this.setRef('id');
+			this.addField('title');
+			this.addField('summary');
+		});
+
+		// loop through each item in the data
+		for ( var item in data ) {
+	
+			// parse
+			var record = {
+				'id'      : data[item].id,
+				'title'   : data[item].title,
+				'summary' : data[item].summary,
+			}
+	
+			// update the index
+			index.addDoc( record );
+	
+		}
+
+		// configure searching
+		var configuration = { bool: "and" };
+
+		// search
+		var results = index.search( query, configuration );
+
+		// initialize and build a list of search results
+		var list = '<ol>';
+		for ( var item in results ) {
+
+			list += '<li>' + results[item].doc.title
+			list += '<ul>'
+			if (results[item].doc.summary ) { list += '<li>' + results[item].doc.summary + '</li>' }
+			list += '<li>' + results[item].ref + '</li>'
+			list += '<li>' + results[item].score + '</li>'
+			list += '</ul>'
+
+		}
+		list += '</ol>'
+
+		// output & done
+		document.write( list )
+
+	}
+</script>
+
+</body>
+</html>

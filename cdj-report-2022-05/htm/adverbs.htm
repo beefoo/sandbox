@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distant Reader</title>
+
+	<!-- Bootstrap CSS files-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<!-- jQuery Javascript Library -->
+	<script src="../js/jquery.min.js"></script>
+	
+	<!-- Bootstrap Library -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Local Javascript add on -->
+	<script src="../js/main.js" type="text/javascript"></script>
+
+	<!-- Font Awesome Web Icons -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<!-- custom local css file -->
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- data tables -->
+	<link   rel="stylesheet"       type="text/css"       href="../css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() { $('#tsv').DataTable( {
+        "order": [[ 1, "desc" ]],
+        "pageLength": 10
+    } ); } );
+	</script>
+	
+</head>
+<body>
+
+	<nav class="navbar yamm navbar-inverse navbar-fixed-top">
+		 <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+								 class="icon-bar"></span><span class="icon-bar"></span></button>
+					 <h1><a class="navbar-brand" href="https://distantreader.org/">Distant Reader</a></h1>
+				</div> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav navbar-right">
+
+							<li class="dropdown" id="grams-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngrams <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="unigrams.htm">Unigrams</a></li>
+										<li><a href="bigrams.htm">Bigrams</a></li>
+										<li><a href="trigrams.htm">Trigrams</a></li>
+										<li><a href="quadgrams.htm">Quadgrams</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="pos-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POS <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="nouns.htm">Nouns</a></li>
+										<li><a href="verbs.htm">Verbs</a></li>
+										<li><a href="adjectives.htm">Adjectives</a></li>
+										<li><a href="adverbs.htm">Adverbs</a></li>
+										<li><a href="pronouns.htm">Pronouns</a></li>
+										<li><a href="proper-nouns.htm">Proper nouns</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="grammar-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grammars <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="noun-verb.htm">Noun – Verb</a></li>
+										<li><a href="adjective-noun.htm">Adjective – Noun</a></li>
+										<li><a href="questions.htm">Questions</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="miscellaneous-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="bibliographics.htm">Bibliographics</a></li>
+										<li><a href="keywords.htm">Keywords</a></li>
+										<li><a href="entities.htm">Named entities</a></li>
+										<li><a href="search.htm">Search (experimental)</a></li>
+										<li><a href="topic-model.htm">Topic model (experimental)</a></li>
+								 </ul>
+							</li>
+					 </ul>
+				</div><!-- /.navbar-collapse -->
+		 </div>
+	</nav>
+
+	<div class="container subpage">
+
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb ">
+			<li class="breadcrumb-item">
+				<a href="../index.htm">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">adverb</li>
+		</ol>
+	</nav>
+
+<h1>adverb</h1>
+<p>This is a table of type adverb and their frequencies. Use it to search &amp; browse the list to learn more about your study carrel.</p>
+
+<table id="tsv" class="display">
+        <thead>
+            <tr>
+                <th>adverb</th>
+                <th>frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td>n''t</td><td>165</td></tr>
+<tr><td>not</td><td>154</td></tr>
+<tr><td>very</td><td>141</td></tr>
+<tr><td>just</td><td>109</td></tr>
+<tr><td>really</td><td>102</td></tr>
+<tr><td>so</td><td>100</td></tr>
+<tr><td>also</td><td>83</td></tr>
+<tr><td>more</td><td>82</td></tr>
+<tr><td>out</td><td>69</td></tr>
+<tr><td>up</td><td>47</td></tr>
+<tr><td>maybe</td><td>43</td></tr>
+<tr><td>even</td><td>41</td></tr>
+<tr><td>only</td><td>41</td></tr>
+<tr><td>much</td><td>38</td></tr>
+<tr><td>well</td><td>38</td></tr>
+<tr><td>too</td><td>34</td></tr>
+<tr><td>forward</td><td>33</td></tr>
+<tr><td>back</td><td>30</td></tr>
+<tr><td>then</td><td>29</td></tr>
+<tr><td>as</td><td>28</td></tr>
+<tr><td>together</td><td>28</td></tr>
+<tr><td>again</td><td>26</td></tr>
+<tr><td>here</td><td>26</td></tr>
+<tr><td>definitely</td><td>25</td></tr>
+<tr><td>already</td><td>22</td></tr>
+<tr><td>in</td><td>22</td></tr>
+<tr><td>pretty</td><td>22</td></tr>
+<tr><td>though</td><td>22</td></tr>
+<tr><td>around</td><td>21</td></tr>
+<tr><td>down</td><td>19</td></tr>
+<tr><td>easily</td><td>19</td></tr>
+<tr><td>n’t</td><td>19</td></tr>
+<tr><td>overall</td><td>18</td></tr>
+<tr><td>perhaps</td><td>16</td></tr>
+<tr><td>there</td><td>16</td></tr>
+<tr><td>still</td><td>15</td></tr>
+<tr><td>most</td><td>14</td></tr>
+<tr><td>instead</td><td>14</td></tr>
+<tr><td>actually</td><td>13</td></tr>
+<tr><td>super</td><td>13</td></tr>
+<tr><td>on</td><td>13</td></tr>
+<tr><td>all</td><td>12</td></tr>
+<tr><td>better</td><td>12</td></tr>
+<tr><td>far</td><td>12</td></tr>
+<tr><td>never</td><td>12</td></tr>
+<tr><td>nt</td><td>12</td></tr>
+<tr><td>rather</td><td>12</td></tr>
+<tr><td>however</td><td>11</td></tr>
+<tr><td>immediately</td><td>11</td></tr>
+<tr><td>over</td><td>11</td></tr>
+<tr><td>probably</td><td>11</td></tr>
+<tr><td>right</td><td>11</td></tr>
+<tr><td>first</td><td>10</td></tr>
+<tr><td>further</td><td>10</td></tr>
+<tr><td>especially</td><td>10</td></tr>
+<tr><td>absolutely</td><td>10</td></tr>
+<tr><td>of</td><td>9</td></tr>
+<tr><td>once</td><td>9</td></tr>
+<tr><td>otherwise</td><td>9</td></tr>
+<tr><td>quickly</td><td>9</td></tr>
+<tr><td>now</td><td>8</td></tr>
+<tr><td>truly</td><td>8</td></tr>
+<tr><td>extremely</td><td>8</td></tr>
+<tr><td>at</td><td>8</td></tr>
+<tr><td>always</td><td>7</td></tr>
+<tr><td>away</td><td>7</td></tr>
+<tr><td>kinda</td><td>7</td></tr>
+<tr><td>quite</td><td>7</td></tr>
+<tr><td>little</td><td>6</td></tr>
+<tr><td>yet</td><td>6</td></tr>
+<tr><td>visually</td><td>6</td></tr>
+<tr><td>sometimes</td><td>6</td></tr>
+<tr><td>off</td><td>6</td></tr>
+<tr><td>almost</td><td>6</td></tr>
+<tr><td>kind</td><td>6</td></tr>
+<tr><td>fully</td><td>6</td></tr>
+<tr><td>directly</td><td>6</td></tr>
+<tr><td>incredibly</td><td>6</td></tr>
+<tr><td>likely</td><td>5</td></tr>
+<tr><td>through</td><td>5</td></tr>
+<tr><td>that</td><td>5</td></tr>
+<tr><td>properly</td><td>5</td></tr>
+<tr><td>slightly</td><td>5</td></tr>
+<tr><td>later</td><td>5</td></tr>
+<tr><td>highly</td><td>5</td></tr>
+<tr><td>ever</td><td>5</td></tr>
+<tr><td>automatically</td><td>5</td></tr>
+<tr><td>mostly</td><td>4</td></tr>
+<tr><td>widely</td><td>4</td></tr>
+<tr><td>soon</td><td>4</td></tr>
+<tr><td>somehow</td><td>4</td></tr>
+<tr><td>personally</td><td>4</td></tr>
+<tr><td>next</td><td>4</td></tr>
+<tr><td>nearly</td><td>4</td></tr>
+<tr><td>enough</td><td>4</td></tr>
+<tr><td>longer</td><td>4</td></tr>
+<tr><td>finally</td><td>4</td></tr>
+<tr><td>fast</td><td>4</td></tr>
+<tr><td>currently</td><td>4</td></tr>
+<tr><td>completely</td><td>4</td></tr>
+<tr><td>before</td><td>4</td></tr>
+<tr><td>anywhere</td><td>4</td></tr>
+<tr><td>outside</td><td>3</td></tr>
+<tr><td>way</td><td>3</td></tr>
+<tr><td>totally</td><td>3</td></tr>
+<tr><td>sort</td><td>3</td></tr>
+<tr><td>slowly</td><td>3</td></tr>
+<tr><td>seriously</td><td>3</td></tr>
+<tr><td>greatly</td><td>3</td></tr>
+<tr><td>often</td><td>3</td></tr>
+<tr><td>individually</td><td>3</td></tr>
+<tr><td>fine</td><td>3</td></tr>
+<tr><td>basically</td><td>3</td></tr>
+<tr><td>additionally</td><td>3</td></tr>
+<tr><td>live</td><td>3</td></tr>
+<tr><td>simply</td><td>2</td></tr>
+<tr><td>nicely</td><td>2</td></tr>
+<tr><td>obviously</td><td>2</td></tr>
+<tr><td>online</td><td>2</td></tr>
+<tr><td>partially</td><td>2</td></tr>
+<tr><td>particularly</td><td>2</td></tr>
+<tr><td>previously</td><td>2</td></tr>
+<tr><td>rapidly</td><td>2</td></tr>
+<tr><td>less</td><td>2</td></tr>
+<tr><td>separately</td><td>2</td></tr>
+<tr><td>somewhere</td><td>2</td></tr>
+<tr><td>sometime</td><td>2</td></tr>
+<tr><td>somewhat</td><td>2</td></tr>
+<tr><td>specifically</td><td>2</td></tr>
+<tr><td>successfully</td><td>2</td></tr>
+<tr><td>surprisingly</td><td>2</td></tr>
+<tr><td>tremendously</td><td>2</td></tr>
+<tr><td>twice</td><td>2</td></tr>
+<tr><td>ultimately</td><td>2</td></tr>
+<tr><td>usually</td><td>2</td></tr>
+<tr><td>necessarily</td><td>2</td></tr>
+<tr><td>forth</td><td>2</td></tr>
+<tr><td>least</td><td>2</td></tr>
+<tr><td>either</td><td>2</td></tr>
+<tr><td>intuitively</td><td>2</td></tr>
+<tr><td>about</td><td>2</td></tr>
+<tr><td>ago</td><td>2</td></tr>
+<tr><td>anyway</td><td>2</td></tr>
+<tr><td>apart</td><td>2</td></tr>
+<tr><td>below</td><td>2</td></tr>
+<tr><td>constantly</td><td>2</td></tr>
+<tr><td>e.g.</td><td>2</td></tr>
+<tr><td>artistically</td><td>2</td></tr>
+<tr><td>elsewhere</td><td>2</td></tr>
+<tr><td>firstly</td><td>2</td></tr>
+<tr><td>freely</td><td>2</td></tr>
+<tr><td>generally</td><td>2</td></tr>
+<tr><td>honestly</td><td>2</td></tr>
+<tr><td>ideally</td><td>2</td></tr>
+<tr><td>immensely</td><td>2</td></tr>
+<tr><td>initially</td><td>2</td></tr>
+<tr><td>exactly</td><td>2</td></tr>
+<tr><td>primarily</td><td>1</td></tr>
+<tr><td>potentially</td><td>1</td></tr>
+<tr><td>precisely</td><td>1</td></tr>
+<tr><td>preferably</td><td>1</td></tr>
+<tr><td>randomly</td><td>1</td></tr>
+<tr><td>professionally</td><td>1</td></tr>
+<tr><td>purposefully</td><td>1</td></tr>
+<tr><td>quicker</td><td>1</td></tr>
+<tr><td>rarely</td><td>1</td></tr>
+<tr><td>perfectly</td><td>1</td></tr>
+<tr><td>phenomenally</td><td>1</td></tr>
+<tr><td>logically</td><td>1</td></tr>
+<tr><td>passionatly</td><td>1</td></tr>
+<tr><td>originally</td><td>1</td></tr>
+<tr><td>occasionally</td><td>1</td></tr>
+<tr><td>no</td><td>1</td></tr>
+<tr><td>meanwhile</td><td>1</td></tr>
+<tr><td>manually</td><td>1</td></tr>
+<tr><td>louder</td><td>1</td></tr>
+<tr><td>long</td><td>1</td></tr>
+<tr><td>realistically</td><td>1</td></tr>
+<tr><td>literwlly</td><td>1</td></tr>
+<tr><td>readily</td><td>1</td></tr>
+<tr><td>shorter</td><td>1</td></tr>
+<tr><td>recently</td><td>1</td></tr>
+<tr><td>regardless</td><td>1</td></tr>
+<tr><td>weirdly</td><td>1</td></tr>
+<tr><td>vibrancy</td><td>1</td></tr>
+<tr><td>unfortunately</td><td>1</td></tr>
+<tr><td>understandably</td><td>1</td></tr>
+<tr><td>thus</td><td>1</td></tr>
+<tr><td>thinly</td><td>1</td></tr>
+<tr><td>therefore</td><td>1</td></tr>
+<tr><td>technologically</td><td>1</td></tr>
+<tr><td>technically</td><td>1</td></tr>
+<tr><td>surely</td><td>1</td></tr>
+<tr><td>strongly</td><td>1</td></tr>
+<tr><td>someday</td><td>1</td></tr>
+<tr><td>smoothly</td><td>1</td></tr>
+<tr><td>simultaneously</td><td>1</td></tr>
+<tr><td>lastly</td><td>1</td></tr>
+<tr><td>semi</td><td>1</td></tr>
+<tr><td>second</td><td>1</td></tr>
+<tr><td>sadly</td><td>1</td></tr>
+<tr><td>roughly</td><td>1</td></tr>
+<tr><td>respectively</td><td>1</td></tr>
+<tr><td>remotely</td><td>1</td></tr>
+<tr><td>lately</td><td>1</td></tr>
+<tr><td>historically</td><td>1</td></tr>
+<tr><td>kindly</td><td>1</td></tr>
+<tr><td>is</td><td>1</td></tr>
+<tr><td>deliberately</td><td>1</td></tr>
+<tr><td>creatively</td><td>1</td></tr>
+<tr><td>conversely</td><td>1</td></tr>
+<tr><td>clearly</td><td>1</td></tr>
+<tr><td>certainly</td><td>1</td></tr>
+<tr><td>casually</td><td>1</td></tr>
+<tr><td>by</td><td>1</td></tr>
+<tr><td>btw</td><td>1</td></tr>
+<tr><td>best</td><td>1</td></tr>
+<tr><td>barely</td><td>1</td></tr>
+<tr><td>athough</td><td>1</td></tr>
+<tr><td>aside</td><td>1</td></tr>
+<tr><td>apparently</td><td>1</td></tr>
+<tr><td>any</td><td>1</td></tr>
+<tr><td>amazingly</td><td>1</td></tr>
+<tr><td>alone</td><td>1</td></tr>
+<tr><td>alike</td><td>1</td></tr>
+<tr><td>air2</td><td>1</td></tr>
+<tr><td>aesthetically</td><td>1</td></tr>
+<tr><td>accidentally</td><td>1</td></tr>
+<tr><td>above</td><td>1</td></tr>
+<tr><td>early</td><td>1</td></tr>
+<tr><td>easier</td><td>1</td></tr>
+<tr><td>else</td><td>1</td></tr>
+<tr><td>haphazard</td><td>1</td></tr>
+<tr><td>instantly</td><td>1</td></tr>
+<tr><td>inherently</td><td>1</td></tr>
+<tr><td>importantly</td><td>1</td></tr>
+<tr><td>imo</td><td>1</td></tr>
+<tr><td>human</td><td>1</td></tr>
+<tr><td>hugely</td><td>1</td></tr>
+<tr><td>horribly</td><td>1</td></tr>
+<tr><td>heavily</td><td>1</td></tr>
+<tr><td>hard</td><td>1</td></tr>
+<tr><td>gradually</td><td>1</td></tr>
+<tr><td>endlessly</td><td>1</td></tr>
+<tr><td>fun</td><td>1</td></tr>
+<tr><td>frequently</td><td>1</td></tr>
+<tr><td>frankly</td><td>1</td></tr>
+<tr><td>financially</td><td>1</td></tr>
+<tr><td>faster</td><td>1</td></tr>
+<tr><td>fairly</td><td>1</td></tr>
+<tr><td>exclusively</td><td>1</td></tr>
+<tr><td>essentially</td><td>1</td></tr>
+<tr><td>entirely</td><td>1</td></tr>
+<tr><td>wildly</td><td>1</td></tr>
+
+        </tbody>
+    </table>
+	</div>
+	<footer class="footer">
+ 		<div class="container">
+ 			 <hr>
+ 			 <div class="row">
+
+ 					<div class="col-sm-4">
+ 						 <p class="text-muted text-center">&copy; 2019 Eric Lease Morgan</p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center"><a href="mailto:emorgan@nd.edu">Contact Webmaster</a></p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center">
+ 								<a href="https://distantreader.org/">About Distant Reader</a>
+ 						 </p>
+ 					</div>
+
+ 			 </div>
+
+
+ 		</div>
+  </footer>
+</body>
+</html>

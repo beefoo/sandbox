@@ -1,0 +1,396 @@
+
+
+Summary of your 'study carrel'
+==============================
+
+This is a summary of your Distant Reader 'study carrel'.
+
+The Distant Reader harvested & cached your content into a
+collection/corpus. It then applied sets of natural language
+processing and text mining against the collection. The results of
+this process was reduced to a database file -- a 'study carrel'.
+The study carrel can then be queried, thus bringing light
+specific characteristics for your collection. These
+characteristics can help you summarize the collection as well as
+enumerate things you might want to investigate more closely.
+
+                               Eric Lease Morgan <emorgan@nd.edu>
+                                                     May 27, 2019
+
+
+Number of items in the collection; 'How big is my corpus?'
+----------------------------------------------------------
+1
+
+
+Average length of all items measured in words; "More or less, how big is each item?"
+------------------------------------------------------------------------------------
+29969
+
+
+Average readability score of all items (0 = difficult; 100 = easy)
+------------------------------------------------------------------
+79
+
+
+Top 50 statistically significant keywords; "What is my collection about?"
+-------------------------------------------------------------------------
+1	cool
+1	great
+1	love
+1	sample
+1	sound
+1	thank
+1	tool
+1	work
+
+
+Top 50 lemmatized nouns; "What is discussed?"
+---------------------------------------------
+290	sample
+234	sound
+132	tool
+113	way
+108	music
+101	site
+82	beat
+79	idea
+75	work
+69	page
+65	clip
+62	time
+60	project
+58	file
+58	resource
+55	thank
+50	bit
+50	remix
+50	thing
+49	source
+48	interface
+48	people
+47	search
+46	button
+46	collection
+44	website
+43	drum
+43	user
+37	lot
+36	recording
+34	library
+30	feature
+30	something
+29	option
+28	function
+28	material
+28	track
+27	producer
+26	browser
+26	sequencer
+26	use
+24	fun
+24	screen
+23	interview
+23	machine
+23	part
+23	sampling
+22	audio
+22	experience
+21	context
+
+
+Top 50 proper nouns; "What are the names of persons or places?"
+--------------------------------------------------------------
+29	DJ
+20	Citizen
+19	Explore
+19	UI
+17	REDACTED
+16	King
+11	Library
+10	LOC
+9	BB
+9	Congress
+9	PII
+9	Remix
+7	DAW
+7	Hip
+7	UX
+6	B.B.
+6	Brian
+6	Hop
+6	WAV
+5	Fun
+5	Safari
+5	wav
+4	A
+4	AI
+4	AWESOME
+4	Ableton
+4	S
+4	U
+4	browser
+3	FMA
+3	Foo
+3	MPC
+3	Producer
+3	Record
+3	Studio
+3	YouTube
+3	iPad
+3	iPhone
+3	intro
+3	mp3s
+3	safari
+2	Adobe
+2	Akai
+2	American
+2	Audio
+2	Australia
+2	B
+2	Context
+2	Cool
+2	Creative
+
+
+Top 50 personal pronouns nouns; "To whom are things referred?"
+-------------------------------------------------------------
+1061	i
+645	it
+340	you
+88	me
+41	them
+39	they
+17	we
+13	myself
+8	themselves
+7	he
+6	us
+4	itself
+2	one
+2	ourselves
+2	she
+1	''s
+1	ios
+1	yourself
+
+
+Top 50 lemmatized verbs; "What do things do?"
+---------------------------------------------
+1534	be
+268	have
+239	use
+212	do
+153	make
+126	find
+114	thank
+100	love
+90	think
+85	look
+77	see
+74	get
+71	download
+69	like
+67	play
+61	create
+56	work
+54	seem
+49	go
+48	explore
+47	click
+45	want
+43	know
+41	need
+36	feel
+36	figure
+32	browse
+32	navigate
+31	hear
+30	select
+30	take
+29	search
+29	try
+29	understand
+28	add
+28	drag
+28	keep
+26	give
+26	sound
+25	hope
+25	put
+25	start
+24	come
+23	share
+22	combine
+22	help
+22	move
+21	let
+21	scroll
+20	change
+
+
+Top 50 lemmatized adjectives and adverbs; "How are things described?"
+---------------------------------------------------------------------
+350	not
+176	more
+157	great
+143	very
+118	cool
+109	just
+102	really
+100	so
+83	also
+74	able
+74	easy
+73	amazing
+69	out
+65	well
+61	good
+57	much
+54	different
+52	nice
+48	only
+47	up
+43	maybe
+41	even
+39	fun
+38	other
+37	long
+36	sure
+35	little
+34	forward
+34	too
+33	available
+32	useful
+31	sound
+30	back
+30	full
+30	hard
+30	interesting
+29	awesome
+29	then
+28	as
+28	intuitive
+28	multiple
+28	possible
+28	short
+28	together
+27	first
+26	again
+26	here
+26	incredible
+25	definitely
+25	difficult
+
+
+Top 50 lemmatized superlative adjectives; "How are things described to the extreme?"
+-------------------------------------------------------------------------
+10	most
+9	good
+5	Most
+5	least
+4	cool
+3	big
+1	full
+1	high
+
+
+Top 50 lemmatized superlative adverbs; "How do things do to the extreme?"
+------------------------------------------------------------------------
+14	most
+2	least
+
+
+Top 50 Internet domains; "What Webbed places are alluded to in this corpus?"
+----------------------------------------------------------------------------
+1	citizendj.labs.loc.gov.s3-website-us-east-1.amazonaws.com
+1	freesound.org
+1	open.spotify.com
+
+
+Top 50 URLs; "What is hyperlinked from this corpus?"
+----------------------------------------------------
+1	http://citizendj.labs.loc.gov.s3-website-us-east-1.amazonaws.com/loc-variety-stage/remix/?itemId=2018620419&itemStart=23220&drumName=Akai%20MPC&patternName=80s%20new%20wave%20pattern%20A%20%5B3%5D
+1	http://freesound.org/browse/
+1	http://open.spotify.com/artist/6HclqqHQlJ6kPzMRQnl05V?si=GwOzZ8_EQEG6wZu0f2zUag
+
+
+Top 50 email addresses; "Who are you gonna call?"
+-------------------------------------------------
+
+
+Top 50 positive assertions; "What sentences are in the shape of noun-verb-noun?"
+-------------------------------------------------------------------------------
+3	clips are too
+2	button did n''t
+2	site is easy
+2	site is really
+2	tool is great
+1	beat making part
+1	beat making tool
+1	beats is tough
+1	beats using samples
+1	bit was not
+1	button are obvious
+1	button made pretty
+1	button was down
+1	clips are automatically
+1	clips are black
+1	clips do n''t
+1	clips were longer
+1	collection was difficult
+1	collection was most
+1	collection was really
+1	collections is absolutely
+1	collections is n''t
+1	collections was really
+1	drums work fine
+1	files are great
+1	files are horribly
+1	files are usually
+1	files were empty
+1	idea is awesome
+1	idea is so
+1	idea was great
+1	interface is accurate
+1	interface is better
+1	interface is effective
+1	interface is fun
+1	interface is not
+1	interface is very
+1	music felt hard
+1	music is also
+1	music is limitless
+1	music is neat
+1	music making ap
+1	music making apps
+1	music making setup
+1	music needs more
+1	page does n''t
+1	page is kinda
+1	page is super
+1	page was frustrating
+1	people browse collection
+
+
+Top 50 negative assertions; "What sentences are in the shape of noun-verb-no|not-noun?"
+---------------------------------------------------------------------------------------
+1	buttons make no sense
+1	sound is not very
+1	website is not intuitive
+
+
+Sizes of items; "Measures in words, how big is each item?"
+----------------------------------------------------------
+29969	input-file
+
+
+Readability of items; "How difficult is each item to read?"
+-----------------------------------------------------------
+79.0	input-file
+
+
+Item summaries; "In a narrative form, how can each item be abstracted?"
+-----------------------------------------------------------------------
+input-file	A few things I especially liked: the high-level find-a-sample-in-the-pile screen (great way to handle having a lot of material without any particular idea of what you''re seeking or what''s in there) the drum sample + beat-pattern selector (this goes kinda above & beyond what I was expecting) the per-sample tool to tweak the duration & volume (I would love a way to tweak the start-offset too) A few things I was hoping to see that I didn''t find: a way to "remix" using samples from multiple sources a way to build collections/folders of samples from various sources (ideally so I can just batch-download (& get the source credits), but really just any way to easily find a sample I liked again would be great) a few illustrative samples/previews of maybe what to expect per "library"(?) on the first screen a quick overview of what''s what, and what the flow looks like And as an aside, I got a bit annoyed by the samples I''d found / remixed getting lost between tasks.
+

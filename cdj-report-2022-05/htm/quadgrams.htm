@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distant Reader</title>
+
+	<!-- Bootstrap CSS files-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<!-- jQuery Javascript Library -->
+	<script src="../js/jquery.min.js"></script>
+	
+	<!-- Bootstrap Library -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Local Javascript add on -->
+	<script src="../js/main.js" type="text/javascript"></script>
+
+	<!-- Font Awesome Web Icons -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+
+	<!-- custom local css file -->
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- data tables -->
+	<link   rel="stylesheet"       type="text/css"       href="../css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() { $('#tsv').DataTable( {
+        "order": [[ 1, "desc" ]],
+        "pageLength": 10
+    } ); } );
+	</script>
+	
+</head>
+<body>
+
+	<nav class="navbar yamm navbar-inverse navbar-fixed-top">
+		 <div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+								 class="icon-bar"></span><span class="icon-bar"></span></button>
+					 <h1><a class="navbar-brand" href="https://distantreader.org/">Distant Reader</a></h1>
+				</div> <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav navbar-right">
+
+							<li class="dropdown" id="grams-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ngrams <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="unigrams.htm">Unigrams</a></li>
+										<li><a href="bigrams.htm">Bigrams</a></li>
+										<li><a href="trigrams.htm">Trigrams</a></li>
+										<li><a href="quadgrams.htm">Quadgrams</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="pos-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POS <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="nouns.htm">Nouns</a></li>
+										<li><a href="verbs.htm">Verbs</a></li>
+										<li><a href="adjectives.htm">Adjectives</a></li>
+										<li><a href="adverbs.htm">Adverbs</a></li>
+										<li><a href="pronouns.htm">Pronouns</a></li>
+										<li><a href="proper-nouns.htm">Proper nouns</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="grammar-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grammars <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="noun-verb.htm">Noun – Verb</a></li>
+										<li><a href="adjective-noun.htm">Adjective – Noun</a></li>
+										<li><a href="questions.htm">Questions</a></li>
+								 </ul>
+							</li>
+							<li class="dropdown" id="miscellaneous-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Other <span class="caret"></span></a>
+								 <ul class="dropdown-menu">
+										<li><a href="bibliographics.htm">Bibliographics</a></li>
+										<li><a href="keywords.htm">Keywords</a></li>
+										<li><a href="entities.htm">Named entities</a></li>
+										<li><a href="search.htm">Search (experimental)</a></li>
+										<li><a href="topic-model.htm">Topic model (experimental)</a></li>
+								 </ul>
+							</li>
+					 </ul>
+				</div><!-- /.navbar-collapse -->
+		 </div>
+	</nav>
+
+	<div class="container subpage">
+
+		<nav aria-label="breadcrumb">
+		<ol class="breadcrumb ">
+			<li class="breadcrumb-item">
+				<a href="../index.htm">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">quadgram</li>
+		</ol>
+	</nav>
+
+<h1>quadgram</h1>
+<p>This is a table of type quadgram and their frequencies. Use it to search &amp; browse the list to learn more about your study carrel.</p>
+
+<table id="tsv" class="display">
+        <thead>
+            <tr>
+                <th>quadgram</th>
+                <th>frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td>to be able to</td><td>30</td></tr>
+<tr><td>this is a great</td><td>20</td></tr>
+<tr><td>figure out how to</td><td>16</td></tr>
+<tr><td>would be nice to</td><td>11</td></tr>
+<tr><td>thank you so much</td><td>11</td></tr>
+<tr><td>it would be nice</td><td>11</td></tr>
+<tr><td>i think this is</td><td>10</td></tr>
+<tr><td>i look forward to</td><td>9</td></tr>
+<tr><td>this is an incredible</td><td>8</td></tr>
+<tr><td>nice to be able</td><td>8</td></tr>
+<tr><td>be nice to be</td><td>8</td></tr>
+<tr><td>this is an amazing</td><td>8</td></tr>
+<tr><td>would be great to</td><td>7</td></tr>
+<tr><td>you so much for</td><td>7</td></tr>
+<tr><td>it would be great</td><td>7</td></tr>
+<tr><td>i would like to</td><td>7</td></tr>
+<tr><td>like to be able</td><td>6</td></tr>
+<tr><td>would love to see</td><td>6</td></tr>
+<tr><td>the bottom of the</td><td>6</td></tr>
+<tr><td>would be cool to</td><td>6</td></tr>
+<tr><td>up the good work</td><td>6</td></tr>
+<tr><td>easy to use and</td><td>6</td></tr>
+<tr><td>be able to download</td><td>6</td></tr>
+<tr><td>i would love to</td><td>6</td></tr>
+<tr><td>would be nice if</td><td>6</td></tr>
+<tr><td>keep up the good</td><td>6</td></tr>
+<tr><td>thank you for this</td><td>6</td></tr>
+<tr><td>think this is a</td><td>6</td></tr>
+<tr><td>this is a really</td><td>5</td></tr>
+<tr><td>it would be cool</td><td>5</td></tr>
+<tr><td>at the bottom of</td><td>5</td></tr>
+<tr><td>is a way to</td><td>5</td></tr>
+<tr><td>is it possible to</td><td>5</td></tr>
+<tr><td>is a great idea</td><td>5</td></tr>
+<tr><td>would like to be</td><td>5</td></tr>
+<tr><td>if there was a</td><td>4</td></tr>
+<tr><td>the play in context</td><td>4</td></tr>
+<tr><td>be a way to</td><td>4</td></tr>
+<tr><td>thank you for the</td><td>4</td></tr>
+<tr><td>i will continue to</td><td>4</td></tr>
+<tr><td>would also be nice</td><td>4</td></tr>
+<tr><td>and easy to use</td><td>4</td></tr>
+<tr><td>samples from multiple sources</td><td>4</td></tr>
+<tr><td>on the remix page</td><td>4</td></tr>
+<tr><td>i love this idea</td><td>4</td></tr>
+<tr><td>not sure if i</td><td>4</td></tr>
+<tr><td>it would also be</td><td>4</td></tr>
+<tr><td>there is a way</td><td>4</td></tr>
+<tr><td>and this is a</td><td>4</td></tr>
+<tr><td>a great way to</td><td>4</td></tr>
+<tr><td>is a great project</td><td>4</td></tr>
+<tr><td>is easy to use</td><td>4</td></tr>
+<tr><td>look forward to exploring</td><td>4</td></tr>
+<tr><td>so much for this</td><td>4</td></tr>
+<tr><td>thank you for putting</td><td>4</td></tr>
+<tr><td>is a great tool</td><td>4</td></tr>
+<tr><td>this is so cool</td><td>4</td></tr>
+<tr><td>for a long time</td><td>4</td></tr>
+<tr><td>be great to have</td><td>3</td></tr>
+<tr><td>the size of the</td><td>3</td></tr>
+<tr><td>wait for it to</td><td>3</td></tr>
+<tr><td>thank you for creating</td><td>3</td></tr>
+<tr><td>this is a fantastic</td><td>3</td></tr>
+<tr><td>a little bit more</td><td>3</td></tr>
+<tr><td>to go back to</td><td>3</td></tr>
+<tr><td>very difficult to use</td><td>3</td></tr>
+<tr><td>to me how to</td><td>3</td></tr>
+<tr><td>was a way to</td><td>3</td></tr>
+<tr><td>confused about how to</td><td>3</td></tr>
+<tr><td>is an incredible resource</td><td>3</td></tr>
+<tr><td>to get to the</td><td>3</td></tr>
+<tr><td>see a way to</td><td>3</td></tr>
+<tr><td>has a lot of</td><td>3</td></tr>
+<tr><td>will definitely use this</td><td>3</td></tr>
+<tr><td>to play around with</td><td>3</td></tr>
+<tr><td>from multiple sources in</td><td>3</td></tr>
+<tr><td>have a way to</td><td>3</td></tr>
+<tr><td>and would love to</td><td>3</td></tr>
+<tr><td>find a search function</td><td>3</td></tr>
+<tr><td>of the coolest things</td><td>3</td></tr>
+<tr><td>be nice if you</td><td>3</td></tr>
+<tr><td>i am very excited</td><td>3</td></tr>
+<tr><td>great to be able</td><td>3</td></tr>
+<tr><td>thank you for sharing</td><td>3</td></tr>
+<tr><td>one of the coolest</td><td>3</td></tr>
+<tr><td>also be nice to</td><td>3</td></tr>
+<tr><td>this is very cool</td><td>3</td></tr>
+<tr><td>i really like the</td><td>3</td></tr>
+<tr><td>as a music producer</td><td>3</td></tr>
+<tr><td>seem to be a</td><td>3</td></tr>
+<tr><td>if it is possible</td><td>3</td></tr>
+<tr><td>to spend more time</td><td>3</td></tr>
+<tr><td>i think there should</td><td>3</td></tr>
+<tr><td>to use samples from</td><td>3</td></tr>
+<tr><td>to have access to</td><td>3</td></tr>
+<tr><td>to be a way</td><td>3</td></tr>
+<tr><td>i am looking forward</td><td>3</td></tr>
+<tr><td>would have liked to</td><td>3</td></tr>
+<tr><td>the library of congress</td><td>3</td></tr>
+<tr><td>would be great if</td><td>3</td></tr>
+<tr><td>an easier way to</td><td>3</td></tr>
+<tr><td>it was easy to</td><td>3</td></tr>
+<tr><td>this is one of</td><td>3</td></tr>
+<tr><td>the length of the</td><td>3</td></tr>
+<tr><td>if you want to</td><td>3</td></tr>
+<tr><td>a lot of fun</td><td>3</td></tr>
+<tr><td>is very cool and</td><td>3</td></tr>
+<tr><td>love love love love</td><td>3</td></tr>
+<tr><td>a way to do</td><td>3</td></tr>
+<tr><td>am looking forward to</td><td>3</td></tr>
+<tr><td>samples from different sources</td><td>3</td></tr>
+<tr><td>but it would be</td><td>3</td></tr>
+<tr><td>to figure out how</td><td>3</td></tr>
+<tr><td>nice if you could</td><td>3</td></tr>
+<tr><td>but i think i</td><td>3</td></tr>
+<tr><td>this is a very</td><td>3</td></tr>
+<tr><td>a lot of people</td><td>3</td></tr>
+<tr><td>it possible to combine</td><td>3</td></tr>
+<tr><td>make it easier to</td><td>3</td></tr>
+<tr><td>the only thing i</td><td>3</td></tr>
+<tr><td>this is an excellent</td><td>3</td></tr>
+<tr><td>is an incredible tool</td><td>3</td></tr>
+<tr><td>i think this site</td><td>3</td></tr>
+<tr><td>an easy way to</td><td>3</td></tr>
+<tr><td>i have no doubt</td><td>3</td></tr>
+<tr><td>i think it would</td><td>3</td></tr>
+<tr><td>is very difficult to</td><td>3</td></tr>
+<tr><td>want to use the</td><td>3</td></tr>
+<tr><td>i will be back</td><td>3</td></tr>
+<tr><td>be able to use</td><td>3</td></tr>
+<tr><td>for putting this together</td><td>3</td></tr>
+<tr><td>be able to combine</td><td>3</td></tr>
+<tr><td>i was unable to</td><td>3</td></tr>
+<tr><td>a search function to</td><td>3</td></tr>
+<tr><td>bottom of the page</td><td>3</td></tr>
+<tr><td>looking forward to using</td><td>3</td></tr>
+<tr><td>this is super cool</td><td>3</td></tr>
+<tr><td>in a way that</td><td>3</td></tr>
+<tr><td>is a really cool</td><td>3</td></tr>
+<tr><td>thanks for making this</td><td>3</td></tr>
+<tr><td>there was a way</td><td>3</td></tr>
+<tr><td>sounds from multiple sources</td><td>3</td></tr>
+<tr><td>to figure out what</td><td>3</td></tr>
+<tr><td>clips are too short</td><td>3</td></tr>
+<tr><td>to create a beat</td><td>2</td></tr>
+<tr><td>to use in music</td><td>2</td></tr>
+<tr><td>out how to select</td><td>2</td></tr>
+<tr><td>to the loc website</td><td>2</td></tr>
+<tr><td>in the remix tab</td><td>2</td></tr>
+<tr><td>i think my husband</td><td>2</td></tr>
+<tr><td>i need to spend</td><td>2</td></tr>
+<tr><td>back and forth between</td><td>2</td></tr>
+<tr><td>thank you for all</td><td>2</td></tr>
+<tr><td>excited for the future</td><td>2</td></tr>
+<tr><td>i figured it out</td><td>2</td></tr>
+<tr><td>to explore it and</td><td>2</td></tr>
+<tr><td>share about your experience</td><td>2</td></tr>
+<tr><td>a lot of effort</td><td>2</td></tr>
+<tr><td>be cool to be</td><td>2</td></tr>
+<tr><td>music that i can</td><td>2</td></tr>
+<tr><td>your work on this</td><td>2</td></tr>
+<tr><td>and be able to</td><td>2</td></tr>
+<tr><td>you for all your</td><td>2</td></tr>
+<tr><td>out how to use</td><td>2</td></tr>
+<tr><td>have no idea what</td><td>2</td></tr>
+<tr><td>experience with citizen dj</td><td>2</td></tr>
+<tr><td>you for creating this</td><td>2</td></tr>
+<tr><td>available to the public</td><td>2</td></tr>
+<tr><td>to change the sample</td><td>2</td></tr>
+<tr><td>site is easy to</td><td>2</td></tr>
+<tr><td>to use the remix</td><td>2</td></tr>
+<tr><td>be able to save</td><td>2</td></tr>
+<tr><td>if it were possible</td><td>2</td></tr>
+<tr><td>could not find a</td><td>2</td></tr>
+<tr><td>to share about your</td><td>2</td></tr>
+<tr><td>is easy to navigate</td><td>2</td></tr>
+<tr><td>is a really great</td><td>2</td></tr>
+<tr><td>for people looking for</td><td>2</td></tr>
+<tr><td>looking forward to the</td><td>2</td></tr>
+<tr><td>forward to exploring more</td><td>2</td></tr>
+<tr><td>you can reach me</td><td>2</td></tr>
+<tr><td>to use and intuitive</td><td>2</td></tr>
+<tr><td>a little more intuitive</td><td>2</td></tr>
+<tr><td>is a great resource</td><td>2</td></tr>
+<tr><td>when it is selected</td><td>2</td></tr>
+<tr><td>this is an awesome</td><td>2</td></tr>
+<tr><td>of what you can</td><td>2</td></tr>
+<tr><td>really looking forward to</td><td>2</td></tr>
+<tr><td>should be able to</td><td>2</td></tr>
+<tr><td>for the future of</td><td>2</td></tr>
+<tr><td>multiple sources in the</td><td>2</td></tr>
+<tr><td>dragging to explore the</td><td>2</td></tr>
+<tr><td>not be able to</td><td>2</td></tr>
+<tr><td>search function would be</td><td>2</td></tr>
+<tr><td>i would use the</td><td>2</td></tr>
+<tr><td>the free music archive</td><td>2</td></tr>
+<tr><td>i went back to</td><td>2</td></tr>
+<tr><td>be downloaded as wavs</td><td>2</td></tr>
+<tr><td>and if you could</td><td>2</td></tr>
+<tr><td>and put them into</td><td>2</td></tr>
+<tr><td>is an amazing tool</td><td>2</td></tr>
+<tr><td>inspire a lot of</td><td>2</td></tr>
+<tr><td>option to download the</td><td>2</td></tr>
+<tr><td>be able to select</td><td>2</td></tr>
+<tr><td>reminds me of the</td><td>2</td></tr>
+<tr><td>as a big fan</td><td>2</td></tr>
+<tr><td>cool to be able</td><td>2</td></tr>
+<tr><td>is a little confusing</td><td>2</td></tr>
+<tr><td>is a great source</td><td>2</td></tr>
+<tr><td>if there is a</td><td>2</td></tr>
+<tr><td>on the explore page</td><td>2</td></tr>
+<tr><td>samples into the sequencer</td><td>2</td></tr>
+<tr><td>for all your hard</td><td>2</td></tr>
+<tr><td>out how to save</td><td>2</td></tr>
+<tr><td>have access to this</td><td>2</td></tr>
+<tr><td>samples as opposed to</td><td>2</td></tr>
+<tr><td>found myself wanting to</td><td>2</td></tr>
+<tr><td>easy it is to</td><td>2</td></tr>
+<tr><td>would be fun to</td><td>2</td></tr>
+<tr><td>and i hope it</td><td>2</td></tr>
+<tr><td>a lot of potential</td><td>2</td></tr>
+<tr><td>to adjust the size</td><td>2</td></tr>
+<tr><td>a great source for</td><td>2</td></tr>
+<tr><td>more than one sample</td><td>2</td></tr>
+<tr><td>had a lot of</td><td>2</td></tr>
+<tr><td>with the remix tool</td><td>2</td></tr>
+<tr><td>sure if i could</td><td>2</td></tr>
+<tr><td>be nice to make</td><td>2</td></tr>
+<tr><td>there should be an</td><td>2</td></tr>
+<tr><td>thank you for doing</td><td>2</td></tr>
+<tr><td>as soon as i</td><td>2</td></tr>
+<tr><td>is a wonderful idea</td><td>2</td></tr>
+<tr><td>the step sequencer to</td><td>2</td></tr>
+<tr><td>forward to see this</td><td>2</td></tr>
+<tr><td>you have any more</td><td>2</td></tr>
+<tr><td>this is a huge</td><td>2</td></tr>
+<tr><td>a very valuable resource</td><td>2</td></tr>
+<tr><td>the sample packs and</td><td>2</td></tr>
+<tr><td>could use a little</td><td>2</td></tr>
+<tr><td>i had to open</td><td>2</td></tr>
+<tr><td>i really enjoyed using</td><td>2</td></tr>
+<tr><td>was very difficult to</td><td>2</td></tr>
+<tr><td>to drag around the</td><td>2</td></tr>
+<tr><td>more time on the</td><td>2</td></tr>
+<tr><td>make it easy to</td><td>2</td></tr>
+<tr><td>as a tool to</td><td>2</td></tr>
+<tr><td>but i wonder if</td><td>2</td></tr>
+<tr><td>right off the bat</td><td>2</td></tr>
+<tr><td>makes it easy to</td><td>2</td></tr>
+<tr><td>control the length of</td><td>2</td></tr>
+<tr><td>it would be fun</td><td>2</td></tr>
+<tr><td>being able to use</td><td>2</td></tr>
+<tr><td>do you have any</td><td>2</td></tr>
+<tr><td>have more control over</td><td>2</td></tr>
+<tr><td>there were a way</td><td>2</td></tr>
+<tr><td>able to download the</td><td>2</td></tr>
+<tr><td>spend more time on</td><td>2</td></tr>
+<tr><td>me how to go</td><td>2</td></tr>
+<tr><td>to have a search</td><td>2</td></tr>
+<tr><td>a way to search</td><td>2</td></tr>
+<tr><td>a way to load</td><td>2</td></tr>
+<tr><td>looking for new sounds</td><td>2</td></tr>
+<tr><td>i did like the</td><td>2</td></tr>
+<tr><td>download the beat as</td><td>2</td></tr>
+<tr><td>a few things i</td><td>2</td></tr>
+<tr><td>you for doing this</td><td>2</td></tr>
+<tr><td>through all the samples</td><td>2</td></tr>
+<tr><td>and i will be</td><td>2</td></tr>
+<tr><td>play in context to</td><td>2</td></tr>
+<tr><td>to use the sounds</td><td>2</td></tr>
+<tr><td>able to choose the</td><td>2</td></tr>
+<tr><td>out how to add</td><td>2</td></tr>
+<tr><td>continue to explore it</td><td>2</td></tr>
+<tr><td>much for creating this</td><td>2</td></tr>
+<tr><td>a way for users</td><td>2</td></tr>
+<tr><td>and look forward to</td><td>2</td></tr>
+<tr><td>love to see it</td><td>2</td></tr>
+<tr><td>to the full source</td><td>2</td></tr>
+<tr><td>please keep working on</td><td>2</td></tr>
+<tr><td>is one of the</td><td>2</td></tr>
+<tr><td>this is a wonderful</td><td>2</td></tr>
+<tr><td>to browse the sounds</td><td>2</td></tr>
+<tr><td>an incredible idea and</td><td>2</td></tr>
+<tr><td>very easy to use</td><td>2</td></tr>
+<tr><td>use samples from different</td><td>2</td></tr>
+<tr><td>went back to the</td><td>2</td></tr>
+<tr><td>i can see it</td><td>2</td></tr>
+<tr><td>thank you this is</td><td>2</td></tr>
+<tr><td>excited to see where</td><td>2</td></tr>
+<tr><td>to following the progress</td><td>2</td></tr>
+<tr><td>the beat as a</td><td>2</td></tr>
+<tr><td>the sample in the</td><td>2</td></tr>
+<tr><td>i wish there was</td><td>2</td></tr>
+<tr><td>excited to play around</td><td>2</td></tr>
+<tr><td>for finding samples to</td><td>2</td></tr>
+<tr><td>for working on this</td><td>2</td></tr>
+<tr><td>i was asked to</td><td>2</td></tr>
+<tr><td>i am a producer</td><td>2</td></tr>
+<tr><td>think this site is</td><td>2</td></tr>
+<tr><td>you get to the</td><td>2</td></tr>
+<tr><td>to make it easier</td><td>2</td></tr>
+<tr><td>i think that would</td><td>2</td></tr>
+<tr><td>through the sounds on</td><td>2</td></tr>
+<tr><td>interface is a bit</td><td>2</td></tr>
+<tr><td>thanks for creating this</td><td>2</td></tr>
+<tr><td>a way to download</td><td>2</td></tr>
+<tr><td>to play with and</td><td>2</td></tr>
+<tr><td>you click and hold</td><td>2</td></tr>
+<tr><td>think this is an</td><td>2</td></tr>
+<tr><td>was asked to do</td><td>2</td></tr>
+<tr><td>the sound browser is</td><td>2</td></tr>
+<tr><td>it were possible to</td><td>2</td></tr>
+<tr><td>to hear only the</td><td>2</td></tr>
+<tr><td>like to know if</td><td>2</td></tr>
+<tr><td>the ability to download</td><td>2</td></tr>
+<tr><td>to use in a</td><td>2</td></tr>
+<tr><td>to download the entire</td><td>2</td></tr>
+<tr><td>library of congress has</td><td>2</td></tr>
+<tr><td>without clicking and dragging</td><td>2</td></tr>
+<tr><td>way to go back</td><td>2</td></tr>
+<tr><td>will continue to explore</td><td>2</td></tr>
+<tr><td>how to search for</td><td>2</td></tr>
+<tr><td>looking forward to seeing</td><td>2</td></tr>
+<tr><td>in addition to the</td><td>2</td></tr>
+<tr><td>more than one sound</td><td>2</td></tr>
+<tr><td>wish there was a</td><td>2</td></tr>
+<tr><td>a way to sort</td><td>2</td></tr>
+<tr><td>be able to choose</td><td>2</td></tr>
+<tr><td>needs to be more</td><td>2</td></tr>
+<tr><td>i really enjoyed the</td><td>2</td></tr>
+<tr><td>around with it more</td><td>2</td></tr>
+<tr><td>able to combine samples</td><td>2</td></tr>
+<tr><td>all your hard work</td><td>2</td></tr>
+<tr><td>forward to following the</td><td>2</td></tr>
+<tr><td>instead of having to</td><td>2</td></tr>
+<tr><td>a little difficult to</td><td>2</td></tr>
+<tr><td>know if it is</td><td>2</td></tr>
+<tr><td>how to use a</td><td>2</td></tr>
+<tr><td>to navigate and i</td><td>2</td></tr>
+<tr><td>it easy to explore</td><td>2</td></tr>
+<tr><td>to listen to a</td><td>2</td></tr>
+<tr><td>no no no no</td><td>2</td></tr>
+<tr><td>i think you have</td><td>2</td></tr>
+<tr><td>i would have liked</td><td>2</td></tr>
+<tr><td>add a search bar</td><td>2</td></tr>
+<tr><td>a lot of work</td><td>2</td></tr>
+<tr><td>sample with a beat</td><td>2</td></tr>
+<tr><td>but i could imagine</td><td>2</td></tr>
+<tr><td>the bb king interview</td><td>2</td></tr>
+<tr><td>i absolutely love this</td><td>2</td></tr>
+<tr><td>very excited for the</td><td>2</td></tr>
+<tr><td>the ui could use</td><td>2</td></tr>
+<tr><td>forward to the full</td><td>2</td></tr>
+<tr><td>thank you library of</td><td>2</td></tr>
+<tr><td>to have more control</td><td>2</td></tr>
+<tr><td>the buttons at the</td><td>2</td></tr>
+<tr><td>this is an extremely</td><td>2</td></tr>
+<tr><td>i want to use</td><td>2</td></tr>
+<tr><td>tiny snippets of a</td><td>2</td></tr>
+<tr><td>how easy it is</td><td>2</td></tr>
+<tr><td>so much for creating</td><td>2</td></tr>
+<tr><td>figured out how to</td><td>2</td></tr>
+<tr><td>love to be able</td><td>2</td></tr>
+<tr><td>think there should be</td><td>2</td></tr>
+<tr><td>the remix feature is</td><td>2</td></tr>
+<tr><td>but it could be</td><td>2</td></tr>
+<tr><td>to create their own</td><td>2</td></tr>
+<tr><td>in the explore section</td><td>2</td></tr>
+<tr><td>will try again on</td><td>2</td></tr>
+<tr><td>makes it hard to</td><td>2</td></tr>
+<tr><td>finding samples to use</td><td>2</td></tr>
+<tr><td>be cool to have</td><td>2</td></tr>
+<tr><td>have a search feature</td><td>2</td></tr>
+<tr><td>go back to a</td><td>2</td></tr>
+<tr><td>and thank you for</td><td>2</td></tr>
+<tr><td>i could not find</td><td>2</td></tr>
+<tr><td>to have the option</td><td>2</td></tr>
+<tr><td>have any more feedback</td><td>2</td></tr>
+<tr><td>it would be interesting</td><td>2</td></tr>
+<tr><td>are too short to</td><td>2</td></tr>
+<tr><td>your experience with citizen</td><td>2</td></tr>
+<tr><td>with citizen dj today</td><td>2</td></tr>
+<tr><td>amazing thank you this</td><td>2</td></tr>
+<tr><td>to combine samples from</td><td>2</td></tr>
+<tr><td>i am going to</td><td>2</td></tr>
+<tr><td>i love the idea</td><td>2</td></tr>
+<tr><td>if there were a</td><td>2</td></tr>
+<tr><td>would love to help</td><td>2</td></tr>
+<tr><td>look forward to the</td><td>2</td></tr>
+<tr><td>to learn how to</td><td>2</td></tr>
+<tr><td>able to combine different</td><td>2</td></tr>
+<tr><td>on the remix tool</td><td>2</td></tr>
+<tr><td>project and i hope</td><td>2</td></tr>
+<tr><td>thank you brian foo</td><td>2</td></tr>
+<tr><td>i wish i could</td><td>2</td></tr>
+<tr><td>to download the samples</td><td>2</td></tr>
+<tr><td>to listen to the</td><td>2</td></tr>
+<tr><td>there should also be</td><td>2</td></tr>
+<tr><td>drag the mouse over</td><td>2</td></tr>
+<tr><td>one issue i had</td><td>2</td></tr>
+<tr><td>a bit clunky and</td><td>2</td></tr>
+<tr><td>in the browse view</td><td>2</td></tr>
+<tr><td>did not seem to</td><td>2</td></tr>
+<tr><td>thank you for your</td><td>2</td></tr>
+<tr><td>found it difficult to</td><td>2</td></tr>
+<tr><td>that would make it</td><td>2</td></tr>
+<tr><td>a really cool idea</td><td>2</td></tr>
+<tr><td>to integrate multiple samples</td><td>2</td></tr>
+<tr><td>this was fun and</td><td>2</td></tr>
+<tr><td>i need to adjust</td><td>2</td></tr>
+<tr><td>to scrub through the</td><td>2</td></tr>
+<tr><td>hold down the mouse</td><td>2</td></tr>
+<tr><td>a way to go</td><td>2</td></tr>
+<tr><td>i do think the</td><td>2</td></tr>
+<tr><td>i have no idea</td><td>2</td></tr>
+<tr><td>great to have a</td><td>2</td></tr>
+<tr><td>multiple samples into the</td><td>2</td></tr>
+<tr><td>way for users to</td><td>2</td></tr>
+<tr><td>use more than one</td><td>2</td></tr>
+<tr><td>a dj and a</td><td>2</td></tr>
+<tr><td>as a way to</td><td>2</td></tr>
+<tr><td>not find a search</td><td>2</td></tr>
+<tr><td>had to open the</td><td>2</td></tr>
+<tr><td>could use some work</td><td>2</td></tr>
+<tr><td>using it in my</td><td>2</td></tr>
+<tr><td>i would also like</td><td>2</td></tr>
+<tr><td>would be very helpful</td><td>2</td></tr>
+<tr><td>not intuitive at all</td><td>2</td></tr>
+<tr><td>the drum machine sequencer</td><td>2</td></tr>
+<tr><td>get to the full</td><td>2</td></tr>
+<tr><td>be great if it</td><td>2</td></tr>
+<tr><td>a way to build</td><td>2</td></tr>
+<tr><td>it is very cool</td><td>2</td></tr>
+<tr><td>like to share about</td><td>2</td></tr>
+<tr><td>for it to play</td><td>2</td></tr>
+<tr><td>i think that the</td><td>2</td></tr>
+<tr><td>incredible idea and i</td><td>2</td></tr>
+<tr><td>it is possible to</td><td>2</td></tr>
+<tr><td>adjust the size of</td><td>2</td></tr>
+<tr><td>no idea what the</td><td>2</td></tr>
+<tr><td>in a long time</td><td>2</td></tr>
+<tr><td>the option to download</td><td>2</td></tr>
+<tr><td>need to spend more</td><td>2</td></tr>
+<tr><td>it is easy to</td><td>2</td></tr>
+<tr><td>with a lot of</td><td>2</td></tr>
+<tr><td>difficult to navigate and</td><td>2</td></tr>
+<tr><td>to understand how the</td><td>2</td></tr>
+<tr><td>the more information tab</td><td>2</td></tr>
+<tr><td>the colors in the</td><td>2</td></tr>
+<tr><td>bottom of the screen</td><td>2</td></tr>
+<tr><td>the context of a</td><td>2</td></tr>
+<tr><td>about your experience with</td><td>2</td></tr>
+<tr><td>is a bit clunky</td><td>2</td></tr>
+<tr><td>i was able to</td><td>2</td></tr>
+<tr><td>it was hard to</td><td>2</td></tr>
+<tr><td>a big fan of</td><td>2</td></tr>
+<tr><td>easy to navigate and</td><td>2</td></tr>
+<tr><td>be fun to have</td><td>2</td></tr>
+<tr><td>the rest of the</td><td>2</td></tr>
+<tr><td>player at the bottom</td><td>2</td></tr>
+<tr><td>at the same time</td><td>2</td></tr>
+<tr><td>buttons at the bottom</td><td>2</td></tr>
+<tr><td>able to see the</td><td>2</td></tr>
+<tr><td>lot of potential and</td><td>2</td></tr>
+<tr><td>at the top of</td><td>2</td></tr>
+<tr><td>i need to explore</td><td>2</td></tr>
+<tr><td>sounds that i downloaded</td><td>2</td></tr>
+<tr><td>you library of congress</td><td>2</td></tr>
+<tr><td>sounds and put them</td><td>2</td></tr>
+<tr><td>to hear the full</td><td>2</td></tr>
+<tr><td>thanks so much for</td><td>2</td></tr>
+<tr><td>be able to tell</td><td>2</td></tr>
+<tr><td>be great to be</td><td>2</td></tr>
+<tr><td>to control the length</td><td>2</td></tr>
+<tr><td>i found it a</td><td>2</td></tr>
+<tr><td>i am working on</td><td>2</td></tr>
+<tr><td>was a little more</td><td>2</td></tr>
+<tr><td>so much for making</td><td>2</td></tr>
+<tr><td>maybe have a way</td><td>2</td></tr>
+<tr><td>if you could use</td><td>2</td></tr>
+<tr><td>and i am looking</td><td>2</td></tr>
+<tr><td>one of the samples</td><td>2</td></tr>
+<tr><td>love to see a</td><td>2</td></tr>
+<tr><td>really enjoyed using the</td><td>2</td></tr>
+<tr><td>be nice to have</td><td>2</td></tr>
+<tr><td>love a way to</td><td>2</td></tr>
+<tr><td>a search function would</td><td>2</td></tr>
+<tr><td>thanks to everyone involved</td><td>2</td></tr>
+<tr><td>did like the remix</td><td>2</td></tr>
+<tr><td>way to do that</td><td>2</td></tr>
+<tr><td>a link to the</td><td>2</td></tr>
+<tr><td>my email is redacted</td><td>2</td></tr>
+<tr><td>thank you very much</td><td>2</td></tr>
+<tr><td>impossible to find something</td><td>2</td></tr>
+<tr><td>little difficult to navigate</td><td>2</td></tr>
+<tr><td>the samples that i</td><td>2</td></tr>
+<tr><td>going to give me</td><td>2</td></tr>
+<tr><td>scrolling through all the</td><td>2</td></tr>
+<tr><td>i will definitely use</td><td>2</td></tr>
+<tr><td>how the samples were</td><td>2</td></tr>
+<tr><td>i really like it</td><td>2</td></tr>
+<tr><td>when i tried to</td><td>2</td></tr>
+<tr><td>the play button do</td><td>2</td></tr>
+<tr><td>like to see more</td><td>2</td></tr>
+<tr><td>able to use samples</td><td>2</td></tr>
+<tr><td>would be interested in</td><td>2</td></tr>
+<tr><td>and i have no</td><td>2</td></tr>
+<tr><td>for this amazing resource</td><td>2</td></tr>
+
+        </tbody>
+    </table>
+	</div>
+	<footer class="footer">
+ 		<div class="container">
+ 			 <hr>
+ 			 <div class="row">
+
+ 					<div class="col-sm-4">
+ 						 <p class="text-muted text-center">&copy; 2019 Eric Lease Morgan</p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center"><a href="mailto:emorgan@nd.edu">Contact Webmaster</a></p>
+ 					</div>
+ 					<div class="col-sm-4">
+ 						 <p class="text-center">
+ 								<a href="https://distantreader.org/">About Distant Reader</a>
+ 						 </p>
+ 					</div>
+
+ 			 </div>
+
+
+ 		</div>
+  </footer>
+</body>
+</html>

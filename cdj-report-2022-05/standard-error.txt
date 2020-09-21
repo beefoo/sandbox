@@ -1,0 +1,153 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   238  100   118  100   120   4577   4655 --:--:-- --:--:-- --:--:--  4800
+mv: ‘input-file.ukn’ and ‘./input-file.ukn’ are the same file
+Created carrel: PROCESS_7f6c21b0-94d2-4146-b20e-dd0e999965c6
+
+Creating study carrel named PROCESS_7f6c21b0-94d2-4146-b20e-dd0e999965c6
+
+Initializing database
+Building cache
+
+cp: ‘./cache/input-file.ukn’ and ‘cache/input-file.ukn’ are the same file
+Building study carrel named PROCESS_7f6c21b0-94d2-4146-b20e-dd0e999965c6
+  Cool environment variables:
+         ACCOUNT_STRING: null
+       APPLICATION_NAME: File
+           CHASSIS_NAME: null
+              CPU_COUNT: 10
+        EXECUTABLE_PATH: /export/reader/bin/files2carrel.sh
+                EXPORTS: []
+             GATEWAY_ID: distantreader
+      GATEWAY_USER_NAME: beefoo
+              INPUT_DIR: /export/reader/carrels/PROCESS_7f6c21b0-94d2-4146-b20e-dd0e999965c6
+                 INPUTS: [input-file.ukn]
+               JOB_NAME: A176720366
+  JOB_SUBMITTER_COMMAND: null
+           MAIL_ADDRESS: scigap03jobs@scigap.org
+          MAX_WALL_TIME: 12:0:00
+        MODULE_COMMANDS: []
+                  NODES: 1
+             OUTPUT_DIR: /export/reader/carrels/PROCESS_7f6c21b0-94d2-4146-b20e-dd0e999965c6
+      POST_JOB_COMMANDS: null
+       PRE_JOB_COMMANDS: null
+       PROCESS_PER_NODE: 10
+     QUALITY_OF_SERVICE: null
+             QUEUE_NAME: cloud
+            RESERVATION: null
+       SCRATCH_LOCATION: []
+             SHELL_NAME: /bin/bash
+    STANDARD_ERROR_FILE: standard-error.txt
+      STANDARD_OUT_FILE: standard-output.txt
+               USED_MEM: null
+              USER_NAME: reader
+            WORKING_DIR: /export/reader/carrels/PROCESS_7f6c21b0-94d2-4146-b20e-dd0e999965c6
+Sep 21, 2020 3:29:13 PM org.apache.tika.config.InitializableProblemHandler$3 handleInitializableProblem
+WARNING: J2KImageReader not loaded. JPEG2000 files will not be processed.
+See https://pdfbox.apache.org/2.0/dependencies.html#jai-image-io
+for optional dependencies.
+
+Sep 21, 2020 3:29:13 PM org.apache.tika.config.InitializableProblemHandler$3 handleInitializableProblem
+WARNING: org.xerial's sqlite-jdbc is not loaded.
+Please provide the jar on your classpath to parse sqlite files.
+See tika-parsers/pom.xml for the correct version.
+INFO  Starting Apache Tika 1.22 server
+INFO  Setting the server's publish address to be http://localhost:9998/
+INFO  Logging initialized @2831ms to org.eclipse.jetty.util.log.Slf4jLog
+INFO  jetty-9.4.z-SNAPSHOT; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_201-b09
+INFO  Started ServerConnector@a078fd{HTTP/1.1,[http/1.1]}{localhost:9998}
+INFO  Started @3083ms
+WARN  Empty contextPath
+INFO  Started o.e.j.s.h.ContextHandler@7a164b{/,null,AVAILABLE}
+INFO  Started Apache Tika server at http://localhost:9998/
+INFO  rmeta/text (autodetecting type)
+  FILE: cache/input-file.ukn
+OUTPUT: txt/input-file.txt
+INFO  Detecting media type for Filename: input-file.ukn
+INFO  rmeta/text (autodetecting type)
+=== file2bib.sh ===
+         id: input-file
+     author: 
+      title: input-file
+       date: 
+      pages: 
+  extension: .ukn
+        txt: ./txt/input-file.txt
+      cache: ./cache/input-file.ukn
+
+Content-Encoding	UTF-8
+Content-Type	text/csv; charset=UTF-8; delimiter=comma
+X-Parsed-By	['org.apache.tika.parser.DefaultParser', 'org.apache.tika.parser.csv.TextAndCSVParser']
+X-TIKA:content_handler	ToTextContentHandler
+X-TIKA:parse_time_millis	32
+csv:delimiter	comma
+resourceName	input-file.ukn
+input-file  txt/../ent/input-file.ent
+input-file  txt/../pos/input-file.pos
+input-file  txt/../wrd/input-file.wrd
+Que is empty; done
+PROCESS_7f6c21b0-94d2-4146-b20e-dd0e999965c6
+=== reduce.pl bib ===
+         id = input-file
+     author = 
+      title = input-file
+       date = 
+      pages = 
+  extension = .ukn
+       mime = text/plain
+      words = 29969
+  sentences = 2402
+     flesch = 79
+    summary = A few things I especially liked: the high-level find-a-sample-in-the-pile screen (great way to handle having a lot of material without any particular idea of what you're seeking or what's in there) the drum sample + beat-pattern selector (this goes kinda above & beyond what I was expecting) the per-sample tool to tweak the duration & volume (I would love a way to tweak the start-offset too) A few things I was hoping to see that I didn't find: a way to "remix" using samples from multiple sources a way to build collections/folders of samples from various sources (ideally so I can just batch-download (& get the source credits), but really just any way to easily find a sample I liked again would be great) a few illustrative samples/previews of maybe what to expect per "library"(?) on the first screen a quick overview of what's what, and what the flow looks like And as an aside, I got a bit annoyed by the samples I'd found / remixed getting lost between tasks.
+      cache = ./cache/input-file.ukn
+       txt  = ./txt/input-file.txt
+Building ./etc/reader.txt
+input-file
+input-file
+                number of items: 1
+                   sum of words: 29,969
+          average size in words: 29,969
+      average readability score: 79
+
+                          nouns: samples; sounds; sample; tool; way; music; site; sound; idea; work; page; time; project; beat; thanks; remix; clips; interface; people; resource; search; bit; website; files; button; drum; collection; library; something; lot; source; beats; user; feature; browser; sequencer; thing; file; function; use; fun; things; sampling; screen; audio; material; recordings; tools; context; experience
+                          verbs: is; be; was; have; use; thank; ''s; love; do; are; ''m; think; make; find; using; did; see; like; am; were; get; download; looking; play; know; found; making; had; being; figure; create; does; need; ''ve; navigate; want; hear; work; click; explore; been; understand; has; hope; look; seem; doing; makes; add; keep
+                     adjectives: great; cool; more; able; amazing; different; easy; good; nice; fun; other; sure; available; useful; sound; interesting; awesome; little; full; intuitive; multiple; possible; short; hard; incredible; difficult; fantastic; own; new; longer; easier; excited; audio; helpful; many; confusing; much; better; specific; first; free; whole; wonderful; -; clear; interested; old; certain; creative; few
+                        adverbs: n''t; not; very; just; really; so; also; more; out; up; maybe; even; only; much; well; too; forward; back; then; as; together; again; here; definitely; already; in; pretty; though; around; down; easily; n’t; overall; perhaps; there; still; instead; most; actually; on; super; all; better; far; never; nt; rather; however; immediately; over
+                       pronouns: i; it; you; my; me; your; them; they; its; we; myself; their; our; themselves; he; us; his; itself; one; ourselves; she; ''s; ios; yourself
+                   proper nouns: dj; citizen; explore; ui; redacted; king; loc; wav; library; congress; bb; hip; pii; remix; safari; daw; hop; ux; b.b.; brian; fun; ableton; iphone; a; ai; awesome; browser; s; u; youtube; cool; dope; download; fma; foo; intro; ipad; mp3s; mpc; new; producer; record; soundcloud; studio; super; adobe; akai; amazing; america; american
+                       keywords: cool; great; love; sample; sound; thank; tool; work
+
+       one topic; one dimension: use
+                        file(s): ./cache/input-file.ukn
+                      titles(s): input-file
+
+    three topics; one dimension: use; zounds; zounds
+                        file(s): ./cache/input-file.ukn, ./cache/input-file.ukn, ./cache/input-file.ukn
+                      titles(s): input-file | input-file | input-file
+
+  five topics; three dimensions: use sounds samples; zounds hover hell; zounds hover hell; zounds hover hell; zounds hover hell
+                        file(s): ./cache/input-file.ukn, ./cache/input-file.ukn, ./cache/input-file.ukn, ./cache/input-file.ukn, ./cache/input-file.ukn
+                      titles(s): input-file | input-file | input-file | input-file | input-file
+
+==== make-pages.sh htm files
+==== make-pages.sh complex files
+==== make-pages.sh named enities
+==== making bibliographics
+         id: input-file
+     author: 
+      title: input-file
+       date: 
+      words: 29969
+  sentences: 2402
+      pages: 
+     flesch: 79
+      cache: ./cache/input-file.ukn
+        txt: ./txt/input-file.txt
+    summary: A few things I especially liked: the high-level find-a-sample-in-the-pile screen (great way to handle having a lot of material without any particular idea of what you''re seeking or what''s in there) the drum sample + beat-pattern selector (this goes kinda above & beyond what I was expecting) the per-sample tool to tweak the duration & volume (I would love a way to tweak the start-offset too) A few things I was hoping to see that I didn''t find: a way to "remix" using samples from multiple sources a way to build collections/folders of samples from various sources (ideally so I can just batch-download (& get the source credits), but really just any way to easily find a sample I liked again would be great) a few illustrative samples/previews of maybe what to expect per "library"(?) on the first screen a quick overview of what''s what, and what the flow looks like And as an aside, I got a bit annoyed by the samples I''d found / remixed getting lost between tasks.
+
+==== make-pages.sh questions
+==== make-pages.sh search
+==== make-pages.sh topic modeling corpus
+
+Zipping study carrel
+
