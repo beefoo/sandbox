@@ -77,15 +77,13 @@ var App = (function() {
     var width = $el.width();
     var height = $el.height();
     var view;
+    var startingDepth = 1;
 
     var svg = d3.create("svg")
         .attr("viewBox", `-${width / 2} -${height / 2} ${width} ${height}`)
         .style("display", "block")
         .style("background", '#000')
-        .style("cursor", "pointer")
-        .on("click", function(e){
-          zoom(e, root);
-        });
+        .style("cursor", "pointer");
 
     var root = d3.pack()
         .size([width, height])
@@ -94,63 +92,102 @@ var App = (function() {
         .sum(d => d.value)
         .sort((a, b) => b.value - a.value));
     var focus = root;
+    var startingNode = _.find(root.descendants(), function(d){ return d.depth === startingDepth; }) || root;
 
     var color = d3.scaleLinear()
         .domain([0, 5])
         .range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"])
         .interpolate(d3.interpolateHcl);
 
+    function isNodeValid(d) {
+      var delta = Math.abs(d.depth - focus.depth);
+      return d !== root && delta === 1 && focus !== d && !d.data.isHidden;
+    }
+
     var node = svg.append("g")
       .selectAll("circle")
       .data(root.descendants().slice(1))
       .join("circle")
-        .attr("fill", d => d.children ? color(d.depth) : "white")
-        .attr("pointer-events", d => !d.children ? "none" : null)
-        .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); d3.select(this).attr("stroke-width", "2"); })
-        .on("mouseout", function() { d3.select(this).attr("stroke", null); })
+        .attr("fill", function(d){
+          // if (d.data.name === "Coleoptera") {
+          //   console.log(d);
+          //   console.log(d.ancestors())
+          //   console.log(d.descendants())
+          // }
+          var fillColor = "white";
+          if (d.data.fillColor) fillColor = d.data.fillColor;
+          else if (d.children && !d.data.isLeaf) fillColor = color(d.depth);
+          return fillColor;
+        })
+        .attr("pointer-events", d => isNodeValid(d) ? null : "none")
+        .style("fill-opacity", d => d.data.isHidden ? 0 : 1)
+        .on("mouseover", function(e, d) {
+          d3.select(this).attr("stroke", "#000");
+          d3.select(this).attr("stroke-width", "2");
+        })
+        .on("mouseout", function(e, d) {
+          d3.select(this).attr("stroke", null);
+        })
         .on("click", function(e, d){
-          focus !== d && (zoom(e, d), e.stopPropagation());
+          isNodeValid(d) && (zoom(e, d), e.stopPropagation());
         });
 
     var label = svg.append("g")
         .style("font", "16px sans-serif")
+        .style("font-weight", "bold")
         .attr("pointer-events", "none")
         .attr("text-anchor", "middle")
       .selectAll("text")
       .data(root.descendants())
       .join("text")
-        .style("fill-opacity", d => d.parent === root ? 1 : 0)
-        .style("display", d => d.parent === root ? "inline" : "none")
-        .text(d => d.data.name);
+        .attr("fill", function(d){ return d.data.isHere ? "red" : "black"; })
+        .style("fill-opacity", d => d.parent === root && !d.data.isHidden ? 1 : 0)
+        .style("display", d => d.parent === root && !d.data.isHidden ? "inline" : "none")
+        .text(d => d.data.name || "");
 
     d3.select(this.opt.el).node().appendChild(svg.node());
 
     function zoomTo(v) {
-      const k = width / v[2];
+      var k = width / v[2];
       view = v;
-      label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
-      node.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+
+      label.attr("transform", function(d){
+        var x = (d.x - v[0]) * k;
+        var y = (d.y - v[1]) * k;
+        if (d.data.isHere) y = y - k*10;
+        return `translate(${x},${y})`;
+      });
+      node.attr("transform", function(d){
+        var x = (d.x - v[0]) * k;
+        var y = (d.y - v[1]) * k;
+        return `translate(${x},${y})`;
+      });
       node.attr("r", d => d.r * k);
     }
 
-    function zoom(event, d) {
-      focus = d;
+    function isLabelVisible(d){
+      return d.parent === focus || d.data.isHere || d === focus && (!d.children || d.isLeaf);
+    }
+
+    function zoom(event, toNode) {
+      focus = toNode;
       var transition = svg.transition()
-          .duration(event.altKey ? 7500 : 750)
+          .duration(750)
           .tween("zoom", d => {
             const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
             return t => zoomTo(i(t));
           });
       label
-        .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+        .filter(function(d) { return isLabelVisible(d) || this.style.display === "inline"; })
         .transition(transition)
-          .style("fill-opacity", d => d.parent === focus ? 1 : 0)
-          .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-          .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+          .style("fill-opacity", d => isLabelVisible(d) ? 1 : 0)
+          .on("start", function(d) { if (isLabelVisible(d)) this.style.display = "inline"; })
+          .on("end", function(d) { if (!isLabelVisible(d)) this.style.display = "none"; });
+      node.attr("pointer-events", d => isNodeValid(d) ? null : "none")
     }
 
     zoomTo([root.x, root.y, root.r * 2]);
-
+    zoom({}, startingNode);
 
   };
 
@@ -189,7 +226,10 @@ var config = {
           {"name": "Amber", "value": 12744},
           {"name": "Arachnida", "value": 1216768},
           {"name": "Cnidaria", "value": 8824},
-          {"name": "Coleoptera", "value": 1982780},
+          {"name": "Coleoptera", "value": 1982780, "isLeaf": true, "children": [
+            {"name": "You are here", "value": 10000, "fillColor": "red", "isHere": true},
+            {"value": 1972780, "isHidden": true}
+          ]},
           {"name": "Crustace", "value": 29022},
           {"name": "Diptera", "value": 1138717},
           {"name": "Hemiptera", "value": 976518},
