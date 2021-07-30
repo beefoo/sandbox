@@ -166,7 +166,7 @@ var App = (function() {
     }
 
     function isLabelVisible(d){
-      return d.parent === focus || d.data.isHere || d === focus && (!d.children || d.isLeaf);
+      return d.parent === focus || d.data.isHere || d === focus && (!d.children || d.data.isLeaf);
     }
 
     function zoom(event, toNode) {
