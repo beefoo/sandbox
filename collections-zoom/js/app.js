@@ -11,6 +11,11 @@ var App = (function() {
     this.init();
   }
 
+  function formatNumber(v){
+    if (isNaN(v)) return v;
+    return v.toLocaleString();
+  }
+
   App.prototype.init = function(){
     var data = this.loadData(this.opt.data)
 
@@ -52,14 +57,29 @@ var App = (function() {
           dept.children.push({
             "name": "Other",
             "value": expectedTotal - sum
-          })
+          });
+          expectedTotal = sum;
         }
+        dept.formattedValue = formatNumber(expectedTotal);
       }
 
-      dept = _.omit(dept, 'value');
+      if (!dept.formattedValue && dept.value) {
+        dept.formattedValue = formatNumber(dept.value);
+      }
+
+      if (dept.children) {
+        dept.children = _.map(dept.children, function(subdivision){
+          subdivision.formattedValue = formatNumber(subdivision.value);
+          return subdivision;
+        })
+      }
+
+      // dept = _.omit(dept, 'value');
 
       return dept;
     });
+
+    data.formattedValue = formatNumber(_.reduce(data.children, function(memo, dept){ return memo + dept.value; }, 0));
 
     data = {
       "name": "root",
@@ -74,6 +94,7 @@ var App = (function() {
 
   App.prototype.loadMap = function(data){
     var $el = $(this.opt.el);
+    var $dashboard = $('#dashboard');
     var width = $el.width();
     var height = $el.height();
     var view;
@@ -134,16 +155,31 @@ var App = (function() {
 
     var label = svg.append("g")
         .style("font", "16px sans-serif")
-        .style("font-weight", "bold")
         .attr("pointer-events", "none")
         .attr("text-anchor", "middle")
       .selectAll("text")
       .data(root.descendants())
       .join("text")
-        .attr("fill", function(d){ return d.data.isHere ? "red" : "black"; })
-        .style("fill-opacity", d => d.parent === root && !d.data.isHidden ? 1 : 0)
-        .style("display", d => d.parent === root && !d.data.isHidden ? "inline" : "none")
-        .text(d => d.data.name || "");
+        .attr("fill", function(d){
+          if (d.data.isHere) return "red";
+          else if (d.depth===1) return "#3d6a64";
+          else return "black";
+        })
+        .style("fill-opacity", d => d.parent === root && !d.data.isHidden || d.depth===1 ? 1 : 0)
+        .style("display", d => d.parent === root && !d.data.isHidden ? "inline" : "none");
+
+    label.append("tspan")
+      .text(d => d.data.name || "")
+      .style("font-weight", "bold")
+      .attr("x", 0)
+      .attr("dx", 0)
+      .attr("dy", 22);
+
+    label.append("tspan")
+      .text(d => d.data.formattedValue || "")
+      .attr("x", 0)
+      .attr("dx", 0)
+      .attr("dy", 22);
 
     d3.select(this.opt.el).node().appendChild(svg.node());
 
@@ -153,8 +189,9 @@ var App = (function() {
 
       label.attr("transform", function(d){
         var x = (d.x - v[0]) * k;
-        var y = (d.y - v[1]) * k;
+        var y = (d.y - v[1]) * k - 22;
         if (d.data.isHere) y = y - k*10;
+        else if (d.depth === 1) y = y - v[1] + k*40;
         return `translate(${x},${y})`;
       });
       node.attr("transform", function(d){
@@ -166,7 +203,7 @@ var App = (function() {
     }
 
     function isLabelVisible(d){
-      return d.parent === focus || d.data.isHere || d === focus && (!d.children || d.data.isLeaf);
+      return d.parent === focus || d.data.isHere || d === focus && (!d.children || d.data.isLeaf) || d.depth===1 && d === focus;
     }
 
     function zoom(event, toNode) {
@@ -184,6 +221,12 @@ var App = (function() {
           .on("start", function(d) { if (isLabelVisible(d)) this.style.display = "inline"; })
           .on("end", function(d) { if (!isLabelVisible(d)) this.style.display = "none"; });
       node.attr("pointer-events", d => isNodeValid(d) ? null : "none")
+
+      if (!toNode.children || toNode.data.isLeaf) {
+        $dashboard.addClass('active');
+      } else {
+        $dashboard.removeClass('active');
+      }
     }
 
     zoomTo([root.x, root.y, root.r * 2]);

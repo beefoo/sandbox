@@ -1,6 +1,7 @@
 body {
   background: black;
   overflow: hidden;
+  font-family: sans-serif;
 }
 .app {
   position: absolute;
@@ -29,4 +30,36 @@ circle {
     margin-top: -50vmin;
     margin-left: 0;
   }
+}
+
+#dashboard {
+  width: 600px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  bottom: 18%;
+  left: 50%;
+  margin-left: -300px;
+  border: 2px solid #51b7c4;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  /* display: none; */
+  opacity: 0;
+  text-align: center;
+}
+#dashboard h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #3d6a64;
+}
+#dashboard img {
+  width: 100%;
+  height: auto;
+}
+#dashboard.active {
+  opacity: 1;
+  /* display: block; */
+  transition: opacity 2s ease-in-out;
+  transition-delay: 1s;
+  z-index: 1000;
 }
