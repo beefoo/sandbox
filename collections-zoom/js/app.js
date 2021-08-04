@@ -49,27 +49,20 @@ var App = (function() {
           }
         });
 
-      // otherwise ensure sum adds up to children values
-      } else if (_.has(dept, 'value')) {
-        var expectedTotal = dept.value;
+      // created value (sum) for department
+      } else if (_.has(dept, 'children')) {
         var sum =  _.reduce(dept.children, function(memo, subdivision){ return memo + subdivision.value; }, 0);
-        if (sum < expectedTotal) {
-          dept.children.push({
-            "name": "Other",
-            "value": expectedTotal - sum
-          });
-          expectedTotal = sum;
-        }
-        dept.formattedValue = formatNumber(expectedTotal);
+        dept.value = sum;
       }
 
-      if (!dept.formattedValue && dept.value) {
+      if (dept.value) {
         dept.formattedValue = formatNumber(dept.value);
       }
 
       if (dept.children) {
         dept.children = _.map(dept.children, function(subdivision){
           subdivision.formattedValue = formatNumber(subdivision.value);
+          if (subdivision.unit) subdivision.formattedValue += " " + subdivision.unit;
           return subdivision;
         })
       }
@@ -238,52 +231,74 @@ var App = (function() {
 
 })();
 
+
+
+
 var config = {
   data: {
     "name": "AMNH Collections",
     "children": [
       {
-        "name": "Cryo Collection",
-        "value": 117728,
-        "children": 4
+        "name": "Monell Cryo-Facility",
+        "value": 126219
       },{
         "name": "Earth and Planetary Sciences",
-        "value": 155298,
-        "children": 4
+        "children": [
+          {"name": "EPS/Mineralogy", "value": 126527},
+          {"name": "EPS/Meteorites", "value": 5294},
+          {"name": "Tektites", "value": 921},
+          {"name": "EPS/Mineral Deposits", "value": 13441},
+          {"name": "EPS/Petrology", "value": 24603},
+          {"name": "Astro/Observations", "value": 45, "unit": "TB"},
+          {"name": "Astro/Simulations", "value": 50, "unit": "TB"},
+          {"name": "Astro/Instruments", "value": 2}
+        ]
       },{
         "name": "Anthropology",
-        "value": 540433,
-        "children": 8
+        "children": [
+          {"name": "Archaeology", "value": 340641},
+          {"name": "Ethnology", "value": 169893},
+          {"name": "Biology", "value": 23009},
+          {"name": "Other (casts, molds)", "value": 7215}
+        ]
       },{
         "name": "Vertebrate Zoology",
-        "value": 4422837,
-        "children": 10
+        "children": [
+          {"name": "Herpetology", "value": 376154},
+          {"name": "Ichthyology", "value": 3231638},
+          {"name": "Mammalogy", "value": 279812},
+          {"name": "Ornithology", "value": 890540}
+        ]
       },{
         "name": "Paleontology",
-        "value": 5564095,
-        "children": 12
+        "children": [
+          {"name": "Fossil Amphibians, Reptiles and Birds", "value": 33231},
+          {"name": "Fossil Fish", "value": 28687},
+          {"name": "Fossil Invertebrates", "value": 5110000},
+          {"name": "Fossil Mammals", "value": 400000},
+          {"name": "Fossil Plants", "value": 440}
+        ]
       },{
         "name": "Invertebrate Zoology",
-        "value": 23357868,
         "children": [
           {"name": "Amber", "value": 12744},
           {"name": "Arachnida", "value": 1216768},
-          {"name": "Cnidaria", "value": 8824},
+          {"name": "Cnidaria", "value": 8826},
           {"name": "Coleoptera", "value": 1982780, "isLeaf": true, "children": [
             {"name": "You are here", "value": 10000, "fillColor": "red", "isHere": true},
             {"value": 1972780, "isHidden": true}
           ]},
-          {"name": "Crustace", "value": 29022},
+          {"name": "Crustacea", "value": 116500},
           {"name": "Diptera", "value": 1138717},
           {"name": "Hemiptera", "value": 976518},
           {"name": "Hymenoptera", "value": 8724094},
           {"name": "Isoptera", "value": 1000000},
           {"name": "Lepidoptera", "value": 2263456},
-          {"name": "Minor orders", "value": 824644},
-          {"name": "Misc bulk", "value": 33597},
-          {"name": "Molusca", "value": 500034},
+          {"name": "Minor Orders", "value": 824644},
+          {"name": "Misc. Bulk", "value": 33597},
+          {"name": "Mollusca", "value": 1606459},
           {"name": "Myriapoda", "value": 79880},
-          {"name": "Other Invert Phhyla", "value": 53978},
+          {"name": "Other Invert Phyla", "value": 3399856},
           {"name": "Protists", "value": 47895}
         ]
       }
