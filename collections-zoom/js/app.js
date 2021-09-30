@@ -1,15 +1,50 @@
 'use strict';
 
+// utility function for returning a promise that resolves after a delay
+function delay(t) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, t);
+    });
+}
+
+Promise.delay = function (fn, t) {
+    // fn is an optional argument
+    if (!t) {
+        t = fn;
+        fn = function () {};
+    }
+    return delay(t).then(fn);
+}
+
+Promise.prototype.delay = function (fn, t) {
+    // return chained promise
+    return this.then(function () {
+        return Promise.delay(fn, t);
+    });
+
+}
+
 var App = (function() {
 
   function App(config) {
     var defaults = {
       el: '#app',
-      data: {}
+      data: {},
+      zoomDuration: 2000,
+      packPadding: 12,
+      auto: false
     };
-    this.opt = _.extend({}, defaults, config);
+    this.opt = _.extend({}, defaults, queryParams(), config);
     this.init();
   }
+
+  function queryParams(){
+    if (location.search.length) {
+      var search = location.search.substring(1);
+      return JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g,'":"') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) });
+    }
+    return {};
+  };
 
   function formatNumber(v){
     if (isNaN(v)) return v;
@@ -17,6 +52,7 @@ var App = (function() {
   }
 
   App.prototype.init = function(){
+    var _this = this;
     var data = this.loadData(this.opt.data)
 
     console.log('Loaded data', data);
@@ -86,6 +122,7 @@ var App = (function() {
   };
 
   App.prototype.loadMap = function(data){
+    var _this = this;
     var $el = $(this.opt.el);
     var $dashboard = $('#dashboard');
     var width = $el.width();
@@ -99,9 +136,21 @@ var App = (function() {
         .style("background", '#000')
         .style("cursor", "pointer");
 
+    var filterDef = svg.append("defs");
+    var pattern = filterDef.append("pattern")
+                  .attr("id", "panel")
+                  .attr("patternContentUnits", "objectBoundingBox")
+                  .attr("width", "100%")
+                  .attr("height", "100%")
+    pattern.append("image")
+          .attr("xlink:href", "img/Trilobite_Layout_01.jpg")
+          .attr("preserveAspectRatio", "none")
+          .attr("width", "1")
+          .attr("height", "1")
+
     var root = d3.pack()
         .size([width, height])
-        .padding(3)
+        .padding(this.opt.packPadding)
       (d3.hierarchy(data)
         .sum(d => d.value)
         .sort((a, b) => b.value - a.value));
@@ -129,11 +178,13 @@ var App = (function() {
           //   console.log(d.descendants())
           // }
           var fillColor = "white";
+
           if (d.data.fillColor) fillColor = d.data.fillColor;
           else if (d.children && !d.data.isLeaf) fillColor = color(d.depth);
           return fillColor;
         })
         .attr("pointer-events", d => isNodeValid(d) ? null : "none")
+        .attr("id", d => d.data.name ? d.data.name.toLowerCase().replaceAll(' ', '-') : '')
         .style("fill-opacity", d => d.data.isHidden ? 0 : 1)
         .on("mouseover", function(e, d) {
           d3.select(this).attr("stroke", "#000");
@@ -183,8 +234,10 @@ var App = (function() {
       label.attr("transform", function(d){
         var x = (d.x - v[0]) * k;
         var y = (d.y - v[1]) * k - 22;
-        if (d.data.isHere) y = y - k*10;
-        else if (d.depth === 1) y = y - v[1] + k*40;
+        if (d.data.isHere) {
+          var z = Math.max(2, k);
+          y = y - z*10;
+        } else if (d.depth === 1) y = y - v[1] + k*40;
         return `translate(${x},${y})`;
       });
       node.attr("transform", function(d){
@@ -202,7 +255,7 @@ var App = (function() {
     function zoom(event, toNode) {
       focus = toNode;
       var transition = svg.transition()
-          .duration(750)
+          .duration(_this.opt.zoomDuration)
           .tween("zoom", d => {
             const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
             return t => zoomTo(i(t));
@@ -215,15 +268,36 @@ var App = (function() {
           .on("end", function(d) { if (!isLabelVisible(d)) this.style.display = "none"; });
       node.attr("pointer-events", d => isNodeValid(d) ? null : "none")
 
-      if (!toNode.children || toNode.data.isLeaf) {
-        $dashboard.addClass('active');
-      } else {
-        $dashboard.removeClass('active');
-      }
+      // if (!toNode.children || toNode.data.isLeaf) {
+      //   $dashboard.addClass('active');
+      // } else {
+      //   $dashboard.removeClass('active');
+      // }
     }
 
     zoomTo([root.x, root.y, root.r * 2]);
     zoom({}, startingNode);
+
+    function loop(){
+      var stepDur = _this.opt.zoomDuration + 1000;
+      var nodes = root.descendants();
+      var n1 = _.find(nodes, function(d){ return d.data.name == 'AMNH Collections'; });
+      var n2 = _.find(nodes, function(d){ return d.data.name == 'Paleontology'; });
+      var n3 = _.find(nodes, function(d){ return d.data.name == 'Fossil Invertebrates'; });
+      var n4 = _.find(nodes, function(d){ return d.data.name == 'You are here'; });
+
+      Promise.delay(function(){ zoom({}, n2); }, stepDur)
+             .delay(function(){ zoom({}, n3); }, stepDur)
+             .delay(function(){ zoom({}, n4); }, stepDur)
+             .delay(function(){ zoom({}, n3); }, stepDur)
+             .delay(function(){ zoom({}, n2); }, stepDur)
+             .delay(function(){ zoom({}, n1); }, stepDur)
+             .delay(function(){ loop(); }, stepDur)
+    };
+
+    if (this.opt.auto) {
+      loop();
+    }
 
   };
 
@@ -274,7 +348,10 @@ var config = {
         "children": [
           {"name": "Fossil Amphibians, Reptiles and Birds", "value": 33231},
           {"name": "Fossil Fish", "value": 28687},
-          {"name": "Fossil Invertebrates", "value": 5110000},
+          {"name": "Fossil Invertebrates", "value": 5110000, "isLeaf": true, "children": [
+            {"name": "You are here", "value": 10000, "isHere": true, "fillColor": "url(#panel)"},
+            {"value": 1972780, "isHidden": true}
+          ]},
           {"name": "Fossil Mammals", "value": 400000},
           {"name": "Fossil Plants", "value": 440}
         ]
@@ -284,10 +361,7 @@ var config = {
           {"name": "Amber", "value": 12744},
           {"name": "Arachnida", "value": 1216768},
           {"name": "Cnidaria", "value": 8826},
-          {"name": "Coleoptera", "value": 1982780, "isLeaf": true, "children": [
-            {"name": "You are here", "value": 10000, "fillColor": "red", "isHere": true},
-            {"value": 1972780, "isHidden": true}
-          ]},
+          {"name": "Coleoptera", "value": 1982780},
           {"name": "Crustacea", "value": 116500},
           {"name": "Diptera", "value": 1138717},
           {"name": "Hemiptera", "value": 976518},
