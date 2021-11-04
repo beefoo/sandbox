@@ -141,12 +141,28 @@ var App = (function() {
                   .attr("id", "panel")
                   .attr("patternContentUnits", "objectBoundingBox")
                   .attr("width", "100%")
-                  .attr("height", "100%")
+                  .attr("height", "100%");
     pattern.append("image")
           .attr("xlink:href", "img/Trilobite_Layout_01.jpg")
           .attr("preserveAspectRatio", "none")
           .attr("width", "1")
-          .attr("height", "1")
+          .attr("height", "1");
+
+    var dotRadius = 2;
+    var dotMargin = 1;
+    var patternWidth = dotRadius * 2 * 2 + dotMargin * 2;
+    var dots = filterDef.append("pattern")
+                .attr("id", "dots")
+                .attr("patternUnits", "userSpaceOnUse")
+                .attr("width", ""+patternWidth)
+                .attr("height", ""+patternWidth);
+
+    dots.append("rect").attr("width", ""+patternWidth).attr("height", ""+patternWidth).attr("x", "0").attr("y", "0").attr("fill", "#548e84");
+    dots.append("circle").attr("r", ""+dotRadius).attr("cx", ""+dotRadius).attr("cy", ""+dotRadius).attr("fill", "#74d7ca");
+    dots.append("circle").attr("r", ""+dotRadius).attr("cx", ""+(dotRadius*3+dotMargin)).attr("cy", ""+dotRadius).attr("fill", "#74d7ca");
+    dots.append("circle").attr("r", ""+dotRadius).attr("cx", "0").attr("cy", ""+(dotRadius*3+dotMargin)).attr("fill", "#74d7ca");
+    dots.append("circle").attr("r", ""+dotRadius).attr("cx", ""+(dotRadius*2+dotMargin)).attr("cy", ""+(dotRadius*3+dotMargin)).attr("fill", "#74d7ca");
+    dots.append("circle").attr("r", ""+dotRadius).attr("cx", ""+patternWidth).attr("cy", ""+(dotRadius*3+dotMargin)).attr("fill", "#74d7ca");
 
     var root = d3.pack()
         .size([width, height])
@@ -185,7 +201,12 @@ var App = (function() {
         })
         .attr("pointer-events", d => isNodeValid(d) ? null : "none")
         .attr("id", d => d.data.name ? d.data.name.toLowerCase().replaceAll(' ', '-') : '')
-        .style("fill-opacity", d => d.data.isHidden ? 0 : 1)
+        // .style("fill-opacity", d => d.data.isHidden ? 0 : 1)
+        .style("fill-opacity", function(d){
+          if (d.data.isHidden) return 0;
+          else if (d.depth===1) return 1;
+          else return 0.667;
+        })
         .on("mouseover", function(e, d) {
           d3.select(this).attr("stroke", "#000");
           d3.select(this).attr("stroke-width", "2");
@@ -206,7 +227,7 @@ var App = (function() {
       .join("text")
         .attr("fill", function(d){
           if (d.data.isHere) return "red";
-          else if (d.depth===1) return "#3d6a64";
+          // else if (d.depth===1) return "#3d6a64";
           else return "black";
         })
         .style("fill-opacity", d => d.parent === root && !d.data.isHidden || d.depth===1 ? 1 : 0)
@@ -311,6 +332,7 @@ var App = (function() {
 var config = {
   data: {
     "name": "AMNH Collections",
+    "fillColor": "url(#dots)",
     "children": [
       {
         "name": "Monell Cryo-Facility",
