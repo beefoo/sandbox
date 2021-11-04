@@ -205,6 +205,7 @@ var App = (function() {
         .style("fill-opacity", function(d){
           if (d.data.isHidden) return 0;
           else if (d.depth===1) return 1;
+          else if (d.depth>=3) return 0.5;
           else return 0.667;
         })
         .on("mouseover", function(e, d) {
@@ -226,7 +227,7 @@ var App = (function() {
       .data(root.descendants())
       .join("text")
         .attr("fill", function(d){
-          if (d.data.isHere) return "red";
+          if (d.data.isHere) return "#9a3044";
           // else if (d.depth===1) return "#3d6a64";
           else return "black";
         })
