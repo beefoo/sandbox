@@ -10,6 +10,27 @@
 
   <div id="message"></div>
 
+  <nav aria-label="Sequence controls" class="sequence-controls-nav">
+    <ul class="controls">
+      <li><button class="toggle-play inverted">Play</button></li>
+      <li class="slider-item"><label for="tempo">BPM:</label> <input id="tempo" type="range" min="60" max="180" value="120" class="slider bpm-input inverted" /> <span class="bpm-text value-text ">120</span></li>
+      <li class="slider-item"><label for="pitch">Pitch shift:</label> <input id="pitch" type="range" min="-12" max="12" value="0" step="0.1" class="slider pitch-input inverted" /> <span class="pitch-text value-text ">0</span></li>
+    </ul>
+  </nav>
+
+  <ul class="controls rack-controls">
+    <li><button class="randomize-collection small">Shuffle item</button></li>
+    <li><button class="prev-collection small">Prev pattern</button></li>
+    <li><button class="next-collection small">Next pattern</button></li>
+  </ul>
+
+  <ul class="controls rack-controls">
+    <li><button class="randomize-drum small">Shuffle drums</button></li>
+    <li><button class="prev-drum small">Prev pattern</button></li>
+    <li><button class="next-drum small">Next pattern</button></li>
+  </ul>
+
+  <script src="jquery-3.6.0.slim.min.js"></script>
   <script src="midi.js"></script>
 
 </body>
