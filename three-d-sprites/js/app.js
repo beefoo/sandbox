@@ -234,6 +234,30 @@ var texture = textureLoader.load('img/sprite.png', function() {
 	mesh.frustumCulled = false;
 	scene.add(mesh);
 
+  // add points
+  var pointSize = 2;
+  var pointsGeo = new THREE.BufferGeometry();
+  var pointsPositions = new Float32Array( maxInstancedCount * 3 );
+  var pointsColors = new Float32Array( maxInstancedCount * 3 );
+
+  for (var i=0; i<maxInstancedCount; i++) {
+    pointsPositions[ 3 * i ] = positions[i].x;
+    pointsPositions[ 3 * i + 1 ] = positions[i].y;
+    pointsPositions[ 3 * i + 2 ] = positions[i].z;
+
+    pointsColors[ 3 * i ] = 255;
+    pointsColors[ 3 * i + 1 ] = 0;
+    pointsColors[ 3 * i + 2 ] = 0;
+  }
+
+  pointsGeo.setAttribute( 'position', new THREE.BufferAttribute( pointsPositions, 3 ) );
+  var colorBuf = new THREE.BufferAttribute( pointsColors, 3 );
+  pointsGeo.setAttribute( 'color', colorBuf );
+  pointsGeo.computeBoundingBox();
+  var pointsMaterial = new THREE.PointsMaterial( { size: pointSize, vertexColors: true } );
+  var points = new THREE.Points( pointsGeo, pointsMaterial );
+  scene.add( points );
+
 });
 
 camera.position.z = 400;
