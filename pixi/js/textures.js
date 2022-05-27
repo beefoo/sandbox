@@ -78,15 +78,7 @@ class Textures {
       console.log(shape2Bounds);
       parent.addChild(shape2);
 
-      const bounds = {};
-      const bx0 = (Math.min(shape1Bounds.x, shape2Bounds.x));
-      const by0 = Math.min(shape1Bounds.y, shape2Bounds.y);
-      const bx1 = Math.max(shape1Bounds.x + shape1Bounds.width, shape2Bounds.x + shape2Bounds.width);
-      const by1 = Math.max(shape1Bounds.y + shape1Bounds.height, shape2Bounds.y + shape2Bounds.height);
-      bounds.width = Math.round(bx1 - bx0);
-      bounds.height = Math.round(by1 - by0);
-      bounds.x = Math.round(bx0);
-      bounds.y = Math.round(by0);
+      const bounds = parent.getBounds();
       console.log(bounds);
 
       app.stage.addChild(parent);
