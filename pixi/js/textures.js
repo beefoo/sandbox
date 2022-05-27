@@ -52,8 +52,10 @@ class Textures {
       shape1.addChild(sprite1, mask1);
       shape1.mask = mask1;
       shape1.pivot.set(unitWidth * 0.5, unitHeight * 0.5);
-      // shape1.rotation = Math.PI / 4;
+      shape1.rotation = Math.PI / 4;
       shape1.position.set(cx1, cy1);
+      const shape1Bounds = shape1.getBounds();
+      console.log(shape1Bounds);
       parent.addChild(shape1);
 
       const x2 = x1 + unitWidth - margin * 0.5;
@@ -72,7 +74,20 @@ class Textures {
       shape2.pivot.set(unitWidth * 0.5, unitHeight * 0.5);
       shape2.rotation = Math.PI / 4;
       shape2.position.set(cx2, cy2);
+      const shape2Bounds = shape2.getBounds();
+      console.log(shape2Bounds);
       parent.addChild(shape2);
+
+      const bounds = {};
+      const bx0 = (Math.min(shape1Bounds.x, shape2Bounds.x));
+      const by0 = Math.min(shape1Bounds.y, shape2Bounds.y);
+      const bx1 = Math.max(shape1Bounds.x + shape1Bounds.width, shape2Bounds.x + shape2Bounds.width);
+      const by1 = Math.max(shape1Bounds.y + shape1Bounds.height, shape2Bounds.y + shape2Bounds.height);
+      bounds.width = Math.round(bx1 - bx0);
+      bounds.height = Math.round(by1 - by0);
+      bounds.x = Math.round(bx0);
+      bounds.y = Math.round(by0);
+      console.log(bounds);
 
       app.stage.addChild(parent);
       const image = app.renderer.plugins.extract.image(parent);
@@ -83,7 +98,8 @@ class Textures {
       const pWidth = Math.round(parent.width);
       const pHeight = Math.round(parent.height);
       const pixels = app.renderer.plugins.extract.pixels(parent);
-      const deltaY = -Math.round((parent.height - unitHeight) * 0.5);
+      const deltaY = Math.round(bounds.y - y1);
+      const deltaX = Math.round(bounds.x - x1);
       _.times(pHeight, (row) => {
         _.times(pWidth, (col) => {
           const index = row * pWidth * 4 + col * 4;
@@ -92,7 +108,7 @@ class Textures {
           const b = pixels[index + 2];
           const a = pixels[index + 3];
           if (a > 0) {
-            const targetIndex = (py + row + deltaY) * w * 4 + (px + col) * 4;
+            const targetIndex = (py + row + deltaY) * w * 4 + (px + col + deltaX) * 4;
             refPixels[targetIndex] = r;
             refPixels[targetIndex + 1] = g;
             refPixels[targetIndex + 2] = b;
@@ -100,7 +116,7 @@ class Textures {
           }
         });
       });
-      console.log(`${(pWidth * pHeight * 4)} = ${pixels.length}`);
+      console.log(`${pWidth} x ${pHeight} x 4 = ${(pWidth * pHeight * 4)} = ${pixels.length}`);
       $('.guide2').css({
         'width': pWidth + 'px',
         'height': pHeight + 'px'
