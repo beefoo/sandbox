@@ -6,8 +6,8 @@ class Textures {
 
   init() {
     const $el = $('#app');
-    const w = $el.width();
-    const h = $el.height();
+    const w = Math.round($el.width());
+    const h = Math.round($el.height());
     const app = new PIXI.Application({
       // antialias: true,
       backgroundAlpha: 0,
