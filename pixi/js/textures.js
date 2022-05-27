@@ -46,13 +46,13 @@ class Textures {
       const shape1 = new PIXI.Container();
       const sprite1 = PIXI.TilingSprite.from(resources.letters.texture, { width: 100, height: 200 });
       const mask1 = new PIXI.Graphics();
-      // sprite1.position.set(x1, y1);
       mask1.beginFill(0xffffff);
       mask1.drawEllipse(unitWidth * 0.5, unitHeight * 0.5, unitWidth * 0.5, unitHeight * 0.5);
       mask1.endFill();
       shape1.addChild(sprite1, mask1);
       shape1.mask = mask1;
       shape1.pivot.set(unitWidth * 0.5, unitHeight * 0.5);
+      // shape1.rotation = Math.PI / 4;
       shape1.position.set(cx1, cy1);
       parent.addChild(shape1);
 
@@ -83,7 +83,7 @@ class Textures {
       const pWidth = Math.round(parent.width);
       const pHeight = Math.round(parent.height);
       const pixels = app.renderer.plugins.extract.pixels(parent);
-      const deltaY = Math.round((parent.height - unitHeight) * 0.5);
+      const deltaY = -Math.round((parent.height - unitHeight) * 0.5);
       _.times(pHeight, (row) => {
         _.times(pWidth, (col) => {
           const index = row * pWidth * 4 + col * 4;
@@ -92,7 +92,7 @@ class Textures {
           const b = pixels[index + 2];
           const a = pixels[index + 3];
           if (a > 0) {
-            const targetIndex = (py + row - deltaY) * w * 4 + (px + col) * 4;
+            const targetIndex = (py + row + deltaY) * w * 4 + (px + col) * 4;
             refPixels[targetIndex] = r;
             refPixels[targetIndex + 1] = g;
             refPixels[targetIndex + 2] = b;
@@ -101,6 +101,10 @@ class Textures {
         });
       });
       console.log(`${(pWidth * pHeight * 4)} = ${pixels.length}`);
+      $('.guide2').css({
+        'width': pWidth + 'px',
+        'height': pHeight + 'px'
+      })
       refCtx.putImageData( refImageData, 0, 0 );
     });
 
