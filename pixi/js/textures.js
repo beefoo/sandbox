@@ -52,10 +52,10 @@ class Textures {
       shape1.addChild(sprite1, mask1);
       shape1.mask = mask1;
       shape1.pivot.set(unitWidth * 0.5, unitHeight * 0.5);
-      shape1.rotation = Math.PI / 4;
+      // shape1.rotation = Math.PI / 2;
       shape1.position.set(cx1, cy1);
       const shape1Bounds = shape1.getBounds();
-      console.log(shape1Bounds);
+      // console.log(shape1Bounds);
       parent.addChild(shape1);
 
       const x2 = x1 + unitWidth - margin * 0.5;
@@ -75,7 +75,7 @@ class Textures {
       shape2.rotation = Math.PI / 4;
       shape2.position.set(cx2, cy2);
       const shape2Bounds = shape2.getBounds();
-      console.log(shape2Bounds);
+      // console.log(shape2Bounds);
       parent.addChild(shape2);
 
       const bounds = parent.getBounds();
