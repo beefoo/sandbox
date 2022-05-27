@@ -18,6 +18,16 @@ class Textures {
     const margin = 50;
     const unitWidth = 100;
     const unitHeight = 200;
+    const refCanvas = $('#reference')[0];
+    refCanvas.width = w;
+    refCanvas.height = h;
+    const refCtx = refCanvas.getContext('2d');
+    const refImageData = refCtx.getImageData(0, 0, w, h);
+    const refPixels = refImageData.data;
+
+    $el.on('click', (e) => {
+      $el.toggleClass('hidden');
+    });
 
     $el.append(app.view);
     app.loader.add([
@@ -67,6 +77,31 @@ class Textures {
       app.stage.addChild(parent);
       const image = app.renderer.plugins.extract.image(parent);
       document.body.appendChild(image);
+
+      const px = x1;
+      const py = y1;
+      const offsetTargetPixels = py * w * 4 + px * 4;
+      const pWidth = Math.round(parent.width);
+      const pHeight = Math.round(parent.height);
+      const pixels = app.renderer.plugins.extract.pixels(parent);
+      _.times(pHeight, (row) => {
+        _.times(pWidth, (col) => {
+          const index = row * pWidth * 4 + col * 4;
+          const r = pixels[index];
+          const g = pixels[index + 1];
+          const b = pixels[index + 2];
+          const a = pixels[index + 3];
+          if (a > 0) {
+            const targetIndex = offsetTargetPixels + row * w * 4 + (px + col) * 4;
+            refPixels[targetIndex] = r;
+            refPixels[targetIndex + 1] = g;
+            refPixels[targetIndex + 2] = b;
+            refPixels[targetIndex + 3] = a;
+          }
+        });
+      });
+      console.log(`${(pWidth * pHeight * 4)} = ${pixels.length}`);
+      refCtx.putImageData( refImageData, 0, 0 );
     });
 
 
