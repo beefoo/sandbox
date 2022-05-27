@@ -9,7 +9,7 @@ class Textures {
     const w = $el.width();
     const h = $el.height();
     const app = new PIXI.Application({
-      antialias: true,
+      // antialias: true,
       backgroundAlpha: 0,
       width: w,
       height: h,
@@ -80,10 +80,10 @@ class Textures {
 
       const px = x1;
       const py = y1;
-      const offsetTargetPixels = py * w * 4 + px * 4;
       const pWidth = Math.round(parent.width);
       const pHeight = Math.round(parent.height);
       const pixels = app.renderer.plugins.extract.pixels(parent);
+      const deltaY = Math.round((parent.height - unitHeight) * 0.5);
       _.times(pHeight, (row) => {
         _.times(pWidth, (col) => {
           const index = row * pWidth * 4 + col * 4;
@@ -92,7 +92,7 @@ class Textures {
           const b = pixels[index + 2];
           const a = pixels[index + 3];
           if (a > 0) {
-            const targetIndex = offsetTargetPixels + row * w * 4 + (px + col) * 4;
+            const targetIndex = (py + row - deltaY) * w * 4 + (px + col) * 4;
             refPixels[targetIndex] = r;
             refPixels[targetIndex + 1] = g;
             refPixels[targetIndex + 2] = b;
