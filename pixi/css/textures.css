@@ -1,5 +1,6 @@
 body {
-  background: black;
+  background: green;
+  overflow: hidden;
 }
 .app {
   width: 100%;
@@ -7,4 +8,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+img {
+  border: 1px solid red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
 }

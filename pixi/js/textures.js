@@ -6,7 +6,15 @@ class Textures {
 
   init() {
     const $el = $('#app');
-    const app = new PIXI.Application({ antialias: true });
+    const w = $el.width();
+    const h = $el.height();
+    const app = new PIXI.Application({
+      antialias: true,
+      backgroundAlpha: 0,
+      width: w,
+      height: h,
+      resizeTo: $el[0]
+    });
     const margin = 50;
     const unitWidth = 100;
     const unitHeight = 200;
@@ -16,6 +24,8 @@ class Textures {
       { name: 'letters', url: 'img/17.jpg' },
       { name: 'window', url: 'img/198.jpg' },
     ]);
+
+    const parent = new PIXI.Container();
 
     app.loader.load((loader, resources) => {
 
@@ -34,7 +44,7 @@ class Textures {
       shape1.mask = mask1;
       shape1.pivot.set(unitWidth * 0.5, unitHeight * 0.5);
       shape1.position.set(cx1, cy1);
-      app.stage.addChild(shape1);
+      parent.addChild(shape1);
 
       const x2 = x1 + unitWidth - margin * 0.5;
       const y2 = margin;
@@ -52,7 +62,11 @@ class Textures {
       shape2.pivot.set(unitWidth * 0.5, unitHeight * 0.5);
       shape2.rotation = Math.PI / 4;
       shape2.position.set(cx2, cy2);
-      app.stage.addChild(shape2);
+      parent.addChild(shape2);
+
+      app.stage.addChild(parent);
+      const image = app.renderer.plugins.extract.image(parent);
+      document.body.appendChild(image);
     });
 
 
