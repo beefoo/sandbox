@@ -55,6 +55,7 @@ class App {
     this.mainCtx.shadowBlur = 8;
     this.mainCtx.shadowOffsetX = 1;
     this.mainCtx.shadowOffsetY = 1;
+    this.isDrawing = false;
 
     const imageLoaded = loadImage('img/17.jpg');
     imageLoaded
@@ -72,8 +73,16 @@ class App {
   }
 
   addSprite(e) {
+    if (this.isDrawing) {
+      console.log('Busy drawing...');
+      return;
+    }
+
+    this.isDrawing = true;
     const userX = e.clientX;
     const userY = e.clientY;
+
+    console.log(userX, userY);
 
     const { mainCtx, spriteCtx, textureImage } = this;
     const canvasW = mainCtx.canvas.width;
@@ -132,6 +141,8 @@ class App {
     const x = userX - spriteW / 2;
     const y = userY - spriteH / 2;
     mainCtx.drawImage(spriteCtx.canvas, x, y, spriteW, spriteH);
+
+    this.isDrawing = false;
   }
 }
 
