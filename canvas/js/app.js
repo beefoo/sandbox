@@ -51,6 +51,11 @@ class App {
     this.mainCtx = mainCanvas.getContext('2d');
     this.spriteCtx = spriteCanvas.getContext('2d');
 
+    this.mainCtx.shadowColor = 'rgba(0, 0, 0, .667)';
+    this.mainCtx.shadowBlur = 8;
+    this.mainCtx.shadowOffsetX = 1;
+    this.mainCtx.shadowOffsetY = 1;
+
     const imageLoaded = loadImage('img/17.jpg');
     imageLoaded
       .then((image) => {
@@ -126,11 +131,6 @@ class App {
     
     const x = userX - spriteW / 2;
     const y = userY - spriteH / 2;
-    mainCtx.shadowColor = 'rgba(0, 0, 0, .667)';
-    mainCtx.shadowBlur = 8;
-    mainCtx.shadowOffsetX = 1;
-    mainCtx.shadowOffsetY = 1;
-    mainCtx.fill(mask);
     mainCtx.drawImage(spriteCtx.canvas, x, y, spriteW, spriteH);
   }
 }
