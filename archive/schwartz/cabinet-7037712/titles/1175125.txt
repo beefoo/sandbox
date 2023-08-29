@@ -1,0 +1,125 @@
+Your Library of Congress account password expires in days.
+
+Please visit the Library's Reading Room to log in to your account, and
+change your password.
+
+
+
+<https://pcwa.loc.gov/loc-film-lab-web/index.jsf>
+*Recorded Sound Reference Center User* | Log Out <#>	| Change Password
+<https://pcwa.loc.gov/loc-film-lab-web/changePassword.jsf> | Settings <#>
+
+  * My Cabinets <#>
+      o Create Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/createCabinet.jsf>
+      o Find Cabinets
+        <https://pcwa.loc.gov/loc-film-lab-web/user/searchCabinet.jsf>
+  * Collection Search
+    <https://pcwa.loc.gov/loc-film-lab-web/user/searchCollectionItems.jsf>
+  *
+  *
+
+Processing
+Session Expired
+X
+X
+X
+X
+X
+
+
+Num
+	
+Index
+	
+Title
+	
+Type
+	
+Total time
+
+false null [0, 1, 2, 3, 4]
+
+// Back To Previous <#>
+
+
+    Playable Audio and Video
+
+Carrier
+	
+Play
+	
+Item Details
+1175125-4-1	
+// <https://pcwa.loc.gov/loc-film-lab-web/content/149076> 	Duration
+(H:M:S) : -- 	//
+
+	Source Rack Number : RXF 4046
+
+false null [0, 1, 2]
+Title: 1175125 <#>
+component
+carrier
+Title 1175125
+
+
+    Spoken and said, not written and read
+
+Summary
+
+"While working on a record in tribute to Martin Luther King, Tony came across Dr. King's eulogy to himself at the Atlanta Eboneser [i.e. Ebenezer] Baptist Church, February 4, 1968.  We listen to Dr. King. "--Accompanying collection documentation.
+
+Credits/Roles
+Role
+	
+Name
+Producer	Tony Schwartz
+Speaker	Martin Luther King
+
+false null [0, 1]
+
+Production/Dates
+Type
+	
+Date
+BROADCAST	Jul 23, 1968
+BROADCAST	Jul 23, 1968
+
+false null [0, 1]
+
+Note
+Broadcast on WNYC, New York (N.Y.), on
+
+Cataloged from container and accompanying paperwork.
+
+Engineer Notes:
+
+A1.1 Tape Signal Chain
+1. Otari MTR-12 - Playback head - Full Track Mono
+2. A to D Converter - PrismSound Dream ADA-8XR
+3. I/O Control - Maselec MTC-2
+4. DAW - Pyramix Version 7.0.11 SP3 Build 1212021.04.2011
+
+Add Title To Cabinet
+Cabinet Name: 	
+Name: 	
+
+Description: 	
+
+Warning: This page calls for XML namespace declared with prefix h1 but
+no taglibrary exists for that namespace.
+
+Send Email
+Email Address: 	
+
+Title Tree
+
+  * 1175125: Spoken and said, not written and read
+
+Actions
+Print
+<https://pcwa.loc.gov/loc-film-lab-web/rest/mavis/titles/1175125/reports/print-pdf>
+
+Version 4.7.3
+Copyright 2020 Library of Congress
+
